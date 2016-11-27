@@ -2,5 +2,29 @@
 footer.footer
   .container
     
-    div &copy; 2016
+    .footer__wrapper
+      div.first
+        
+        .footer__logo
+          div
+            img(src="./img/footer-logo.png", alt="")
+          div 
+            span.span Если у вас возникают вопросы связанные непосредственно с веб-сайтом или процессом  поиска/покупки запчастей, пожалуйста, 
+              a(href="#") пишите
+              | .
+            .copyright © 2016 arm.group Все права защищены
+            
+      div.center
+        nav(role="navigation").footer__navigation
+          ul
+            li: a(href="#") Главная
+            li: a(href="#") Новости
+            li: a(href="#") О компании
+            
+        .footer__button.hidden Меню
+          
+      div.last.hidden-xs
+        .copyright © 2016 arm.group
+          br
+          | Все права защищены
   

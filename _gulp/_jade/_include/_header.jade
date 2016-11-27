@@ -2,14 +2,64 @@
 header.header
   .container
     
-    -var navigation = { 'Главная': '#', 'О нас': '#', 'Продукция': '#', 'Сотрудничество': '#', 'Наши магазины': '#', 'Контакты': '#'};
-    
-    nav.navigation(role="navigation")
-      ul
-        each val, key in navigation
-          if active === key
-            li.active
-              a(href=val, title=key)= key
-          else
-            li
-              a(href=val, title=key)= key
+    .header__wrapper
+      div.first
+        
+        .header__logo
+          a(href="#")
+            img(src="./img/sp.gif", alt="")
+        
+      div.center
+        
+        .header__menu
+          a(href="#").header__button
+            i.ion-grid
+            | Меню сайта
+      
+          -var navigation = { 'Новости': '#', 'О компании': '#', 'Стать клиентом': '#'};
+          
+          nav(role="navigation").header__navigation
+            ul
+              each val, key in navigation
+                if active === key
+                  li.active
+                    a(href=val, title=key)= key
+                else
+                  li
+                    a(href=val, title=key)= key
+                  
+      div.last
+        
+        .header__right
+          div 
+            .header__enter
+              .header__enter__button
+                a(href="#").btn.btn--effect1
+                  span(data-hover="Вход") Вход
+              .header__enter__body
+                .header__enter__wrapper
+                  form(action="#")
+                    // .has-error
+                    .form__group
+                      label.hidden Ваш логин
+                      input(type="text" name="login" placeholder="Ваш логин").form-control
+                    .form__group
+                      label.hidden Ваш пароль
+                      input(type="password" name="password" placeholder="Ваш пароль").form-control
+                    .header__enter__bottom
+                      div
+                        button(type="submit").btn.btn--blue 
+                          strong ВОЙТИ НА САЙТ
+                      div
+                        .header__enter__link
+                          small Нет аккаунта?
+                          a(href="#").link-nounderline Зарегистрироваться
+              
+          div
+            .header__lang
+              .header__lang__head RU
+              .header__lang__wrapper
+                ul
+                  li.active: a(href="#") RU
+                  li: a(href="#") Ua
+                  li: a(href="#") EN

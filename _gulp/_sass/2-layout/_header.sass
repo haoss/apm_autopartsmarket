@@ -1,8 +1,147 @@
 /* header */
 .header
-  background-color: $color-gray
-  height: 100px
+  // background-color: $color-gray
+  // height: 100px
+  margin-bottom: 10px
 
-  ul
-    li
-      display: inline
+  &__wrapper
+    display: table
+    width: 100%
+    padding: 34px 0
+    &>div
+      display: table-cell
+      vertical-align: middle
+
+  &__logo
+    display: inline-block
+    transition: opacity 0.3s linear
+    &:hover
+      opacity: 0.6
+    img
+      width: 163px
+      height: 33px
+      background: url('../img/logo.png') left top no-repeat
+
+  &__lang
+    font-size: rem(13)
+    position: relative
+    text-transform: uppercase
+    float: right
+
+    &__head
+      height: 30px
+      width: 30px
+      line-height: 30px
+      text-align: center
+      border-radius: 50%
+      color: $color-blue
+      cursor: pointer
+      position: relative
+      z-index: 50
+      transition: all 0.2s linear
+      background: $color-white
+      &:hover
+        color: $color-white
+        background: $color-blue
+    &.is-active
+      .header__lang__head
+        color: $color-white
+        background: $color-blue
+      li
+        top: 30px
+        opacity: 1
+        &:nth-child(2)
+          top: 30px
+          transition-delay: 0.2s
+        &:nth-child(3)
+          top: 60px
+          transition-delay: 0.3s
+
+    &__wrapper
+      position: absolute
+      top: 0
+      z-index: 10
+      ul
+        margin: 0
+        padding: 0
+        position: absolute
+        li
+          list-style: none
+          margin: 0
+          position: absolute
+          top: 0
+          opacity: 0
+          display: block
+          transition: all 0.2s linear
+          &>a, &>span
+            height: 30px
+            width: 30px
+            line-height: 30px
+            text-align: center
+            border-radius: 50%
+            cursor: pointer
+            color: $primary-color
+            text-decoration: none
+            display: block
+            background: $color-white
+          a:hover
+            color: $color-blue
+          &.active
+            display: none
+
+  &__right
+    display: table
+    float: right
+    &>div
+      display: table-cell
+      vertical-align: top
+      &:last-child
+        width: 84px
+
+  &__enter
+    position: relative
+    &.is-open
+      .header__enter__body
+        display: block
+        opacity: 1
+      .btn--effect1
+        span
+          transform: rotateX(90deg) translateY(-22px)
+    &__button
+      text-align: right
+      padding-right: 1px
+    &__body
+      position: absolute
+      right: 0
+      top: 30px
+      display: none
+      opacity: 0
+      z-index: 500
+      animation: visible 0.3s linear
+    &__wrapper
+      width: 360px
+      border: 4px solid $color-blue
+      padding: 30px
+      background: $color-white
+
+    &__bottom
+      display: table
+      width: 100%
+      &>div
+        display: table-cell
+        vertical-align: middle
+
+    &__link
+      text-align: right
+      font-size: rem(12)
+      small
+        font-size: rem(11)
+        display: block
+
+@keyframes visible
+  0%
+    opacity: 0
+    // transform: translateY(2px)
+  100%
+    opacity: 1
+    // transform: translateY(0)

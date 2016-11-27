@@ -1,0 +1,170 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Новости' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Список новостей' + ' - siteName' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    //- include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    // Content
+    .content
+      .container
+        
+        .row
+          .col-sm-3.col-xs-12
+            
+            .h1.h1--dark Новости
+            
+            nav(role="navigation").navigation-level2
+              ul
+                li.active: a(href="#") Все
+                li: a(href="#") Тест-драйвы
+                li: a(href="#") Водителям
+                li: a(href="#") Покупка и продажа
+            
+            .news__calendar
+            
+            .tag
+              a(href="#") Запчасти
+              a(href="#") audi
+              a(href="#") Wv
+              a(href="#") mercedes benz
+              a(href="#") ВАз
+              a(href="#") Газ
+              a(href="#") Газель
+            
+          .col-sm-9.col-xs-12
+            
+            // News
+            .news.row
+              
+              .col-sm-4.col-xs-6
+                .news__block
+                  .news__line1: i
+                  .news__line2: i
+                  .news__line3: i
+                  .news__line4: i
+                  a(href="#").news__link
+                  .news__wrapper
+                    .news__img(style="background-image: url('./tmp/blog.png')")
+                    .news__date 2 ноября 2016
+                    p Бизнесмен подарил сотрудникам 1260 машин и 400 квартир
+                  .news__wrapper__hover
+                    p Бизнесмен подарил сотрудникам 1260 машин и 400 квартир
+                    .news__readmore Читать новость
+                    
+              .col-sm-4.col-xs-6
+                .news__block
+                  .news__line1: i
+                  .news__line2: i
+                  .news__line3: i
+                  .news__line4: i
+                  a(href="#").news__link
+                  .news__wrapper
+                    .news__img(style="background-image: url('./tmp/blog2.png')")
+                    .news__date 1 ноября 2016
+                    p Новый тип разметки в России: вафли
+                  .news__wrapper__hover
+                    p Новый тип разметки в России: вафли
+                    .news__readmore Читать новость
+                    
+              .col-sm-4.col-xs-6
+                .news__block
+                  .news__line1: i
+                  .news__line2: i
+                  .news__line3: i
+                  .news__line4: i
+                  a(href="#").news__link
+                  .news__wrapper
+                    .news__img(style="background-image: url('./tmp/blog3.png')")
+                    .news__date 30 октября 2016
+                    p Шипы или не шипы? Отвечаем на главные вопросы
+                  .news__wrapper__hover
+                    p Шипы или не шипы? Отвечаем на главные вопросы
+                    .news__readmore Читать новость
+                    
+              .col-sm-4.col-xs-6
+                .news__block
+                  .news__line1: i
+                  .news__line2: i
+                  .news__line3: i
+                  .news__line4: i
+                  a(href="#").news__link
+                  .news__wrapper
+                    .news__img(style="background-image: url('./tmp/blog4.png')")
+                    .news__date 29 октября 2016
+                    p Бизнесмен подарил сотрудникам 1260 машин и 400 квартир Бизнесмен подарил сотрудникам 1260 машин и 400 квартир
+                  .news__wrapper__hover
+                    p Бизнесмен подарил сотрудникам 1260 машин и 400 квартир Бизнесмен подарил сотрудникам 1260 машин и 400 квартир
+                    .news__readmore Читать новость
+                    
+              .col-sm-4.col-xs-6
+                .news__block
+                  .news__line1: i
+                  .news__line2: i
+                  .news__line3: i
+                  .news__line4: i
+                  a(href="#").news__link
+                  .news__wrapper
+                    .news__img(style="background-image: url('./tmp/blog.png')")
+                    .news__date 28 октября 2016
+                    p Полностью новая Mazda CX-5: первый тизер и дата премьеры
+                  .news__wrapper__hover
+                    p Полностью новая Mazda CX-5: первый тизер и дата премьеры
+                    .news__readmore Читать новость
+                    
+              .col-sm-4.col-xs-6
+                .news__block
+                  .news__line1: i
+                  .news__line2: i
+                  .news__line3: i
+                  .news__line4: i
+                  a(href="#").news__link
+                  .news__wrapper
+                    .news__img(style="background-image: url('./tmp/blog2.png')")
+                    .news__date 27 октября 2016
+                    p Автопроизводители откажутся от маленьких турбомоторов
+                  .news__wrapper__hover
+                    p Автопроизводители откажутся от маленьких турбомоторов
+                    .news__readmore Читать новость
+            
+            // Pagination
+            .pagination
+              ul
+                li: span.line
+                li: a(href="#") 1
+                li: a(href="#") 2
+                li: a(href="#") 3
+                li.active: span 4
+                li: a(href="#") 5
+                li: a(href="#") 6
+                li: span ...
+                li: a(href="#") 99
+                li: span.line
+
+    
+    include ./_include/_footer
+    //- div(style="height: 900px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Vendor.js
+       Modernizr v2.8.3
+       Plugins-scroll
+    script(src='./js/libs/vendor.js')
+    include ./_include/_footer-js
+    script(src='./js/common.js')
+    include ./_include/_js-body-bottom
+  

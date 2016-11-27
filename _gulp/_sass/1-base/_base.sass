@@ -28,8 +28,8 @@ body
 
 body
   background: $color-white
-  font-size: rem(16)
-  font-family: $primary-font
+  font-size: rem(15)
+  font-family: $font-roboto
   color: $primary-color
   -webkit-font-smoothing: antialiased
   -webkit-text-size-adjust: 100%
@@ -37,45 +37,75 @@ body
 //  Typography
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6
   color: $primary-color
-  font-weight: bold
+  font-weight: normal
+  font-family: $font-roboto-bold
   text-decoration: none
   margin: 0 0 25px 0
 
 .h1, h1
-  font-size: rem(21)
-  line-height: 1.05
+  font-size: rem(35)
+  line-height: 1.2
   letter-spacing: -1px
+  font-family: $font-intro
+  color: $color-blue
+
+  &--afLine
+    position: relative
+    // padding-right: 65px
+    display: inline-block
+    display: table
+    &>*
+      display: table-cell
+      vertical-align: top
+    &::after
+      display: inline-block
+      vertical-align: middle
+      content: ''
+      width: 50px
+      height: 1px
+      background: $color-blue
+      margin-left: 10px
+      // position: absolute
+      // right: 0
+      // top: 10px
+
+.h1
+  &--dark
+    color: $primary-color
+
 
 .h2, h2
-  font-size: rem(18)
+  font-size: rem(30)
   line-height: 1.14
+  color: $color-blue
 
 .h3, h3
-  font-size: rem(16)
+  font-size: rem(26)
   line-height: 1.38
 
 .h4, h4
-  font-size: rem(14)
+  font-size: rem(22)
   line-height: 1.38
 
 .h5, h5
-  font-size: rem(13)
+  font-size: rem(18)
 
 .h6, h6
-  font-size: rem(12)
+  font-size: rem(16)
 
 .small, small
   font-size: rem(12)
   line-height: 1.2
 
 p
-  margin: 0 0 20px 0
+  margin: 0 0 25px 0
 
 em, i, .em, .i
   font-style: italic
 
 strong, b, .strong, .b
-  font-weight: bold
+  font-weight: 400
+  font-family: $font-roboto-bold
 
 hr
   border: solid #ddd
@@ -85,7 +115,7 @@ hr
   height: 0
 
 // Links
-a, .link
+a, .link, .link-underline
   color: $link-color
   text-decoration: underline
   outline: none
@@ -95,10 +125,18 @@ a, .link
     color: $link-color
     text-decoration: none
     outline: none
-
-a.link
-  &:hover, &:focus, &:active
+  &:visited
+    // color: $color-lightblue
+  &:hover
     text-decoration: none
+
+.link-nounderline
+  text-decoration: none
+  &:hover
+    text-decoration: underline
+
+.content
+  padding-bottom: 40px
 
 .container
   margin: 0 auto
@@ -124,22 +162,22 @@ a.link
   top: 0
   position: fixed
   z-index: 10000
-  background-color: #241e20
+  background-color: $color-white
 
   &__block
-    background: #927a64
+    background: $color-blue
     animation: load1 1s infinite ease-in-out
     width: 1em
     height: 4em
     position: absolute
     top: 50%
     left: 50%
-    color: #927a64
+    color: $color-blue
     text-indent: -9999em
     font-size: 11px
     animation-delay: -0.16s
     &:before, &:after
-      background: #927a64
+      background: $color-blue
       animation: load1 1s infinite ease-in-out
       width: 1em
       height: 4em
@@ -246,3 +284,13 @@ ol li
       margin-left: 0 !important
     &-right
       margin-right: 0 !important
+
+.table
+  display: table
+  &__cell
+    display: table-cell
+    vertical-align: middle
+    &+.table__cell
+      padding-left: 30px
+    &--w100
+      width: 100%

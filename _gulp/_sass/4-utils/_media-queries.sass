@@ -10,39 +10,194 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1199px)
-  /**/
+  .footer
+    &__navigation
+      ul
+        &>li
+          padding: 0 3px
+          &>a, &>span
+    &__logo
+      .span
+        width: 250px
+
+  .header
+    &__navigation
+      ul
+        &>li
+          padding: 0 5px
+    &__right
+      &>div
+        &:last-child
+          width: 50px
+
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
-  /**/
+  h1, .h1
+    font-size: rem(30)
+
+  .footer
+    &__navigation
+      display: none
+
+  .header
+    &__logo
+      img
+        width: 12px
+        background-position-y: 2px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
 
-  /*Disable Animation on Mobile Devices*/
-  .animated
-    /*CSS transitions*/
-		-o-transition-property: none !important
-		-moz-transition-property: none !important
-		-ms-transition-property: none !important
-		-webkit-transition-property: none !important
-		transition-property: none !important
-		/*CSS transforms*/
-		-o-transform: none !important
-		-moz-transform: none !important
-		-ms-transform: none !important
-		-webkit-transform: none !important
-		transform: none !important
-		/*CSS animations*/
-		-webkit-animation: none !important
-		-moz-animation: none !important
-		-o-animation: none !important
-		-ms-animation: none !important
-		animation: none !important
+
+  .footer
+    &__wrapper
+      padding: 30px 0
+      &>div.first
+        width: auto
+    &__logo
+      margin: 0 auto
+      .copyright
+        display: block
+      &>div
+        vertical-align: top
+      .span
+        width: 280px
+
+  .copyright
+    white-space: normal
+    float: none
+    margin-top: 10px
+
+  .header
+    &__navigation
+      display: none
+      position: absolute
+      z-index: 1000
+      width: 100%
+      top: 33px
+      padding-top: 10px
+      padding-bottom: 10px
+      animation: visible 0.3s linear
+      background: rgba($color-white, 0.9)
+      ul
+        &>li
+          display: block
+          &>a, &>span
+            display: block
+            height: 50px
+            line-height: 50px
+            &::after
+              display: none
+            &::before
+              transform: rotate(0) translateX(-50%)
+              left: 50%
+              bottom: 0
+              top: inherit
+          &:last-child
+            &>a, &>span
+              &::before
+                display: none
+    &__button
+      display: block
+      margin: 0 auto
+    &__menu
+      position: relative
+      max-width: 300px
+      text-align: center
+      margin: 0 auto
+      &.is-open
+        .header__navigation
+          display: block
+
+    &__wrapper
+      &>div
+        &.last
+          width: 165px
+
+  .navigation-level2
+    border-bottom: 1px solid $color-gray
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
-  /**/
+
+  .footer
+    &__logo
+
+      &>div
+        &:first-child
+          display: none
+        &+div
+          padding-left: 0
+
+  .header
+    &__wrapper
+      display: block
+      &>div
+        display: block
+        width: 100%
+        &.first
+          display: none
+        &.last
+          width: 100%
+    &__right
+      float: none
+      width: 100%
+    &__enter
+      &__button
+        text-align: left
+        // padding-left: 1px
+        padding-right: 0
+        .btn
+          display: block
+      &__body
+        left: -1px
+        right: -2px
+        // width: 100%
+        min-width: 290px
+      &__wrapper
+        width: 100%
+        padding-bottom: 20px
+      &__bottom
+        display: block
+        &>div
+          display: block
+        .btn
+          display: block
+          margin-bottom: 10px
+          margin-top: 4px
+          width: 100%
+      &__link
+        text-align: center
+    &__button
+      width: 100%
+      margin-bottom: 20px
+
+  .col-xxs-12
+    width: 100% !important
+
+  .table
+    &--xxs-block
+      display: block !important
+      .table__cell
+        display: block !important
+        &+.table__cell
+          padding-left: 0
+          padding-top: 8px
+
+  .btn
+    &--xxs-block
+      display: block !important
+      width: 100% !important
+
+  .h1
+    &--afLine
+      &::after
+        display: none
+
+  .navigation-level2
+    &--help
+      border-bottom: 0
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 319px)

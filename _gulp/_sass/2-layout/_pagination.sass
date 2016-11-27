@@ -1,1 +1,38 @@
 /* pagintaion */
+.pagination
+  text-align: center
+  font-size: rem(14)
+  ul
+    margin: 0
+    padding: 0
+    display: inline-block
+    li
+      list-style: none
+      margin: 0 11px
+      float: left
+      &>a, &>span
+        display: block
+        height: 29px
+        width: 29px
+        text-align: center
+        line-height: 28px
+        color: $primary-color
+        // background: pink
+        text-decoration: none
+        border: 1px solid transparent
+      &>a
+        &:hover
+          border-color: $color-blue
+          color: $color-blue
+      &>span.line
+        &::before
+          content: ''
+          vertical-align: 4px
+          display: inline-block
+          width: 29px
+          height: 1px
+          background-color: #c1c1c1
+      &.active
+        &>a, &>span
+          background-color: $color-blue
+          color: $color-white

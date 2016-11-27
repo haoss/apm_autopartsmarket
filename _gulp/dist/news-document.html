@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Список новостей - siteName</title>
+        <meta name="description" content="">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <!-- Jquery 2.2.4-->
+        <script src="./js/libs/jquery/jquery-2.2.4.min.js"></script>
+        <script src="./js/libs/jquery/jquery-migrate-1.4.1.min.js"></script>
+        <link rel="stylesheet" href="./css/main.css">
+    </head>
+    <body>
+        <!-- Preloader-->
+        <!-- Header-->
+        <header class="header">
+            <div class="container">
+                <div class="header__wrapper">
+                    <div class="first">
+                        <div class="header__logo"><a href="#"><img src="./img/sp.gif" alt=""></a></div>
+                    </div>
+                    <div class="center">
+                        <div class="header__menu"><a href="#" class="header__button"><i class="ion-grid"></i>Меню сайта</a>
+                            <nav role="navigation" class="header__navigation">
+                                <ul>
+                                    <li class="active"><a href="#" title="Новости">Новости</a></li>
+                                    <li><a href="#" title="О компании">О компании</a></li>
+                                    <li><a href="#" title="Стать клиентом">Стать клиентом</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="last">
+                        <div class="header__right">
+                            <div> 
+                                <div class="header__enter">
+                                    <div class="header__enter__button"><a href="#" class="btn btn--effect1"><span data-hover="Вход">Вход</span></a></div>
+                                    <div class="header__enter__body">
+                                        <div class="header__enter__wrapper">
+                                            <form action="#">
+                                                <!-- .has-error-->
+                                                <div class="form__group">
+                                                    <label class="hidden">Ваш логин</label>
+                                                    <input type="text" name="login" placeholder="Ваш логин" class="form-control">
+                                                </div>
+                                                <div class="form__group">
+                                                    <label class="hidden">Ваш пароль</label>
+                                                    <input type="password" name="password" placeholder="Ваш пароль" class="form-control">
+                                                </div>
+                                                <div class="header__enter__bottom">
+                                                    <div>
+                                                        <button type="submit" class="btn btn--blue"> <strong>ВОЙТИ НА САЙТ</strong></button>
+                                                    </div>
+                                                    <div>
+                                                        <div class="header__enter__link"><small>Нет аккаунта?</small><a href="#" class="link-nounderline">Зарегистрироваться</a></div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="header__lang">
+                                    <div class="header__lang__head">RU</div>
+                                    <div class="header__lang__wrapper">
+                                        <ul>
+                                            <li class="active"><a href="#">RU</a></li>
+                                            <li><a href="#">Ua</a></li>
+                                            <li><a href="#">EN</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Content-->
+        <div class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3 col-xs-12">
+                        <div class="h1 h1--dark">Новости</div>
+                        <nav role="navigation" class="navigation-level2">
+                            <ul>
+                                <li class="active"><a href="#">Все</a></li>
+                                <li><a href="#">Тест-драйвы</a></li>
+                                <li><a href="#">Водителям</a></li>
+                                <li><a href="#">Покупка и продажа</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-sm-9 col-xs-12">
+                        <h1>Полностью новая Mazda CX-5: первый тизер и дата премьеры</h1>
+                        <p><img src="./tmp/img-news.png" alt="" class="img-responsive"></p>
+                        <p>Подробностей совсем немного: мировую премьеру Mazda CX-5 справит на предстоящем автошоу в американском Лос-Анджелесе, которое стартует 18 ноября. Пресс-конференция, где впервые покажут новинку, состоится 16 ноября.</p>
+                        <p>В официальном сообщении, которое сопровождает первый тизер, отмечается, что создатели кроссовера продолжили опираться на фирменную дизайн-философию Kodo. Кроме того, заявлено, что модель изменится в размерах, а также обзаведётся новыми системами и технологиями.</p>
+                        <!-- Форма подписки-->
+                        <div class="form form__subscription">
+                            <form action="#">
+                                <div class="table table--xxs-block">
+                                    <div class="table__cell table__cell--w100">
+                                        <div class="form__group">
+                                            <label class="hidden">Ваш e-mail</label>
+                                            <input type="text" placeholder="Ваш e-mail" class="form__control form__control--big">
+                                        </div>
+                                    </div>
+                                    <div class="table__cell">
+                                        <button type="submit" class="btn btn--blue btn--big btn--xxs-block">Подписаться</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer-->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__wrapper">
+                    <div class="first">
+                        <div class="footer__logo">
+                            <div><img src="./img/footer-logo.png" alt=""></div>
+                            <div> <span class="span">Если у вас возникают вопросы связанные непосредственно с веб-сайтом или процессом  поиска/покупки запчастей, пожалуйста, <a href="#">пишите</a>.</span>
+                                <div class="copyright">© 2016 arm.group Все права защищены</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="center">
+                        <nav role="navigation" class="footer__navigation">
+                            <ul>
+                                <li><a href="#">Главная</a></li>
+                                <li><a href="#">Новости</a></li>
+                                <li><a href="#">О компании</a></li>
+                            </ul>
+                        </nav>
+                        <div class="footer__button hidden">Меню</div>
+                    </div>
+                    <div class="last hidden-xs">
+                        <div class="copyright">© 2016 arm.group<br>Все права защищены</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--[if gte IE 9]
+        <script src='./js/libs/html5shiv/es5-shim.min.js'>
+        <script src='./js/libs/html5shiv/html5shiv.min.js'>
+        <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+        <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+        
+        -->
+        <!-- Vendor.js
+        Modernizr v2.8.3
+        Plugins-scroll
+        -->
+        <script src="./js/libs/vendor.js"></script>
+        <!-- Footer js-->
+        <link rel="stylesheet" href="./js/libs/magnific-popup/magnific-popup.css">
+        <script src="./js/libs/magnific-popup/jquery.magnific-popup.min.js"></script>
+        <script src="./js/libs/bootstrap/bootstrap.min.js"></script>
+        <script src="./js/common.js"></script>
+        <!-- Retina js-->
+        <script src="./js/libs/retinajs/retina.min.js"></script>
+        <script>retinajs( $('img') );</script>
+    </body>
+</html>

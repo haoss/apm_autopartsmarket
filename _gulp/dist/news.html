@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Список новостей - siteName</title>
+        <meta name="description" content="">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <!-- Jquery 2.2.4-->
+        <script src="./js/libs/jquery/jquery-2.2.4.min.js"></script>
+        <script src="./js/libs/jquery/jquery-migrate-1.4.1.min.js"></script>
+        <link rel="stylesheet" href="./css/main.css">
+    </head>
+    <body>
+        <!-- Preloader-->
+        <!-- Header-->
+        <header class="header">
+            <div class="container">
+                <div class="header__wrapper">
+                    <div class="first">
+                        <div class="header__logo"><a href="#"><img src="./img/sp.gif" alt=""></a></div>
+                    </div>
+                    <div class="center">
+                        <div class="header__menu"><a href="#" class="header__button"><i class="ion-grid"></i>Меню сайта</a>
+                            <nav role="navigation" class="header__navigation">
+                                <ul>
+                                    <li class="active"><a href="#" title="Новости">Новости</a></li>
+                                    <li><a href="#" title="О компании">О компании</a></li>
+                                    <li><a href="#" title="Стать клиентом">Стать клиентом</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="last">
+                        <div class="header__right">
+                            <div> 
+                                <div class="header__enter">
+                                    <div class="header__enter__button"><a href="#" class="btn btn--effect1"><span data-hover="Вход">Вход</span></a></div>
+                                    <div class="header__enter__body">
+                                        <div class="header__enter__wrapper">
+                                            <form action="#">
+                                                <!-- .has-error-->
+                                                <div class="form__group">
+                                                    <label class="hidden">Ваш логин</label>
+                                                    <input type="text" name="login" placeholder="Ваш логин" class="form-control">
+                                                </div>
+                                                <div class="form__group">
+                                                    <label class="hidden">Ваш пароль</label>
+                                                    <input type="password" name="password" placeholder="Ваш пароль" class="form-control">
+                                                </div>
+                                                <div class="header__enter__bottom">
+                                                    <div>
+                                                        <button type="submit" class="btn btn--blue"> <strong>ВОЙТИ НА САЙТ</strong></button>
+                                                    </div>
+                                                    <div>
+                                                        <div class="header__enter__link"><small>Нет аккаунта?</small><a href="#" class="link-nounderline">Зарегистрироваться</a></div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="header__lang">
+                                    <div class="header__lang__head">RU</div>
+                                    <div class="header__lang__wrapper">
+                                        <ul>
+                                            <li class="active"><a href="#">RU</a></li>
+                                            <li><a href="#">Ua</a></li>
+                                            <li><a href="#">EN</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Content-->
+        <div class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3 col-xs-12">
+                        <div class="h1 h1--dark">Новости</div>
+                        <nav role="navigation" class="navigation-level2">
+                            <ul>
+                                <li class="active"><a href="#">Все</a></li>
+                                <li><a href="#">Тест-драйвы</a></li>
+                                <li><a href="#">Водителям</a></li>
+                                <li><a href="#">Покупка и продажа</a></li>
+                            </ul>
+                        </nav>
+                        <div class="news__calendar"></div>
+                        <div class="tag"><a href="#">Запчасти</a><a href="#">audi</a><a href="#">Wv</a><a href="#">mercedes benz</a><a href="#">ВАз</a><a href="#">Газ</a><a href="#">Газель</a></div>
+                    </div>
+                    <div class="col-sm-9 col-xs-12">
+                        <!-- News-->
+                        <div class="news row">
+                            <div class="col-sm-4 col-xs-6">
+                                <div class="news__block">
+                                    <div class="news__line1"><i></i></div>
+                                    <div class="news__line2"><i></i></div>
+                                    <div class="news__line3"><i></i></div>
+                                    <div class="news__line4"><i></i></div><a href="#" class="news__link"></a>
+                                    <div class="news__wrapper">
+                                        <div style="background-image: url('./tmp/blog.png')" class="news__img"></div>
+                                        <div class="news__date">2 ноября 2016</div>
+                                        <p>Бизнесмен подарил сотрудникам 1260 машин и 400 квартир</p>
+                                    </div>
+                                    <div class="news__wrapper__hover">
+                                        <p>Бизнесмен подарил сотрудникам 1260 машин и 400 квартир</p>
+                                        <div class="news__readmore">Читать новость</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-xs-6">
+                                <div class="news__block">
+                                    <div class="news__line1"><i></i></div>
+                                    <div class="news__line2"><i></i></div>
+                                    <div class="news__line3"><i></i></div>
+                                    <div class="news__line4"><i></i></div><a href="#" class="news__link"></a>
+                                    <div class="news__wrapper">
+                                        <div style="background-image: url('./tmp/blog2.png')" class="news__img"></div>
+                                        <div class="news__date">1 ноября 2016</div>
+                                        <p>Новый тип разметки в России: вафли</p>
+                                    </div>
+                                    <div class="news__wrapper__hover">
+                                        <p>Новый тип разметки в России: вафли</p>
+                                        <div class="news__readmore">Читать новость</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-xs-6">
+                                <div class="news__block">
+                                    <div class="news__line1"><i></i></div>
+                                    <div class="news__line2"><i></i></div>
+                                    <div class="news__line3"><i></i></div>
+                                    <div class="news__line4"><i></i></div><a href="#" class="news__link"></a>
+                                    <div class="news__wrapper">
+                                        <div style="background-image: url('./tmp/blog3.png')" class="news__img"></div>
+                                        <div class="news__date">30 октября 2016</div>
+                                        <p>Шипы или не шипы? Отвечаем на главные вопросы</p>
+                                    </div>
+                                    <div class="news__wrapper__hover">
+                                        <p>Шипы или не шипы? Отвечаем на главные вопросы</p>
+                                        <div class="news__readmore">Читать новость</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-xs-6">
+                                <div class="news__block">
+                                    <div class="news__line1"><i></i></div>
+                                    <div class="news__line2"><i></i></div>
+                                    <div class="news__line3"><i></i></div>
+                                    <div class="news__line4"><i></i></div><a href="#" class="news__link"></a>
+                                    <div class="news__wrapper">
+                                        <div style="background-image: url('./tmp/blog4.png')" class="news__img"></div>
+                                        <div class="news__date">29 октября 2016</div>
+                                        <p>Бизнесмен подарил сотрудникам 1260 машин и 400 квартир Бизнесмен подарил сотрудникам 1260 машин и 400 квартир</p>
+                                    </div>
+                                    <div class="news__wrapper__hover">
+                                        <p>Бизнесмен подарил сотрудникам 1260 машин и 400 квартир Бизнесмен подарил сотрудникам 1260 машин и 400 квартир</p>
+                                        <div class="news__readmore">Читать новость</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-xs-6">
+                                <div class="news__block">
+                                    <div class="news__line1"><i></i></div>
+                                    <div class="news__line2"><i></i></div>
+                                    <div class="news__line3"><i></i></div>
+                                    <div class="news__line4"><i></i></div><a href="#" class="news__link"></a>
+                                    <div class="news__wrapper">
+                                        <div style="background-image: url('./tmp/blog.png')" class="news__img"></div>
+                                        <div class="news__date">28 октября 2016</div>
+                                        <p>Полностью новая Mazda CX-5: первый тизер и дата премьеры</p>
+                                    </div>
+                                    <div class="news__wrapper__hover">
+                                        <p>Полностью новая Mazda CX-5: первый тизер и дата премьеры</p>
+                                        <div class="news__readmore">Читать новость</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-xs-6">
+                                <div class="news__block">
+                                    <div class="news__line1"><i></i></div>
+                                    <div class="news__line2"><i></i></div>
+                                    <div class="news__line3"><i></i></div>
+                                    <div class="news__line4"><i></i></div><a href="#" class="news__link"></a>
+                                    <div class="news__wrapper">
+                                        <div style="background-image: url('./tmp/blog2.png')" class="news__img"></div>
+                                        <div class="news__date">27 октября 2016</div>
+                                        <p>Автопроизводители откажутся от маленьких турбомоторов</p>
+                                    </div>
+                                    <div class="news__wrapper__hover">
+                                        <p>Автопроизводители откажутся от маленьких турбомоторов</p>
+                                        <div class="news__readmore">Читать новость</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Pagination-->
+                        <div class="pagination">
+                            <ul>
+                                <li><span class="line"></span></li>
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li class="active"><span>4</span></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">6</a></li>
+                                <li><span>...</span></li>
+                                <li><a href="#">99</a></li>
+                                <li><span class="line"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer-->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__wrapper">
+                    <div class="first">
+                        <div class="footer__logo">
+                            <div><img src="./img/footer-logo.png" alt=""></div>
+                            <div> <span class="span">Если у вас возникают вопросы связанные непосредственно с веб-сайтом или процессом  поиска/покупки запчастей, пожалуйста, <a href="#">пишите</a>.</span>
+                                <div class="copyright">© 2016 arm.group Все права защищены</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="center">
+                        <nav role="navigation" class="footer__navigation">
+                            <ul>
+                                <li><a href="#">Главная</a></li>
+                                <li><a href="#">Новости</a></li>
+                                <li><a href="#">О компании</a></li>
+                            </ul>
+                        </nav>
+                        <div class="footer__button hidden">Меню</div>
+                    </div>
+                    <div class="last hidden-xs">
+                        <div class="copyright">© 2016 arm.group<br>Все права защищены</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--[if gte IE 9]
+        <script src='./js/libs/html5shiv/es5-shim.min.js'>
+        <script src='./js/libs/html5shiv/html5shiv.min.js'>
+        <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+        <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+        
+        -->
+        <!-- Vendor.js
+        Modernizr v2.8.3
+        Plugins-scroll
+        -->
+        <script src="./js/libs/vendor.js"></script>
+        <!-- Footer js-->
+        <link rel="stylesheet" href="./js/libs/magnific-popup/magnific-popup.css">
+        <script src="./js/libs/magnific-popup/jquery.magnific-popup.min.js"></script>
+        <script src="./js/libs/bootstrap/bootstrap.min.js"></script>
+        <script src="./js/common.js"></script>
+        <!-- Retina js-->
+        <script src="./js/libs/retinajs/retina.min.js"></script>
+        <script>retinajs( $('img') );</script>
+    </body>
+</html>

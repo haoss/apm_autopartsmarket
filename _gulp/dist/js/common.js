@@ -84,6 +84,42 @@ $(document).ready(function(){
 
   };
 
+  // Language
+  $('.header__lang').hover(function(){
+    $(this).toggleClass('is-active');
+  });
+
+  // Header enter block
+  $('.header__enter__button').on('click', function(e){
+    e.preventDefault();
+    $(this).parent().toggleClass('is-open');
+    $('.header__menu').removeClass('is-open');
+  });
+
+  $('.header__button').on('click', function(e){
+    e.preventDefault();
+    $(this).parent().toggleClass('is-open');
+    $('.header__enter').removeClass('is-open');
+  });
+
+  // Help
+  $('#help__navigation a[href^="#"]').on('click', function(e){
+    e.preventDefault();
+
+    var scrollId = $(this).attr('href');
+    if (scrollId.length != 0) {
+      $('html, body').animate({ scrollTop: $(scrollId).offset().top }, 500);
+    }
+  });
+
+  // Radio
+  $('.form__radio input[type="radio"]:checked').parents('.form__radio').addClass("is-selected");
+
+  $('.form__radio input[type="radio"]').on('click', function(){
+    $('input:not(:checked)').parents('.form__radio').removeClass("is-selected");
+    $('input:checked').parents('.form__radio').addClass("is-selected");
+  })
+
   // simpleForm version 2015-09-23 14:30 GMT +2
   simpleForm('form.form-callback');
 });

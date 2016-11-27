@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Регистрация - siteName</title>
+        <meta name="description" content="">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <!-- Jquery 2.2.4-->
+        <script src="./js/libs/jquery/jquery-2.2.4.min.js"></script>
+        <script src="./js/libs/jquery/jquery-migrate-1.4.1.min.js"></script>
+        <link rel="stylesheet" href="./css/main.css">
+    </head>
+    <body>
+        <!-- Preloader-->
+        <!-- Header-->
+        <header class="header">
+            <div class="container">
+                <div class="header__wrapper">
+                    <div class="first">
+                        <div class="header__logo"><a href="#"><img src="./img/sp.gif" alt=""></a></div>
+                    </div>
+                    <div class="center">
+                        <div class="header__menu"><a href="#" class="header__button"><i class="ion-grid"></i>Меню сайта</a>
+                            <nav role="navigation" class="header__navigation">
+                                <ul>
+                                    <li><a href="#" title="Новости">Новости</a></li>
+                                    <li><a href="#" title="О компании">О компании</a></li>
+                                    <li><a href="#" title="Стать клиентом">Стать клиентом</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="last">
+                        <div class="header__right">
+                            <div> 
+                                <div class="header__enter">
+                                    <div class="header__enter__button"><a href="#" class="btn btn--effect1"><span data-hover="Вход">Вход</span></a></div>
+                                    <div class="header__enter__body">
+                                        <div class="header__enter__wrapper">
+                                            <form action="#">
+                                                <!-- .has-error-->
+                                                <div class="form__group">
+                                                    <label class="hidden">Ваш логин</label>
+                                                    <input type="text" name="login" placeholder="Ваш логин" class="form-control">
+                                                </div>
+                                                <div class="form__group">
+                                                    <label class="hidden">Ваш пароль</label>
+                                                    <input type="password" name="password" placeholder="Ваш пароль" class="form-control">
+                                                </div>
+                                                <div class="header__enter__bottom">
+                                                    <div>
+                                                        <button type="submit" class="btn btn--blue"> <strong>ВОЙТИ НА САЙТ</strong></button>
+                                                    </div>
+                                                    <div>
+                                                        <div class="header__enter__link"><small>Нет аккаунта?</small><a href="#" class="link-nounderline">Зарегистрироваться</a></div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="header__lang">
+                                    <div class="header__lang__head">RU</div>
+                                    <div class="header__lang__wrapper">
+                                        <ul>
+                                            <li class="active"><a href="#">RU</a></li>
+                                            <li><a href="#">Ua</a></li>
+                                            <li><a href="#">EN</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Content-->
+        <div class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-sm-push-2">
+                        <div class="h1 h1--dark">Регистрация в интернет-магазине</div>
+                        <p>Для регистрации в интернет-магазине, пожалуйста, заполните данную анкету.<br>Обязательные для заполнения поля выделены данным цветом.<br>Если у вас возникли проблемы с регистрацией, пожалуйста напишите нам на адрес <a href="#">info@apm.store</a></p>
+                        <div class="form form__register">
+                            <form action="#">
+                                <fieldset class="form__fieldset"></fieldset>
+                                <fieldset class="form__fieldset">
+                                    <div class="form__group form__group--slim has-error has-feedback">
+                                        <label class="hidden">Страна</label>
+                                        <input type="text" placeholder="Страна" class="form-control"><span class="form__feedback"> 
+                                            <div class="feedback-info">Обязательное поле!</div><i class="ion-close"></i></span>
+                                    </div>
+                                    <div class="form__group form__group--slim has-feedback">
+                                        <label class="hidden">Город</label>
+                                        <input type="text" placeholder="Город" class="form-control"><span class="form__feedback"> 
+                                            <div class="feedback-info">Обязательное поле!</div><i class="ion-close"></i></span>
+                                    </div>
+                                    <div class="form__group form__group--slim has-feedback">
+                                        <label class="hidden">Наименование организации</label>
+                                        <input type="text" placeholder="Наименование организации" class="form-control"><span class="form__feedback"> 
+                                            <div class="feedback-info">Обязательное поле!</div><i class="ion-close"></i></span>
+                                    </div>
+                                    <div class="form__group form__group--slim has-feedback">
+                                        <label class="hidden">Регистрационный №</label>
+                                        <input type="text" placeholder="Регистрационный №" class="form-control"><span class="form__feedback"> 
+                                            <div class="feedback-info">Обязательное поле!</div><i class="ion-close"></i></span>
+                                    </div>
+                                    <div class="form__group form__group--slim has-feedback">
+                                        <label class="hidden">Регистрационный № ндс</label>
+                                        <input type="text" placeholder="Регистрационный № ндс" class="form-control"><span class="form__feedback"> 
+                                            <div class="feedback-info">Обязательное поле!</div><i class="ion-close"></i></span>
+                                    </div>
+                                    <div class="form__group form__group--slim has-feedback">
+                                        <label class="hidden">Юридичиский адрес</label>
+                                        <input type="text" placeholder="Юридичиский адрес" class="form-control"><span class="form__feedback"> 
+                                            <div class="feedback-info">Обязательное поле!</div><i class="ion-close"></i></span>
+                                    </div>
+                                    <div class="form__group form__group--slim has-feedback">
+                                        <label class="hidden">Фамилия Имя</label>
+                                        <input type="text" placeholder="Фамилия Имя" class="form-control"><span class="form__feedback"> 
+                                            <div class="feedback-info">Обязательное поле!</div><i class="ion-close"></i></span>
+                                    </div>
+                                    <div class="form__group form__group--slim has-feedback">
+                                        <label class="hidden">Должность</label>
+                                        <input type="text" placeholder="Должность" class="form-control"><span class="form__feedback"> 
+                                            <div class="feedback-info">Обязательное поле!</div><i class="ion-close"></i></span>
+                                    </div>
+                                    <div class="form__group form__group--slim has-feedback">
+                                        <label class="hidden">Телефон</label>
+                                        <input type="text" placeholder="Телефон" class="form-control"><span class="form__feedback"> 
+                                            <div class="feedback-info">Обязательное поле!</div><i class="ion-close"></i></span>
+                                    </div>
+                                    <div class="form__group form__group--slim has-feedback">
+                                        <label class="hidden">E-mail</label>
+                                        <input type="text" placeholder="E-mail" class="form-control"><span class="form__feedback"> 
+                                            <div class="feedback-info">Обязательное поле!</div><i class="ion-close"></i></span>
+                                    </div>
+                                    <div class="form__group form__group--slim has-feedback">
+                                        <label class="hidden">Пароль</label>
+                                        <input type="text" placeholder="Пароль" class="form-control"><span class="form__feedback"> 
+                                            <div class="feedback-info">Обязательное поле!</div><i class="ion-close"></i></span>
+                                    </div>
+                                    <div class="form__group">
+                                        <label class="hidden">Подтвердить пароль</label>
+                                        <input type="text" placeholder="Подтвердить пароль" class="form-control"><span class="form__feedback"> 
+                                            <div class="feedback-info">Обязательное поле!</div><i class="ion-close"></i></span>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="form__fieldset">
+                                    <legend class="form__legend">Анкета</legend>
+                                    <div class="form__block">
+                                        <div class="form__group form__group--slim">
+                                            <label class="hidden">Торговое название компании</label>
+                                            <input type="text" placeholder="Торговое название компании" class="form-control">
+                                        </div>
+                                        <div class="form__group form__group--slim">
+                                            <label class="hidden">Сайт компании</label>
+                                            <input type="text" placeholder="Сайт компании" class="form-control">
+                                        </div>
+                                        <div class="form__group">
+                                            <label class="hidden">Сколько лет на рынке</label>
+                                            <input type="text" placeholder="Сколько лет на рынке" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form__block">
+                                        <label class="form__block__label">В каком формате работает ваша компания: </label>
+                                        <div class="form__group">
+                                            <label class="form__radio"><span class="span">
+                                                    <input type="radio" name="radio" checked><span class="input-radio"></span></span><span class="span"><span class="input-label">интернет-магазин (оптовая торговля) </span></span></label>
+                                        </div>
+                                        <div class="form__group">
+                                            <label class="form__radio"><span class="span">
+                                                    <input type="radio" name="radio"><span class="input-radio"></span></span><span class="span"><span class="input-label">интернет магазин (розничная торговля) </span></span></label>
+                                        </div>
+                                        <div class="form__group">
+                                            <label class="form__radio"><span class="span">
+                                                    <input type="radio" name="radio"><span class="input-radio"></span></span><span class="span"><span class="input-label">интернет-магазин (опт и розница) </span></span></label>
+                                        </div>
+                                        <div class="form__group">
+                                            <label class="form__radio"><span class="span">
+                                                    <input type="radio" name="radio"><span class="input-radio"></span></span><span class="span"><span class="input-label">оптовый склад</span></span></label>
+                                        </div>
+                                        <div class="form__group">
+                                            <label class="form__radio"><span class="span">
+                                                    <input type="radio" name="radio"><span class="input-radio"></span></span><span class="span"><span class="input-label">СТО</span></span></label>
+                                        </div>
+                                        <div class="form__group">
+                                            <label class="form__radio"><span class="span">
+                                                    <input type="radio" name="radio"><span class="input-radio"></span></span><span class="span"><span class="input-label">сеть магазинов розничной торговли (или мелкий опт)</span></span></label>
+                                        </div>
+                                        <div class="form__group">
+                                            <label class="form__radio"><span class="span">
+                                                    <input type="radio" name="radio"><span class="input-radio"></span></span><span class="span"><span class="input-label">другое (указать)</span></span></label>
+                                        </div>
+                                    </div>
+                                    <div class="form__block">
+                                        <div class="form__group form__group--slim">
+                                            <label class="hidden">Какие марки автомобилей являются приоритетными для вас</label>
+                                            <input type="text" placeholder="Какие марки автомобилей являются приоритетными для вас" class="form-control">
+                                        </div>
+                                        <div class="form__group form__group--slim">
+                                            <label class="hidden">Количество номенклатурных позиций на складе</label>
+                                            <input type="text" placeholder="Количество номенклатурных позиций на складе" class="form-control">
+                                        </div>
+                                        <div class="form__group">
+                                            <label class="hidden">Соотношение оригинала / неоригинала (например, 70/30</label>
+                                            <input type="text" placeholder="Соотношение оригинала / неоригинала (например, 70/30" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form__block">
+                                        <label class="form__block__label">Интересующая вас форма работы: </label>
+                                        <div class="form__group">
+                                            <label class="form__radio"><span class="span">
+                                                    <input type="radio" name="radio2" checked><span class="input-radio"></span></span><span class="span"><span class="input-label">только по наличию Киев</span></span></label>
+                                        </div>
+                                        <div class="form__group">
+                                            <label class="form__radio"><span class="span">
+                                                    <input type="radio" name="radio2"><span class="input-radio"></span></span><span class="span"><span class="input-label">контейнерные и авиапоставки «под заказ»</span></span></label>
+                                        </div>
+                                        <div class="form__group">
+                                            <label class="form__radio"><span class="span">
+                                                    <input type="radio" name="radio2"><span class="input-radio"></span></span><span class="span"><span class="input-label">оба варианта</span></span></label>
+                                        </div>
+                                    </div>
+                                    <div class="form__block">
+                                        <label class="form__block__label">Вы осуществляете закупки: </label>
+                                        <div class="form__group">
+                                            <label class="form__radio"><span class="span">
+                                                    <input type="radio" name="radio3" checked><span class="input-radio"></span></span><span class="span"><span class="input-label">под склад</span></span></label>
+                                        </div>
+                                        <div class="form__group">
+                                            <label class="form__radio"><span class="span">
+                                                    <input type="radio" name="radio3"><span class="input-radio"></span></span><span class="span"><span class="input-label">только под клиентов</span></span></label>
+                                        </div>
+                                        <div class="form__group">
+                                            <label class="form__radio"><span class="span">
+                                                    <input type="radio" name="radio3"><span class="input-radio"></span></span><span class="span"><span class="input-label">оба варианта</span></span></label>
+                                        </div>
+                                    </div>
+                                    <div class="form__block">
+                                        <label class="form__block__label">Кто является вашими основными клиентами: </label>
+                                        <div class="form__group">
+                                            <label class="form__radio"><span class="span">
+                                                    <input type="radio" name="radio4" checked><span class="input-radio"></span></span><span class="span"><span class="input-label">физ. лица</span></span></label>
+                                        </div>
+                                        <div class="form__group">
+                                            <label class="form__radio"><span class="span">
+                                                    <input type="radio" name="radio4"><span class="input-radio"></span></span><span class="span"><span class="input-label">СТО</span></span></label>
+                                        </div>
+                                        <div class="form__group">
+                                            <label class="form__radio"><span class="span">
+                                                    <input type="radio" name="radio4"><span class="input-radio"></span></span><span class="span"><span class="input-label">розничные и мелкооптовые магазины</span></span></label>
+                                        </div>
+                                        <div class="form__group">
+                                            <label class="form__radio"><span class="span">
+                                                    <input type="radio" name="radio4"><span class="input-radio"></span></span><span class="span"><span class="input-label">другое (указать)</span></span></label>
+                                        </div>
+                                    </div>
+                                    <div class="form__block">
+                                        <label class="form__block__label">Укажите эл. адреса для отправки: </label>
+                                        <div class="form__group form__group--slim">
+                                            <label class="hidden">Укажите эл. адреса для отправки документов (упд, счета)</label>
+                                            <input type="text" placeholder="документов (упд, счета)" class="form-control">
+                                        </div>
+                                        <div class="form__group form__group--slim">
+                                            <label class="hidden">Укажите эл. адреса для отправки ответа на заказ</label>
+                                            <input type="text" placeholder="ответа на заказ" class="form-control">
+                                        </div>
+                                        <div class="form__group">
+                                            <label class="hidden">Укажите эл. адреса для отправки прайс-листа</label>
+                                            <input type="text" placeholder="прайс-листа" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form__block">
+                                        <label class="form__block__label">Способ получения заказов:</label>
+                                        <div class="form__group">
+                                            <label class="form__radio"><span class="span">
+                                                    <input type="radio" name="radio5" checked><span class="input-radio"></span></span><span class="span"><span class="input-label">самовывоз</span></span></label>
+                                        </div>
+                                        <div class="form__group">
+                                            <label class="form__radio"><span class="span">
+                                                    <input type="radio" name="radio5"><span class="input-radio"></span></span><span class="span"><span class="input-label">доставка по Киеву</span></span></label>
+                                        </div>
+                                        <div class="form__group">
+                                            <label class="form__radio"><span class="span">
+                                                    <input type="radio" name="radio5"><span class="input-radio"></span></span><span class="span"><span class="input-label">отправка через ТК</span></span></label>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer-->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__wrapper">
+                    <div class="first">
+                        <div class="footer__logo">
+                            <div><img src="./img/footer-logo.png" alt=""></div>
+                            <div> <span class="span">Если у вас возникают вопросы связанные непосредственно с веб-сайтом или процессом  поиска/покупки запчастей, пожалуйста, <a href="#">пишите</a>.</span>
+                                <div class="copyright">© 2016 arm.group Все права защищены</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="center">
+                        <nav role="navigation" class="footer__navigation">
+                            <ul>
+                                <li><a href="#">Главная</a></li>
+                                <li><a href="#">Новости</a></li>
+                                <li><a href="#">О компании</a></li>
+                            </ul>
+                        </nav>
+                        <div class="footer__button hidden">Меню</div>
+                    </div>
+                    <div class="last hidden-xs">
+                        <div class="copyright">© 2016 arm.group<br>Все права защищены</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--[if gte IE 9]
+        <script src='./js/libs/html5shiv/es5-shim.min.js'>
+        <script src='./js/libs/html5shiv/html5shiv.min.js'>
+        <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+        <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+        
+        -->
+        <!-- Vendor.js
+        Modernizr v2.8.3
+        Plugins-scroll
+        -->
+        <script src="./js/libs/vendor.js"></script>
+        <!-- Footer js-->
+        <link rel="stylesheet" href="./js/libs/magnific-popup/magnific-popup.css">
+        <script src="./js/libs/magnific-popup/jquery.magnific-popup.min.js"></script>
+        <script src="./js/libs/bootstrap/bootstrap.min.js"></script>
+        <script src="./js/common.js"></script>
+        <!-- Retina js-->
+        <script src="./js/libs/retinajs/retina.min.js"></script>
+        <script>retinajs( $('img') );</script>
+    </body>
+</html>

@@ -1,4 +1,36 @@
 /* footer */
 .footer
-  background-color: $color-gray
-  height: 100px
+  font-size: rem(12)
+  color: $add-color
+
+  &__wrapper
+    border-top: 1px solid $color-gray
+    padding: 30px 0
+    display: table
+    width: 100%
+    &>div
+      display: table-cell
+      vertical-align: middle
+      &.first, &.last
+        width: 1px
+
+  &__logo
+    display: table
+    .copyright
+      display: none
+    &>div
+      display: table-cell
+      vertical-align: middle
+      &+div
+        padding-left: 35px
+    a
+      color: $add-color
+    .span
+      display: block
+      line-height: 1.5
+      // white-space: nowrap
+      width: 280px
+
+.copyright
+  float: right
+  white-space: nowrap

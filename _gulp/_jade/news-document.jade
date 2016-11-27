@@ -1,0 +1,71 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Новости' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Список новостей' + ' - siteName' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    //- include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    // Content
+    .content
+      .container
+        
+        .row
+          .col-sm-3.col-xs-12
+            
+            .h1.h1--dark Новости
+            
+            nav(role="navigation").navigation-level2
+              ul
+                li.active: a(href="#") Все
+                li: a(href="#") Тест-драйвы
+                li: a(href="#") Водителям
+                li: a(href="#") Покупка и продажа
+            
+          .col-sm-9.col-xs-12
+            h1 Полностью новая Mazda CX-5: первый тизер и дата премьеры
+            
+            p
+              img(src="./tmp/img-news.png", alt="").img-responsive
+            
+            p Подробностей совсем немного: мировую премьеру Mazda CX-5 справит на предстоящем автошоу в американском Лос-Анджелесе, которое стартует 18 ноября. Пресс-конференция, где впервые покажут новинку, состоится 16 ноября.
+            p В официальном сообщении, которое сопровождает первый тизер, отмечается, что создатели кроссовера продолжили опираться на фирменную дизайн-философию Kodo. Кроме того, заявлено, что модель изменится в размерах, а также обзаведётся новыми системами и технологиями.
+            
+            // Форма подписки
+            .form.form__subscription
+              form(action="#")
+                .table.table--xxs-block
+                  .table__cell.table__cell--w100
+                    .form__group
+                      label.hidden Ваш e-mail
+                      input(type="text" placeholder="Ваш e-mail").form__control.form__control--big
+                  .table__cell
+                    button(type="submit").btn.btn--blue.btn--big.btn--xxs-block Подписаться
+
+    
+    include ./_include/_footer
+    //- div(style="height: 900px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Vendor.js
+       Modernizr v2.8.3
+       Plugins-scroll
+    script(src='./js/libs/vendor.js')
+    include ./_include/_footer-js
+    script(src='./js/common.js')
+    include ./_include/_js-body-bottom
+
+  

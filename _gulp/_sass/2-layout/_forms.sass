@@ -1,13 +1,13 @@
 /* forms */
 
 ::-webkit-input-placeholder
-  color: $color-gray
+  color: #b1b0b0
 ::-moz-placeholder
-  color: $color-gray
+  color: #b1b0b0
 :-ms-input-placeholder
-  color: $color-gray
+  color: #b1b0b0
 input:-moz-placeholder
-  color: $color-gray
+  color: #b1b0b0
 
 button, input, optgroup, select, textarea
   margin: 0
@@ -24,41 +24,202 @@ button, html input[type=button], input[type=reset], input[type=submit]
 
 .form
   &-group,  &__group
-    margin-bottom: 15px
+    margin-bottom: 8px
+
+    &--slim
+      margin-bottom: 0
+      .form-control, .form__control
+        border-bottom: 0
 
   &-control, &__control
     display: block
     width: 100%
-    height: 34px
-    padding: 6px 12px
-    font-size: 14px
+    height: 40px
+    padding: 9px 12px
+    font-size: rem(12)
     line-height: 1.42857143
-    color: #555
+    color: $primary-color
     background-color: $color-white
     background-image: none
     border: 1px solid $color-gray
-    border-radius: 4px
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075)
+    border-left: 0
+    border-right: 0
+    border-radius: 0px
+    box-shadow: none
     transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s
+    z-index: 1
+    font-family: $font-roboto-medium
+    &:focus
+      box-shadow: none
+      // border-top-color: $color-blue
+      // border-bottom-color: $color-blue
+      border-color: $color-gray
+      z-index: 10
+    &--big
+      height: 54px
+      padding-top: 16px
+      padding-bottom: 16px
+
+  &__subscription
+    padding-top: 15px
+    max-width: 750px
+    margin: 0 auto 20px
+    .table
+      width: 100%
+    .form__group
+      margin-bottom: 0
+
+  &__feedback
+    position: absolute
+    right: 0
+    top: 0
+    height: 40px
+    line-height: 41px
+    padding: 0 4px
+    font-size: rem(14)
+    cursor: pointer
+    display: none
+    i
+      color: $color-red
+    &:hover
+      .feedback-info
+        opacity: 1
+        display: block
+
+  &__legend
+    border-bottom: 0
+    font-size: rem(15)
+    text-transform: uppercase
+    margin-bottom: 15px
+    font-family: $font-roboto-medium
+
+  &__fieldset
+    padding-bottom: 30px
+    .form__block:last-child
+      margin-bottom: 0
+
+  &__block
+    margin-bottom: 25px
+
+    &__label
+      font-size: rem(15)
+      font-weight: 400
+      font-family: $font-roboto-medium
+      padding-left: 12px
+      margin-bottom: 13px
+      display: block
+
+  &__radio
+    display: table
+    line-height: 1
+    cursor: pointer
+    margin-left: 10px
+    &.is-selected
+      .input-label
+        color: $color-blue
+    &>.span
+      display: table-cell
+      vertical-align: top
+      line-height: 0
+      &+.span
+        padding-left: 15px
+    input[type="radio"]
+      display: none
+      &:checked
+        ~.input-radio
+          border-color: $color-blue
+          &::after
+            background-color: $color-blue
+        ~.input-label
+          color: $color-blue
+    .input-radio
+      display: inline-block
+      width: 16px
+      height: 16px
+      border: 1px solid $primary-color
+      border-radius: 50%
+      background-color: $color-white
+      position: relative
+      &::after
+        content: ''
+        position: absolute
+        top: 1px
+        left: 1px
+        width: 12px
+        height: 12px
+        background-color: $color-white
+        border-radius: 50%
+
+.input-label
+  font-size: rem(12)
+  font-family: $font-roboto-medium
+  display: block
+  line-height: 1.2
+
+.feedback-info
+  position: absolute
+  display: none
+  opacity: 1
+  background-color: $color-red
+  font-size: rem(12)
+  height: 24px
+  line-height: 24px
+  color: $color-white
+  text-transform: uppercase
+  right: 25px
+  padding: 0 12px
+  top: 50%
+  transform: translateY(-50%)
+  white-space: nowrap
+  animation: visible 0.3s linear
+  &::after
+    right: -5px
+    width: 0
+    height: 0
+    border-top: 6px solid transparent
+    border-bottom: 6px solid transparent
+    border-left: 5px solid $color-red
+    content: ''
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
 
 label
   display: inline-block
   max-width: 100%
   margin-bottom: 5px
-  font-weight: 700
+  font-weight: 400
 
 .has
-  &-success .form-control
+  &-success .form-control, &-success .form__control
     border-color: #3c763d
-    box-shadow: inset 0 1px 1px rgba(#3c763d,.75)
+    box-shadow: none
+    &:focus
+      box-shadow: none
+      border-color: #3c763d
 
-  &-warning .form-control
+  &-warning .form-control, &-warning .form__control
     border-color: #8a6d3b
-    box-shadow: inset 0 1px 1px rgba(#8a6d3b,.75)
+    box-shadow: none
+    &:focus
+      box-shadow: none
+      border-color: #8a6d3b
 
-  &-error .form-control
-    border-color: #a94442
-    box-shadow: inset 0 1px 1px rgba(#a94442,.75)
+  &-error .form-control, &-error .form__control
+    border-color: $color-gray
+    box-shadow: none
+    &:focus
+      box-shadow: none
+      border-color: $color-gray
+
+    &::-webkit-input-placeholder
+      color: $color-red
+    &::-moz-placeholder
+      color: $color-red
+    &:-ms-input-placeholder
+      color: $color-red
+    &:-moz-placeholder
+      color: $color-red
 
   &-success .control-label
     color: #3c763d
@@ -67,4 +228,11 @@ label
     color: #8a6d3b
 
   &-error .control-label
-    color: #a94442
+    color: $color-red
+
+  &-error
+    .form__feedback
+      display: block
+
+  &-feedback
+    position: relative
