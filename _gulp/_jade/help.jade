@@ -3,7 +3,7 @@ doctype
 html(lang="ru")
   
   -var active = 'Помощь' //активный пункт меню, список в header.jade
-  -var pageTitle = 'Помощь' + ' - siteName' //title страницы для генерации верстки  
+  -var pageTitle = 'Помощь' + ' - Биржа автозапчастей' //title страницы для генерации верстки  
 
   include ./_include/_head
 
@@ -25,11 +25,11 @@ html(lang="ru")
             
             nav(role="navigation").navigation-level2.navigation-level2--help#help__navigation
               ul
-                li.active: a(href="#block1") С чего начать
-                li: a(href="#block2") Заказ товара
-                li: a(href="#block3") Оплата
-                li: a(href="#block4") Доставка
-                li: a(href="#block5") Условия отмены заказа
+                li.active: a(href="#block1").anchor С чего начать
+                li: a(href="#block2").anchor Заказ товара
+                li: a(href="#block3").anchor Оплата
+                li: a(href="#block4").anchor Доставка
+                li: a(href="#block5").anchor Условия отмены заказа
             
           .col-sm-9.col-xs-12
             

@@ -89,6 +89,14 @@ $(document).ready(function(){
     $(this).toggleClass('is-active');
   });
 
+  $('.header__lang ul li a').on('click', function(e){
+    e.preventDefault();
+    $('.header__lang ul li').removeClass('active');
+    $(this).parent().addClass('active');
+    $('.header__lang__head').text($(this).text());
+    // console.log($(this).text());
+  });
+
   // Header enter block
   $('.header__enter__button').on('click', function(e){
     e.preventDefault();
@@ -102,10 +110,9 @@ $(document).ready(function(){
     $('.header__enter').removeClass('is-open');
   });
 
-  // Help
-  $('#help__navigation a[href^="#"]').on('click', function(e){
+  // anchor link
+  $('a[href^="#"].anchor').on('click', function(e){
     e.preventDefault();
-
     var scrollId = $(this).attr('href');
     if (scrollId.length != 0) {
       $('html, body').animate({ scrollTop: $(scrollId).offset().top }, 500);
@@ -118,7 +125,10 @@ $(document).ready(function(){
   $('.form__radio input[type="radio"]').on('click', function(){
     $('input:not(:checked)').parents('.form__radio').removeClass("is-selected");
     $('input:checked').parents('.form__radio').addClass("is-selected");
-  })
+  });
+
+  // Sumoselect
+  $('.sumoselect').SumoSelect();
 
   // simpleForm version 2015-09-23 14:30 GMT +2
   simpleForm('form.form-callback');

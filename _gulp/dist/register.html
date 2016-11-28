@@ -2,7 +2,7 @@
 <html lang="ru">
     <head>
         <meta charset="utf-8">
-        <title>Регистрация - siteName</title>
+        <title>Регистрация - Биржа автозапчастей</title>
         <meta name="description" content="">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -82,12 +82,45 @@
         <div class="content">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-8 col-sm-push-2">
+                    <div class="col-lg-8 col-lg-push-2 col-md-10 col-md-push-1">
                         <div class="h1 h1--dark">Регистрация в интернет-магазине</div>
                         <p>Для регистрации в интернет-магазине, пожалуйста, заполните данную анкету.<br>Обязательные для заполнения поля выделены данным цветом.<br>Если у вас возникли проблемы с регистрацией, пожалуйста напишите нам на адрес <a href="#">info@apm.store</a></p>
                         <div class="form form__register">
                             <form action="#">
-                                <fieldset class="form__fieldset"></fieldset>
+                                <fieldset class="form__fieldset">
+                                    <label class="form__block__label form__block__label--head">Я регистрируюсь как:</label>
+                                    <div class="form__row__group form__row__group--xxs-block">
+                                        <div class="first first--register">
+                                            <div class="form__group">
+                                                <label class="form__radio form__radio--head"><span class="span">
+                                                        <input type="radio" name="radio00" checked><span class="input-radio"></span></span><span class="span"><span class="input-label">Компания</span></span></label>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="form__group">
+                                                <label class="form__radio form__radio--head"><span class="span">
+                                                        <input type="radio" name="radio00"><span class="input-radio"></span></span><span class="span"><span class="input-label">Частный предприниматель</span></span></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="form__fieldset">
+                                    <label class="form__block__label form__block__label--head">Хочу пройти регистрацию: </label>
+                                    <div class="form__row__group form__row__group--xs-block">
+                                        <div class="first first--register">
+                                            <div class="form__group">
+                                                <label class="form__radio form__radio--head"><span class="span">
+                                                        <input type="radio" name="radio11" checked><span class="input-radio"></span></span><span class="span"><span class="input-label">По телефону</span></span></label>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="form__group">
+                                                <label class="form__radio form__radio--head"><span class="span">
+                                                        <input type="radio" name="radio11"><span class="input-radio"></span></span><span class="span"><span class="input-label">онлайн и получить <a href="#"> <strong class="strong--frh480">максимальную скидку</strong></a></span></span></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
                                 <fieldset class="form__fieldset">
                                     <div class="form__group form__group--slim has-error has-feedback">
                                         <label class="hidden">Страна</label>
@@ -148,6 +181,15 @@
                                         <label class="hidden">Подтвердить пароль</label>
                                         <input type="text" placeholder="Подтвердить пароль" class="form-control"><span class="form__feedback"> 
                                             <div class="feedback-info">Обязательное поле!</div><i class="ion-close"></i></span>
+                                    </div>
+                                    <div class="form__group form__group--captcha">
+                                        <div class="first">
+                                            <label>Картинка для проверки </label>
+                                        </div>
+                                        <div class="center"><img src="./tmp/captcha.gif" alt="" class="captcha"></div>
+                                        <div class="last">
+                                            <input type="text" class="form-control">
+                                        </div>
                                     </div>
                                 </fieldset>
                                 <fieldset class="form__fieldset">
@@ -257,7 +299,8 @@
                                         </div>
                                         <div class="form__group">
                                             <label class="form__radio"><span class="span">
-                                                    <input type="radio" name="radio4"><span class="input-radio"></span></span><span class="span"><span class="input-label">другое (указать)</span></span></label>
+                                                    <input type="radio" name="radio4"><span class="input-radio"></span></span><span class="span span--nowrap"><span class="input-label">другое (указать)</span></span><span class="span span--w100">
+                                                    <input type="text" class="form-control form-control--other"></span></label>
                                         </div>
                                     </div>
                                     <div class="form__block">
@@ -287,10 +330,19 @@
                                         </div>
                                         <div class="form__group">
                                             <label class="form__radio"><span class="span">
-                                                    <input type="radio" name="radio5"><span class="input-radio"></span></span><span class="span"><span class="input-label">отправка через ТК</span></span></label>
+                                                    <input type="radio" name="radio5"><span class="input-radio"></span></span><span class="span"><span class="input-label">отправка через ТК</span></span><span class="span">
+                                                    <select class="sumoselect">
+                                                        <option value="Новая Почта" selected>Новая Почта</option>
+                                                        <option value="УкрПочта">УкрПочта</option>
+                                                        <option value="РусПочта">РусПочта</option>
+                                                        <option value="Курьер">Курьер</option>
+                                                    </select></span></label>
                                         </div>
                                     </div>
                                 </fieldset>
+                                <div class="register-info">спасибо за регистрацию, после обработки вашей информации менеджером вы получите файл с договором на Email</div>
+                                <button type="submit" class="btn btn--blue btn--biggest">Зарегистрироваться на сайте</button>
+                                
                             </form>
                         </div>
                     </div>
@@ -341,9 +393,8 @@
         <link rel="stylesheet" href="./js/libs/magnific-popup/magnific-popup.css">
         <script src="./js/libs/magnific-popup/jquery.magnific-popup.min.js"></script>
         <script src="./js/libs/bootstrap/bootstrap.min.js"></script>
+        <script src="./js/libs/sumoselect/jquery.sumoselect.min.js"></script>
+        <link rel="stylesheet" href="./js/libs/sumoselect/sumoselect.css">
         <script src="./js/common.js"></script>
-        <!-- Retina js-->
-        <script src="./js/libs/retinajs/retina.min.js"></script>
-        <script>retinajs( $('img') );</script>
     </body>
 </html>

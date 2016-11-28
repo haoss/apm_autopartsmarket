@@ -29,6 +29,10 @@
       &>div
         &:last-child
           width: 50px
+    &__wrapper
+      &>div
+        &.first
+          width: 180px
 
 
 /* Medium Devices, Desktops */
@@ -45,6 +49,11 @@
       img
         width: 12px
         background-position-y: 2px
+
+    &__wrapper
+      &>div
+        &.first
+          width: auto
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
@@ -117,6 +126,13 @@
 
   .navigation-level2
     border-bottom: 1px solid $color-gray
+
+  .form__row__group--xs-block
+    display: block
+    &>div
+      display: block
+      &+div
+        padding-top: 5px
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
@@ -198,6 +214,40 @@
   .navigation-level2
     &--help
       border-bottom: 0
+
+  .form
+    &__row__group--xxs-block
+      display: block
+      &>div
+        display: block
+        &+div
+          padding-top: 5px
+    &__group--captcha
+      display: block
+      &>div
+        display: block
+        float: left
+        &.first
+          width: 55%
+        &.first
+          label
+            padding-top: 12px
+            display: block
+        &.center
+          overflow: hidden
+          width: 45%
+        &.last
+          width: 100%
+          margin-top: -1px
+
+
+  .strong--frh480
+    display: block
+    margin-top: 5px
+
+  .btn
+    &--biggest
+      font-size: rem(15)
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 319px)
