@@ -197,3 +197,147 @@
   color: $color-blue
   text-transform: uppercase
   margin-bottom: 35px
+  font-family: $font-roboto-medium
+
+/**/
+.SumoSelect
+  line-height: 1.2
+  position: relative
+  z-index: 100
+  font-size: rem(12)
+  color: $color-blue
+  width: 100%
+  min-width: 105px
+  display: block
+  font-family: $font-roboto-medium
+  &>.CaptionCont
+    border: 0
+    border-bottom: 1px solid $color-gray
+    padding-right: 0
+    cursor: pointer
+    &>span
+      padding-right: 25px
+    &>label
+      padding: 0
+      margin: 0
+      width: 19px
+      // background: pink
+      &>i
+        font-size: rem(12)
+        opacity: 1
+        width: auto
+        height: auto
+        background: none
+        &::before
+          display: inline-block
+          font-family: "Ionicons"
+          speak: none
+          font-style: normal
+          font-weight: normal
+          font-variant: normal
+          text-transform: none
+          text-rendering: auto
+          line-height: 1
+          content: "\f123"
+          margin-top: 8px
+          margin-left: 5px
+
+  &:focus > .CaptionCont, &:hover > .CaptionCont, &.open > .CaptionCont
+    box-shadow: none
+    border: 0
+    border-bottom: 1px solid $color-gray
+  &> .optWrapper > .options  li
+    &.opt
+      border-bottom: 0
+      color: $primary-color
+      padding: 10px 12px
+      cursor: pointer
+      &:first-child
+        border-radius: 0 !important
+      &:last-child
+        border-radius: 0 !important
+      &:hover
+        background: $color-white
+        color: $color-blue
+      &.selected
+        display: none
+    label
+      padding-left: 0
+
+  &.open
+    &>.optWrapper
+      top: 24px
+      border-radius: 0
+      box-shadow: none
+      &>.options
+        li
+          label
+            margin-bottom: 0
+
+/**/
+.body
+  &__main
+    position: relative
+    width: 100%
+    background: $color-white
+    // overflow-x: hidden
+    background-size: cover
+    background-position: center center
+    z-index: 1
+    &__wrapper
+      position: relative
+      z-index: 10
+
+#bg-animation
+  position: fixed
+  left: 0
+  top: 0
+  right: 0
+  bottom: 0
+  z-index: 1
+  background: $color-white
+
+/* Profile */
+.profile
+  &__photo
+    position: relative
+    margin-bottom: 20px
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      border: 10px solid rgba($color-white, .85)
+
+/**/
+.special-offers
+  &__block
+    margin-bottom: 40px
+    width: 100%
+    font-size: rem(14)
+    &>div
+      vertical-align: top
+      &+div
+        padding-left: 30px
+      &.first
+        width: 262px
+    p
+      margin-bottom: 0
+      &+p
+        margin-top: 25px
+
+  &__title
+    text-decoration: none
+    color: $primary-color
+    font-family: $font-roboto-medium
+    font-size: rem(20)
+    margin-bottom: 10px
+    display: inline-block
+
+  &__date
+    display: block
+    margin-bottom: 15px
+    font-size: rem(12)
+    color: #636363

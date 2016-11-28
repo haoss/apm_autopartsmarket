@@ -16,7 +16,10 @@ header.header
             i.ion-grid
             | Меню сайта
       
-          -var navigation = { 'Новости': '#', 'О компании': '#', 'Стать клиентом': '#'};
+          if headerBlock == 'ЛЧ'
+            - var navigation = { 'Новости': '#', 'О компании': '#', 'APM Group': '#'};
+          else
+            - var navigation = { 'Новости': '#', 'О компании': '#', 'Стать клиентом': '#'};
           
           nav(role="navigation").header__navigation
             ul

@@ -55,6 +55,11 @@
         &.first
           width: auto
 
+  .content
+    &__head
+      &--register
+        text-align: center
+
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
 
@@ -228,14 +233,21 @@
         display: block
         float: left
         &.first
-          width: 55%
+          width: calc(100% - 130px)
+
         &.first
           label
             padding-top: 12px
             display: block
         &.center
           overflow: hidden
-          width: 45%
+          width: 130px
+          border-left: 1px solid $color-gray
+          border-right: 1px solid $color-gray
+          .captcha
+            position: relative
+            left: 50%
+            transform: translateX(-50%)
         &.last
           width: 100%
           margin-top: -1px

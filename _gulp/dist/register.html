@@ -9,6 +9,8 @@
         <!-- Jquery 2.2.4-->
         <script src="./js/libs/jquery/jquery-2.2.4.min.js"></script>
         <script src="./js/libs/jquery/jquery-migrate-1.4.1.min.js"></script>
+        <link rel="stylesheet" href="./js/libs/magnific-popup/magnific-popup.css">
+        <link rel="stylesheet" href="./js/libs/sumoselect/sumoselect.css">
         <link rel="stylesheet" href="./css/main.css">
     </head>
     <body>
@@ -83,7 +85,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-lg-push-2 col-md-10 col-md-push-1">
-                        <div class="h1 h1--dark">Регистрация в интернет-магазине</div>
+                        <div class="content__head content__head--dark content__head--register">
+                            <h1>Регистрация в интернет-магазине</h1>
+                        </div>
                         <p>Для регистрации в интернет-магазине, пожалуйста, заполните данную анкету.<br>Обязательные для заполнения поля выделены данным цветом.<br>Если у вас возникли проблемы с регистрацией, пожалуйста напишите нам на адрес <a href="#">info@apm.store</a></p>
                         <div class="form form__register">
                             <form action="#">
@@ -328,15 +332,19 @@
                                             <label class="form__radio"><span class="span">
                                                     <input type="radio" name="radio5"><span class="input-radio"></span></span><span class="span"><span class="input-label">доставка по Киеву</span></span></label>
                                         </div>
-                                        <div class="form__group">
-                                            <label class="form__radio"><span class="span">
-                                                    <input type="radio" name="radio5"><span class="input-radio"></span></span><span class="span"><span class="input-label">отправка через ТК</span></span><span class="span">
-                                                    <select class="sumoselect">
-                                                        <option value="Новая Почта" selected>Новая Почта</option>
-                                                        <option value="УкрПочта">УкрПочта</option>
-                                                        <option value="РусПочта">РусПочта</option>
-                                                        <option value="Курьер">Курьер</option>
-                                                    </select></span></label>
+                                        <div class="form__group form__group--sumoselect">
+                                            <div>
+                                                <label class="form__radio"><span class="span">
+                                                        <input type="radio" name="radio5"><span class="input-radio"></span></span><span class="span"><span class="input-label">отправка через ТК</span></span></label>
+                                            </div>
+                                            <div>
+                                                <select class="sumoselect">
+                                                    <option value="Новая Почта" selected>Новая Почта</option>
+                                                    <option value="УкрПочта">УкрПочта</option>
+                                                    <option value="РусПочта">РусПочта</option>
+                                                    <option value="Курьер">Курьер</option>
+                                                </select>
+                                            </div>
                                         </div>
                                     </div>
                                 </fieldset>
@@ -390,11 +398,9 @@
         -->
         <script src="./js/libs/vendor.js"></script>
         <!-- Footer js-->
-        <link rel="stylesheet" href="./js/libs/magnific-popup/magnific-popup.css">
         <script src="./js/libs/magnific-popup/jquery.magnific-popup.min.js"></script>
         <script src="./js/libs/bootstrap/bootstrap.min.js"></script>
         <script src="./js/libs/sumoselect/jquery.sumoselect.min.js"></script>
-        <link rel="stylesheet" href="./js/libs/sumoselect/sumoselect.css">
         <script src="./js/common.js"></script>
     </body>
 </html>

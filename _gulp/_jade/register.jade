@@ -20,7 +20,9 @@ html(lang="ru")
         
         .row
           .col-lg-8.col-lg-push-2.col-md-10.col-md-push-1
-            .h1.h1--dark Регистрация в интернет-магазине
+            
+            .content__head.content__head--dark.content__head--register
+              h1 Регистрация в интернет-магазине
             
             p Для регистрации в интернет-магазине, пожалуйста, заполните данную анкету.
               br
@@ -378,19 +380,20 @@ html(lang="ru")
                         span.span
                           span.input-label доставка по Киеву
                           
-                    .form__group
-                      label.form__radio
-                        span.span
-                          input(type="radio" name="radio5")
-                          span.input-radio
-                        span.span
-                          span.input-label отправка через ТК
-                        span.span
-                          select.sumoselect
-                            option(value="Новая Почта" selected) Новая Почта
-                            option(value="УкрПочта") УкрПочта
-                            option(value="РусПочта") РусПочта
-                            option(value="Курьер") Курьер
+                    .form__group.form__group--sumoselect
+                      div
+                        label.form__radio
+                          span.span
+                            input(type="radio" name="radio5")
+                            span.input-radio
+                          span.span
+                            span.input-label отправка через ТК
+                      div
+                        select.sumoselect
+                          option(value="Новая Почта" selected) Новая Почта
+                          option(value="УкрПочта") УкрПочта
+                          option(value="РусПочта") РусПочта
+                          option(value="Курьер") Курьер
               
                 .register-info спасибо за регистрацию, после обработки вашей информации менеджером вы получите файл с договором на Email
                 
