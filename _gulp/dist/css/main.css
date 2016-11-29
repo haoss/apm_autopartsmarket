@@ -3950,6 +3950,27 @@ ol li {
     font-size: 1rem;
     padding-top: 25px;
     padding-bottom: 25px; }
+  .btn--xsl {
+    background: #ffffff;
+    width: 82px;
+    padding: 0;
+    height: 40px;
+    line-height: 40px;
+    border-color: #30c4f3;
+    display: block;
+    min-width: inherit; }
+    .btn--xsl svg {
+      vertical-align: -9px;
+      fill: #30c4f3; }
+      .btn--xsl svg path.path-color {
+        fill: #30c4f3; }
+    .btn--xsl:hover {
+      background: #30c4f3;
+      border-color: #ffffff; }
+      .btn--xsl:hover svg {
+        fill: #ffffff; }
+        .btn--xsl:hover svg path.path-color {
+          fill: #ffffff; }
 
 /* carousel */
 .carousel ul, .carousel li {
@@ -4462,7 +4483,8 @@ label {
         color: #444444;
         display: block;
         padding: 4px 0;
-        text-decoration: none; }
+        text-decoration: none;
+        position: relative; }
         .navigation-level2 ul li > a:hover, .navigation-level2 ul li > span:hover {
           color: #30c4f3; }
       .navigation-level2 ul li.active > a, .navigation-level2 ul li.active > span {
@@ -4475,14 +4497,17 @@ label {
         background: #30c4f3;
         width: 20px;
         height: 20px;
-        line-height: 20px;
+        line-height: 21px;
         text-align: center;
         font-size: 0.625rem;
         font-family: "RobotoLight";
         margin-left: 10px;
-        vertical-align: middle; }
+        vertical-align: middle;
+        position: absolute; }
   .navigation-level2--border {
     border-bottom: 1px solid #e8e8e8; }
+  .navigation-level2--user ul li > a, .navigation-level2--user ul li > span {
+    padding-right: 35px; }
 
 /* pagintaion */
 .pagination {
@@ -4521,11 +4546,11 @@ label {
 
 /* header */
 .header {
-  margin-bottom: 10px; }
+  margin-bottom: 25px; }
   .header__wrapper {
     display: table;
     width: 100%;
-    padding: 34px 0; }
+    padding: 34px 0 28px 0; }
     .header__wrapper > div {
       display: table-cell;
       vertical-align: middle; }
@@ -5001,49 +5026,133 @@ label {
   color: #b1b1b1;
   border-bottom: 1px solid #e8e8e8;
   margin-bottom: 30px;
-  padding-bottom: 10px; }
+  padding-bottom: 20px; }
   .news__calendar a {
     text-decoration: none;
-    color: #444444; }
+    color: #444444;
+    padding-top: 9px;
+    padding-bottom: 9px; }
     .news__calendar a:hover {
       color: #30c4f3; }
-  .news__calendar__head, .news__calendar__month {
-    width: 100%; }
-    .news__calendar__head > div, .news__calendar__month > div {
-      width: 100%; }
-      .news__calendar__head > div + div, .news__calendar__month > div + div {
-        padding-left: 10px; }
-      .news__calendar__head > div:first-child, .news__calendar__head > div:last-child, .news__calendar__month > div:first-child, .news__calendar__month > div:last-child {
-        width: 1px;
-        white-space: nowrap; }
-  .news__calendar__month:first-child {
-    margin-top: 10px; }
-  .news__calendar__month > div:nth-child(2)::after {
-    content: '';
+  .news__calendar ul {
+    margin: 0;
+    padding: 0; }
+    .news__calendar ul li {
+      margin: 0;
+      list-style: none; }
+      .news__calendar ul li a {
+        display: block;
+        overflow: hidden; }
+        .news__calendar ul li a small {
+          font-size: 0.875rem;
+          color: #b1b1b1;
+          float: right;
+          line-height: 1;
+          padding-left: 10px;
+          background: #ffffff; }
+        .news__calendar ul li a span {
+          float: left;
+          line-height: 1;
+          padding-right: 10px;
+          background: #ffffff; }
+      .news__calendar ul li.active ul {
+        display: block; }
+    .news__calendar ul ul {
+      padding-left: 30px;
+      display: none; }
+      .news__calendar ul ul li.active a {
+        color: #30c4f3;
+        position: relative; }
+        .news__calendar ul ul li.active a small {
+          color: #b1b1b1; }
+        .news__calendar ul ul li.active a::after {
+          content: '';
+          width: 100%;
+          height: 1px;
+          display: block;
+          background: #30c4f3;
+          opacity: 1;
+          position: absolute;
+          top: 50%;
+          z-index: -1; }
+  .news__calendar > ul > li.active > a {
+    color: #30c4f3; }
+    .news__calendar > ul > li.active > a small {
+      color: #b1b1b1; }
+
+/**/
+.user__search {
+  background: #30c4f3;
+  color: #ffffff;
+  margin-bottom: 40px;
+  margin-top: -25px;
+  padding-top: 58px;
+  padding-bottom: 40px; }
+  .user__search__wrapper {
+    max-width: 750px;
     width: 100%;
-    height: 1px;
-    display: block;
+    margin: 0 auto;
+    font-size: 0.75rem; }
+    .user__search__wrapper > div {
+      vertical-align: top !important;
+      width: 100%; }
+      .user__search__wrapper > div + div {
+        padding-left: 15px !important; }
+      .user__search__wrapper > div:last-child {
+        width: 1px; }
+  .user__search__body {
+    overflow: hidden;
+    background: #ffffff;
+    margin-bottom: 5px; }
+    .user__search__body .form-control {
+      font-size: 1rem;
+      width: calc(100% - 44px);
+      float: left;
+      background: #ffffff;
+      border: 0;
+      font-family: "RobotoRegular";
+      padding-left: 15px;
+      padding-right: 15px; }
+    .user__search__body button {
+      float: right;
+      width: 44px;
+      text-align: center;
+      height: 40px;
+      border: 0;
+      background: none;
+      color: #30c4f3;
+      font-size: 1.375rem;
+      line-height: 40px; }
+  .user__search a {
+    color: #ffffff;
+    text-decoration: none; }
+    .user__search a:hover {
+      text-decoration: underline; }
+
+/**/
+.table-basic {
+  font-size: 0.875rem;
+  width: 100%;
+  margin-bottom: 20px; }
+  .table-basic > tbody > tr > td, .table-basic > tbody > tr > th, .table-basic > tfoot > tr > td, .table-basic > tfoot > tr > th, .table-basic > thead > tr > td, .table-basic > thead > tr > th {
+    padding: 7px 15px;
+    line-height: 1.42857143;
+    vertical-align: top; }
+  .table-basic > tbody > tr > th, .table-basic > tfoot > tr > th, .table-basic > thead > tr > th {
+    background: #f2f2f2;
+    font-weight: 400;
+    font-family: "RobotoMedium"; }
+  .table-basic--hover > tbody > tr:hover > td, .table-basic--hover > tfoot > tr:hover > td, .table-basic--hover > thead > tr:hover > td {
     background: #30c4f3;
-    opacity: 0; }
-  .news__calendar__month.active {
-    color: #30c4f3; }
-    .news__calendar__month.active > div:nth-child(2)::after {
-      opacity: 1; }
-    .news__calendar__month.active a {
-      color: #30c4f3; }
-  .news__calendar__month + .news__calendar__month {
-    margin-top: 15px; }
-  .news__calendar__head.active a {
-    color: #30c4f3; }
-  .news__calendar__head.active + .news__calendar__body {
-    display: block; }
-  .news__calendar__body {
-    padding-left: 30px;
-    display: none; }
-  .news__calendar__row {
-    margin-bottom: 15px; }
-  .news__calendar .table__cell + .table__cell {
-    padding-left: 10px; }
+    color: #ffffff; }
+  .table-basic .tr--separator-top td {
+    padding: 0;
+    height: 15px;
+    background: none !important; }
+  .table-basic .th--big {
+    font-size: 20px;
+    padding-top: 3px;
+    padding-bottom: 3px; }
 
 /* clear */
 .clear, .clear1, .clear2, .clear3, .clear4, .clear5, .clear6, .clear7, .clear8, .clear9, .clear10, .clear11, .clear12, .clear13, .clear14, .clear15, .clear16, .clear17, .clear18, .clear19, .clear20, .clear21, .clear22, .clear23, .clear24, .clear25, .clear26, .clear27, .clear28, .clear29, .clear30, .clear31, .clear32, .clear33, .clear34, .clear35, .clear36, .clear37, .clear38, .clear39, .clear40, .clear41, .clear42, .clear43, .clear44, .clear45, .clear46, .clear47, .clear48, .clear49, .clear50, .clear51, .clear52, .clear53, .clear54, .clear55, .clear56, .clear57, .clear58, .clear59, .clear60, .clear61, .clear62, .clear63, .clear64, .clear65, .clear66, .clear67, .clear68, .clear69, .clear70, .clear71, .clear72, .clear73, .clear74, .clear75, .clear76, .clear77, .clear78, .clear79, .clear80, .clear81, .clear82, .clear83, .clear84, .clear85, .clear86, .clear87, .clear88, .clear89, .clear90, .clear91, .clear92, .clear93, .clear94, .clear95, .clear96, .clear97, .clear98, .clear99, .clear100, .clear-hr {
@@ -5407,7 +5516,10 @@ label {
   .news__img {
     height: 157px; }
   .special-offers__block > div.first {
-    width: 157px; } }
+    width: 157px; }
+  .navigation-level2--user ul li .label {
+    right: 0;
+    top: 8px; } }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 767px) {
@@ -5577,7 +5689,9 @@ label {
   .news__img {
     height: 280px; }
   .news__calendar__month + .news__calendar__month {
-    margin-top: 10px; } }
+    margin-top: 10px; }
+  .link-history {
+    margin-right: -95px; } }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 319px) {

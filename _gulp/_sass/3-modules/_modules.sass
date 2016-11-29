@@ -351,56 +351,156 @@
     color: #b1b1b1
     border-bottom: 1px solid #e8e8e8
     margin-bottom: 30px
-    padding-bottom: 10px
+    padding-bottom: 20px
     a
       text-decoration: none
       color: $primary-color
+      padding-top: 9px
+      padding-bottom: 9px
       &:hover
         color: $color-blue
-    &__head, &__month
-      width: 100%
-      &>div
-        width: 100%
-        &+div
-          padding-left: 10px
-        &:first-child, &:last-child
-          width: 1px
-          white-space: nowrap
-    &__month
-      &:first-child
-        margin-top: 10px
-      &>div
-        &:nth-child(2)
-          &::after
-            content: ''
-            width: 100%
-            height: 1px
-            display: block
-            background: $color-blue
-            opacity: 0
-      &.active
-        color: $color-blue
-        &>div
-          &:nth-child(2)
-            &::after
-              opacity: 1
+    ul
+      margin: 0
+      padding: 0
+      li
+        margin: 0
+        list-style: none
         a
-          color: $color-blue
-      &+.news__calendar__month
-        margin-top: 15px
-    &__head
-      &.active
-        a
-          color: $color-blue
-        &+.news__calendar__body
           display: block
+          overflow: hidden
+          small
+            font-size: rem(14)
+            color: #b1b1b1
+            float: right
+            line-height: 1
+            padding-left: 10px
+            background: $color-white
+          span
+            float: left
+            line-height: 1
+            padding-right: 10px
+            background: $color-white
+
+        &.active
+          ul
+            display: block
+
+      ul
+        padding-left: 30px
+        display: none
+        li
+          &+li
+            // margin-top: 20px
+          &:first-child
+            // margin-top: 15px
+          &.active
+            a
+              color: $color-blue
+              position: relative
+              small
+                color: #b1b1b1
+              &::after
+                content: ''
+                width: 100%
+                height: 1px
+                display: block
+                background: $color-blue
+                opacity: 1
+                position: absolute
+                top: 50%
+                z-index: -1
+
+    &>ul
+      &>li
+        // margin-bottom: 15px
+        &.active
+          &>a
+            color: $color-blue
+            small
+              color: #b1b1b1
+
+/**/
+.user
+  &__search
+    background: $color-blue
+    color: $color-white
+    margin-bottom: 40px
+    margin-top: -25px
+    padding-top: 58px
+    padding-bottom: 40px
+
+    &__wrapper
+      max-width: 750px
+      width: 100%
+      margin: 0 auto
+      font-size: rem(12)
+      &>div
+        vertical-align: top !important
+        &+div
+          padding-left:  15px !important
+        width: 100%
+        &:last-child
+          width: 1px
 
     &__body
-      padding-left: 30px
-      display: none
+      overflow: hidden
+      background: $color-white
+      margin-bottom: 5px
+      .form-control
+        font-size: rem(16)
+        width: calc(100% - 44px)
+        float: left
+        background: $color-white
+        border: 0
+        font-family: $font-roboto
+        padding-left: 15px
+        padding-right: 15px
+        // font-family: $font-roboto-light
+      button
+        float: right
+        width: 44px
+        text-align: center
+        height: 40px
+        border: 0
+        background: none
+        color: $color-blue
+        font-size: rem(22)
+        line-height: 40px
+    a
+      color: $color-white
+      text-decoration: none
+      &:hover
+        text-decoration: underline
 
-    &__row
-      margin-bottom: 15px
+/**/
+.table-basic
+  font-size: rem(14)
+  width: 100%
+  margin-bottom: 20px
+  &>tbody, &>tfoot, &>thead
+    &>tr
+      &>td, &>th,
+        padding: 7px 15px
+        line-height: 1.42857143
+        vertical-align: top
+      &>th
+        background: #f2f2f2
+        font-weight: 400
+        font-family: $font-roboto-medium
+  &--hover
+    &>tbody, &>tfoot, &>thead
+      &>tr
+        &:hover
+          &>td
+            background: $color-blue
+            color: $color-white
+  .tr--separator-top
+    td
+      padding: 0
+      height: 15px
+      background: none !important
 
-    .table__cell + .table__cell
-      padding-left: 10px
+  .th--big
+    font-size: 20px
+    padding-top: 3px
+    padding-bottom: 3px

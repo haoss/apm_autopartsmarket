@@ -226,6 +226,7 @@
         display: block
         padding: 4px 0
         text-decoration: none
+        position: relative
         &:hover
           color: $color-blue
       &.active
@@ -239,12 +240,19 @@
         background: $color-blue
         width: 20px
         height: 20px
-        line-height: 20px
+        line-height: 21px
         text-align: center
         font-size: rem(10)
         font-family: $font-roboto-light
         margin-left: 10px
         vertical-align: middle
+        position: absolute
 
   &--border
     border-bottom: 1px solid #e8e8e8
+
+  &--user
+    ul
+      li
+        &>a, &>span
+          padding-right: 35px
