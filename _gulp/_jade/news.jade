@@ -23,7 +23,7 @@ html(lang="ru")
             
             .h1.h1--dark Новости
             
-            nav(role="navigation").navigation-level2
+            nav(role="navigation").navigation-level2.navigation-level2--border
               ul
                 li.active: a(href="#") Все
                 li: a(href="#") Тест-драйвы
@@ -31,9 +31,143 @@ html(lang="ru")
                 li: a(href="#") Покупка и продажа
             
             .news__calendar
+              .news__calendar__row
+                .news__calendar__head.table.active
+                  div.table__cell
+                    a(href="#") 2016 год
+                  div.table__cell &nbsp;
+                  div.table__cell
+                    span 2105
+                .news__calendar__body
+                  .news__calendar__month.table
+                    div.table__cell
+                      a(href="#") Январь
+                    div.table__cell
+                    div.table__cell
+                      span 54
+                  .news__calendar__month.table
+                    div.table__cell
+                      a(href="#") Февраль
+                    div.table__cell
+                    div.table__cell
+                      span 354
+                  .news__calendar__month.table.active
+                    div.table__cell
+                      a(href="#") Апрель
+                    div.table__cell
+                    div.table__cell
+                      span 98
+                  .news__calendar__month.table
+                    div.table__cell
+                      a(href="#") Май
+                    div.table__cell
+                    div.table__cell
+                      span 354
+                  .news__calendar__month.table
+                    div.table__cell
+                      a(href="#") Июнь
+                    div.table__cell
+                    div.table__cell
+                      span 874
+                  .news__calendar__month.table
+                    div.table__cell
+                      a(href="#") Ноябрь
+                    div.table__cell
+                    div.table__cell
+                      span 9
+                      
+              .news__calendar__row
+                .news__calendar__head.table
+                  div.table__cell
+                    a(href="#") 2015 год
+                  div.table__cell &nbsp;
+                  div.table__cell
+                    span 6544
+                .news__calendar__body
+                  .news__calendar__month.table
+                    div.table__cell
+                      a(href="#") Январь
+                    div.table__cell
+                    div.table__cell
+                      span 54
+                  .news__calendar__month.table
+                    div.table__cell
+                      a(href="#") Февраль
+                    div.table__cell
+                    div.table__cell
+                      span 354
+                  .news__calendar__month.table
+                    div.table__cell
+                      a(href="#") Апрель
+                    div.table__cell
+                    div.table__cell
+                      span 98
+                  .news__calendar__month.table
+                    div.table__cell
+                      a(href="#") Май
+                    div.table__cell
+                    div.table__cell
+                      span 354
+                  .news__calendar__month.table
+                    div.table__cell
+                      a(href="#") Июнь
+                    div.table__cell
+                    div.table__cell
+                      span 874
+                  .news__calendar__month.table
+                    div.table__cell
+                      a(href="#") Ноябрь
+                    div.table__cell
+                    div.table__cell
+                      span 9
+                      
+              .news__calendar__row
+                .news__calendar__head.table
+                  div.table__cell
+                    a(href="#") 2014 год
+                  div.table__cell &nbsp;
+                  div.table__cell
+                    span 9874
+                .news__calendar__body
+                  .news__calendar__month.table
+                    div.table__cell
+                      a(href="#") Январь
+                    div.table__cell
+                    div.table__cell
+                      span 54
+                  .news__calendar__month.table
+                    div.table__cell
+                      a(href="#") Февраль
+                    div.table__cell
+                    div.table__cell
+                      span 354
+                  .news__calendar__month.table
+                    div.table__cell
+                      a(href="#") Апрель
+                    div.table__cell
+                    div.table__cell
+                      span 98
+                  .news__calendar__month.table
+                    div.table__cell
+                      a(href="#") Май
+                    div.table__cell
+                    div.table__cell
+                      span 354
+                  .news__calendar__month.table
+                    div.table__cell
+                      a(href="#") Июнь
+                    div.table__cell
+                    div.table__cell
+                      span 874
+                  .news__calendar__month.table
+                    div.table__cell
+                      a(href="#") Ноябрь
+                    div.table__cell
+                    div.table__cell
+                      span 9
             
             .tag
-              a(href="#") Запчасти
+              a(href="#").active Запчасти
               a(href="#") audi
               a(href="#") Wv
               a(href="#") mercedes benz
@@ -46,7 +180,7 @@ html(lang="ru")
             // News
             .news.row
               
-              .col-sm-4.col-xs-6
+              .col-sm-4.col-xs-6.col-xxs-12
                 .news__block
                   .news__line1: i
                   .news__line2: i
@@ -61,7 +195,7 @@ html(lang="ru")
                     p Бизнесмен подарил сотрудникам 1260 машин и 400 квартир
                     .news__readmore Читать новость
                     
-              .col-sm-4.col-xs-6
+              .col-sm-4.col-xs-6.col-xxs-12
                 .news__block
                   .news__line1: i
                   .news__line2: i
@@ -76,7 +210,7 @@ html(lang="ru")
                     p Новый тип разметки в России: вафли
                     .news__readmore Читать новость
                     
-              .col-sm-4.col-xs-6
+              .col-sm-4.col-xs-6.col-xxs-12
                 .news__block
                   .news__line1: i
                   .news__line2: i
@@ -91,7 +225,7 @@ html(lang="ru")
                     p Шипы или не шипы? Отвечаем на главные вопросы
                     .news__readmore Читать новость
                     
-              .col-sm-4.col-xs-6
+              .col-sm-4.col-xs-6.col-xxs-12
                 .news__block
                   .news__line1: i
                   .news__line2: i
@@ -106,7 +240,7 @@ html(lang="ru")
                     p Бизнесмен подарил сотрудникам 1260 машин и 400 квартир Бизнесмен подарил сотрудникам 1260 машин и 400 квартир
                     .news__readmore Читать новость
                     
-              .col-sm-4.col-xs-6
+              .col-sm-4.col-xs-6.col-xxs-12
                 .news__block
                   .news__line1: i
                   .news__line2: i
@@ -121,7 +255,7 @@ html(lang="ru")
                     p Полностью новая Mazda CX-5: первый тизер и дата премьеры
                     .news__readmore Читать новость
                     
-              .col-sm-4.col-xs-6
+              .col-sm-4.col-xs-6.col-xxs-12
                 .news__block
                   .news__line1: i
                   .news__line2: i

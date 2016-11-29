@@ -52,6 +52,7 @@
 
   &__img
     height: 264px
+    width: 100%
     background:
       position: center
       repeat: no-repeat
@@ -171,6 +172,7 @@
   text-transform: uppercase
   overflow: hidden
   margin-left: -10px
+  margin-bottom: 55px
   a
     display: inline-block
     float: left
@@ -182,7 +184,7 @@
     padding: 0 7px
     margin-bottom: 10px
     margin-left: 10px
-    &:hover
+    &:hover, &.active
       background: $color-blue
       color: $color-white
 
@@ -341,3 +343,64 @@
     margin-bottom: 15px
     font-size: rem(12)
     color: #636363
+
+/**/
+.news
+  &__calendar
+    font-size: rem(14)
+    color: #b1b1b1
+    border-bottom: 1px solid #e8e8e8
+    margin-bottom: 30px
+    padding-bottom: 10px
+    a
+      text-decoration: none
+      color: $primary-color
+      &:hover
+        color: $color-blue
+    &__head, &__month
+      width: 100%
+      &>div
+        width: 100%
+        &+div
+          padding-left: 10px
+        &:first-child, &:last-child
+          width: 1px
+          white-space: nowrap
+    &__month
+      &:first-child
+        margin-top: 10px
+      &>div
+        &:nth-child(2)
+          &::after
+            content: ''
+            width: 100%
+            height: 1px
+            display: block
+            background: $color-blue
+            opacity: 0
+      &.active
+        color: $color-blue
+        &>div
+          &:nth-child(2)
+            &::after
+              opacity: 1
+        a
+          color: $color-blue
+      &+.news__calendar__month
+        margin-top: 15px
+    &__head
+      &.active
+        a
+          color: $color-blue
+        &+.news__calendar__body
+          display: block
+
+    &__body
+      padding-left: 30px
+      display: none
+
+    &__row
+      margin-bottom: 15px
+
+    .table__cell + .table__cell
+      padding-left: 10px

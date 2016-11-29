@@ -34,6 +34,16 @@
         &.first
           width: 180px
 
+  .news
+    &__img
+      height: 212px
+
+  .special-offers
+    &__block
+      &>div
+        &.first
+          width: 213px
+
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
@@ -59,6 +69,16 @@
     &__head
       &--register
         text-align: center
+
+  .news
+    &__img
+      height: 157px
+
+  .special-offers
+    &__block
+      &>div
+        &.first
+          width: 157px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
@@ -138,6 +158,18 @@
       display: block
       &+div
         padding-top: 5px
+
+  .news
+    &__img
+      height: 210px
+
+  .special-offers
+    &__block
+      &>div
+        &.first
+          display: none
+        &+div
+          padding-left: 0 !important
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
@@ -260,6 +292,18 @@
   .btn
     &--biggest
       font-size: rem(15)
+
+  .tag
+    margin-bottom: 40px
+
+  .news
+    &__img
+      height: 280px
+
+    &__calendar__month + .news__calendar__month
+      margin-top: 10px
+
+
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 319px)
