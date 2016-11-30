@@ -4,6 +4,7 @@ html(lang="ru")
   
   -var active = 'Главная' //активный пункт меню, список в header.jade
   -var pageTitle = 'Главная' + ' - Биржа автозапчастей' //title страницы для генерации верстки  
+  -var main = 'Yes'
 
   include ./_include/_head
 
@@ -21,7 +22,20 @@ html(lang="ru")
         .content.content--main
           .container
             
-            h1 test
+            .hay__block
+              .hay__line1: i
+              .hay__line2: i
+              .hay__line3: i
+              .hay__line4: i
+              a(href="#").hay__link
+              .hay__strong хэй
+              .hay__text
+                .hay__text__name apm.group
+                p 
+                  strong Auto Parts Market 
+                  | &nbsp; - инновация в сфере продажи автозапчастей. Мы объединили сервис, комфорт, ассортимент и доступные цены в одном слове 
+                  strong apm.store
+              
 
     
         include ./_include/_footer

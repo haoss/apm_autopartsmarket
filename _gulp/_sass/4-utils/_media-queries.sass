@@ -44,6 +44,32 @@
         &.first
           width: 213px
 
+  .table-basic
+    font-size: rem(12)
+    &>tbody, &>tfoot, &>thead
+      &>tr
+        &>td, &>th,
+          padding-left: 8px
+          padding-right: 8px
+
+  .user
+    &__product
+      &>div
+        &:first-child
+          width: 375px
+
+  .hay
+    &__block
+      width: 227px
+      height: 295px
+    &__strong
+      font-size: rem(85)
+      left: 21px
+      bottom: 28px
+    &__text
+
+      &::after
+        left: 158px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
@@ -96,6 +122,27 @@
         margin-bottom: 5px
         &+.user__head__label
           margin-left: 0
+
+    &__product
+      &>div
+        &:first-child
+          width: 220px
+
+  .hay
+    &__block
+      width: 100%
+      height: 198px
+      margin-bottom: 44px
+    &__strong
+      font-size: rem(85)
+      left: inherit
+      right: 38px
+      bottom: inherit
+      top: 50%
+      transform: translateY(-50%)
+    &__text
+      &::after
+        display: none
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
@@ -201,6 +248,47 @@
       padding-top: 45px
       width: 290px
       display: none
+
+    &__product
+      &>div
+        width: 100%
+        display: block
+        &:first-child
+          width: 100%
+          padding-bottom: 40px
+        &+div
+          padding-left: 0 !important
+      &__img
+        display: block
+        max-width: 500px
+        margin: 0 auto
+
+  .hay
+    &__block
+      width: 100%
+      height: 212px
+      margin-bottom: 105px
+    &__strong
+      left: 40px
+      right: inherit
+      transform: none
+      top: inherit
+      bottom: -28px
+      z-index: 100
+      &::after
+        content: ''
+        position: absolute
+        height: 4px
+        top: 50%
+        margin-top: -3px
+        background-color: $color-white
+        width: 100%
+        z-index: -1
+        left: 0
+
+  .content
+    &--main
+      padding-top: 0
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
@@ -335,6 +423,16 @@
   .link-history
     margin-right: -95px
 
+  .hay
+    &__block
+      height: auto
+      margin-bottom: 100px
+      padding-top: 65px
+      padding-bottom: 80px
+    &__text
+      position: relative
+      width: calc(100% - 85px)
+      top: 0
 
 
 /* Custom, iPhone Retina */

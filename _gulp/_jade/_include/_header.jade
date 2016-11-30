@@ -5,9 +5,13 @@ header.header
     .header__wrapper
       div.first
 
-        .header__logo
-          a(href="#")
+        if main == 'Yes'
+          .header__logo.header__logo--main
             img(src="./img/sp.gif", alt="")
+        else
+          .header__logo
+            a(href="#")
+              img(src="./img/sp.gif", alt="")
 
       div.center
 
