@@ -104,11 +104,12 @@
     padding: 0
     height: 40px
     line-height: 40px
-    border-color: $color-blue
+    border-color: $color-white
     display: block
     min-width: inherit
+    border-width: 2px
     svg
-      vertical-align: -9px
+      vertical-align: -7px
       fill: $color-blue
       path.path-color
         fill: $color-blue
@@ -119,3 +120,17 @@
         fill: $color-white
         path.path-color
           fill: $color-white
+
+  &--more
+    background: none
+    text-transform: none
+    color: $color-blue
+    .ion-refresh
+      margin-right: 10px
+      transform: rotate(0)
+      display: inline-block
+      transition: transform 0.2s ease
+    &:hover
+      .ion-refresh
+        transform: rotate(180deg)
+      color: $primary-color

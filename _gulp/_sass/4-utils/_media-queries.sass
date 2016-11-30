@@ -88,6 +88,15 @@
             right: 0
             top: 8px
 
+  .user
+    &__head
+      margin-bottom: 10px
+      .h1, h1
+        display: block
+        margin-bottom: 5px
+        &+.user__head__label
+          margin-left: 0
+
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
 
@@ -177,6 +186,21 @@
           display: none
         &+div
           padding-left: 0 !important
+
+  .user
+    &__menu
+      display: block
+
+    &__navigation
+      position: absolute
+      background-color: #f8f8f8
+      // background-color: pink
+      z-index: 100
+      top: 255px
+      // height: 100%
+      padding-top: 45px
+      width: 290px
+      display: none
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
@@ -310,6 +334,7 @@
 
   .link-history
     margin-right: -95px
+
 
 
 /* Custom, iPhone Retina */

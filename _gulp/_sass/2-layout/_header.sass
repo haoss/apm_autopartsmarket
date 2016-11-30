@@ -147,6 +147,42 @@
         font-size: rem(11)
         display: block
 
+    &__user
+      display: table
+      &>div
+        display: table-cell
+        vertical-align: middle
+        &+div
+          padding-left: 15px
+      a
+        display: block
+        height: 30px
+        width: 30px
+        line-height: 26px
+        text-align: center
+        color: $color-blue
+        text-decoration: none
+        border-radius: 50%
+        font-size: rem(23)
+        border: 1px solid $color-white
+        &:hover
+          background: $color-blue
+          border-color: $color-blue
+          color: $color-white
+        sup
+          position: absolute
+          color: $primary-color
+          font-size: rem(10)
+          margin-top: 4px
+
+        &.user__icon
+          border-color: $color-blue
+          background: $color-blue
+          color: $color-white
+          &:hover
+            background: $color-white
+            color: $color-blue
+
 @keyframes visible
   0%
     opacity: 0

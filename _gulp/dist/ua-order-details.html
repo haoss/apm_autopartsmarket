@@ -2,7 +2,7 @@
 <html lang="ru">
     <head>
         <meta charset="utf-8">
-        <title>Список новостей - Биржа автозапчастей</title>
+        <title>ЛЧ Детали заказа - Биржа автозапчастей</title>
         <meta name="description" content="">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -26,9 +26,9 @@
                         <div class="header__menu"><a href="#" class="header__button"><i class="ion-grid"></i>Меню сайта</a>
                             <nav role="navigation" class="header__navigation">
                                 <ul>
-                                    <li class="active"><a href="#" title="Новости">Новости</a></li>
+                                    <li><a href="#" title="Новости">Новости</a></li>
                                     <li><a href="#" title="О компании">О компании</a></li>
-                                    <li><a href="#" title="Стать клиентом">Стать клиентом</a></li>
+                                    <li><a href="#" title="APM Group">APM Group</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -37,29 +37,9 @@
                         <div class="header__right">
                             <div>
                                 <div class="header__enter">
-                                    <div class="header__enter__button"><a href="#" class="btn btn--effect1"><span data-hover="Вход">Вход</span></a></div>
-                                    <div class="header__enter__body">
-                                        <div class="header__enter__wrapper">
-                                            <form action="#">
-                                                <!-- .has-error-->
-                                                <div class="form__group">
-                                                    <label class="hidden">Ваш логин</label>
-                                                    <input type="text" name="login" placeholder="Ваш логин" class="form-control">
-                                                </div>
-                                                <div class="form__group">
-                                                    <label class="hidden">Ваш пароль</label>
-                                                    <input type="password" name="password" placeholder="Ваш пароль" class="form-control">
-                                                </div>
-                                                <div class="header__enter__bottom">
-                                                    <div>
-                                                        <button type="submit" class="btn btn--blue"><strong>ВОЙТИ НА САЙТ</strong></button>
-                                                    </div>
-                                                    <div>
-                                                        <div class="header__enter__link"><small>Нет аккаунта?</small><a href="#" class="link-nounderline">Зарегистрироваться</a></div>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
+                                    <div class="header__enter__user">
+                                        <div><a href="#" class="user__icon"><i class="ion-person"></i><sup>23</sup></a></div>
+                                        <div><a href="#" class="user__cart"><i class="ion-ios-cart"></i><sup>69</sup></a></div>
                                     </div>
                                 </div>
                             </div>
@@ -80,176 +60,143 @@
                 </div>
             </div>
         </header>
+        <!-- Search-->
+        <div class="user__search">
+            <div class="container">
+                <form action="#">
+                    <div class="user__search__wrapper table">
+                        <div class="table__cell">
+                            <div class="user__search__body">
+                                <input type="text" placeholder="Введите номер детали" class="form-control">
+                                <button type="submit"><i class="ion-android-search"></i></button>
+                            </div><a href="#" class="link-catalog pull-left">Оригинальный каталог</a><a href="#" class="link-history pull-right">История запросов</a>
+                        </div>
+                        <div class="table__cell"><a href="#" class="btn btn--xsl">
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.2" viewbox="0 0 47.106934 50.000001" width="27" height="29">
+                                    <path d="M26.355 28.015c-.22-.354-.525-.635-.916-.842-.39-.208-.99-.403-1.796-.598-.806-.196-1.318-.38-1.538-.55-.17-.134-.244-.305-.244-.5 0-.22.085-.39.268-.513.27-.195.66-.293 1.137-.293.463 0 .817.096 1.062.28.23.182.39.487.46.915l1.674-.074c-.025-.756-.305-1.366-.83-1.82-.525-.45-1.306-.68-2.344-.68-.634 0-1.17.096-1.623.292-.45.195-.793.476-1.025.842-.244.366-.354.757-.354 1.184 0 .658.256 1.208.757 1.66.366.317.99.597 1.88.817.696.17 1.135.293 1.33.366.28.1.49.22.6.355.108.135.17.306.17.5 0 .306-.135.575-.403.794-.27.232-.672.342-1.21.342-.512 0-.914-.122-1.207-.378-.293-.257-.5-.66-.6-1.197l-1.622.16c.11.927.44 1.623 1 2.11.562.49 1.368.72 2.406.72.72 0 1.316-.096 1.792-.304.476-.195.855-.513 1.11-.916.27-.415.392-.854.392-1.33 0-.55-.11-.99-.33-1.343zM15.05 30.347v-6.8h-1.67v8.19h5.81v-1.39h-4.14zM9.668 27.49l2.563-4.016h-1.926l-1.624 2.65-1.66-2.65H5.065L7.63 27.43l-2.82 4.308h2.002l1.83-2.856 1.832 2.856h2.014l-2.82-4.248zm0 0" class="path-color"></path>
+                                    <path d="M31.726 20.19v14.43c0 1.586-1.294 2.88-2.88 2.88H12.5v8.655c0 1.062.867 1.916 1.93 1.916h28.83c1.062 0 1.928-.864 1.928-1.914V15.393h-12.5c-.537 0-.964-.427-.964-.964V1.93H14.43c-1.063 0-1.93.865-1.93 1.927V17.31h16.345c1.587 0 2.88 1.294 2.88 2.88z" fill="none"></path>
+                                    <path fill="none" d="M33.655 13.464h10.46L33.655 2.6M2.88 35.583h25.965c.525 0 .965-.427.965-.964V20.19c0-.524-.428-.964-.965-.964H2.88c-.524 0-.963.427-.963.964v14.43c.012.524.44.963.964.963z"></path>
+                                    <path d="M2.88 37.5h7.69v8.655c0 2.124 1.735 3.845 3.86 3.845h28.83c2.05 0 3.735-1.61 3.845-3.638V14.1c-.024-.208-.11-.416-.27-.562L34.108.293C33.922.11 33.678 0 33.41 0H14.43c-2.125 0-3.86 1.733-3.86 3.857V17.31H2.88C1.295 17.31 0 18.604 0 20.19v14.43c0 1.586 1.294 2.88 2.88 2.88zM33.656 2.6l10.46 10.864h-10.46V2.6zM12.5 3.857c0-1.062.867-1.928 1.93-1.928h17.296v12.5c0 .535.427.962.964.962h12.5v30.774c0 1.062-.866 1.916-1.928 1.916H14.43c-1.063 0-1.93-.866-1.93-1.916V37.51h16.345c1.587 0 2.88-1.293 2.88-2.88V20.19c0-1.586-1.293-2.88-2.88-2.88H12.5V3.857zM1.93 20.19c0-.524.426-.964.963-.964h25.964c.525 0 .965.427.965.964v14.43c0 .524-.427.963-.965.963H2.88c-.524 0-.963-.427-.963-.964V20.19z" class="path-color"></path>
+                                </svg></a></div>
+                    </div>
+                </form>
+            </div>
+        </div>
         <!-- Content-->
         <div class="content">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-3 col-xs-12">
-                        <div class="h1 h1--dark">Новости</div>
-                        <nav role="navigation" class="navigation-level2 navigation-level2--border">
+                    <div class="col-sm-3 col-xs-12 hidden-xs">
+                        <!-- Profile photo-->
+                        <div class="profile__photo"><img src="./tmp/profile-photo.png" alt="" class="img-responsive"></div>
+                        <nav role="navigation" class="navigation-level2 navigation-level2--user">
                             <ul>
-                                <li class="active"><a href="#">Все</a></li>
-                                <li><a href="#">Тест-драйвы</a></li>
-                                <li><a href="#">Водителям</a></li>
-                                <li><a href="#">Покупка и продажа</a></li>
+                                <li><a href="#">Личный кабинет</a></li>
+                                <li><a href="#">Мои Заказы</a></li>
+                                <li><a href="#">Мои Сообщения<span class="label">23</span></a></li>
+                                <li><a href="#">Состояние счета</a></li>
+                                <li><a href="#">Состояние заказов</a></li>
+                                <li><a href="#">Спец. предложения</a></li>
+                                <li><a href="#">Мои Документы</a></li>
+                                <li><a href="#">Мои Настройки</a></li>
                             </ul>
                         </nav>
-                        <div class="news__calendar">
-                            <ul>
-                                <li class="active"><a href="#"> <span>2016 год</span><small>2105</small></a>
-                                    <ul>
-                                        <li><a href="#"><span>Январь</span><small>54</small></a></li>
-                                        <li><a href="#"><span>Февраль	</span><small>354</small></a></li>
-                                        <li class="active"><a href="#"><span>Апрель	</span><small>98</small></a></li>
-                                        <li><a href="#"><span>Май	</span><small>354</small></a></li>
-                                        <li><a href="#"><span>Июнь	</span><small>874</small></a></li>
-                                        <li><a href="#"><span>Ноябрь	</span><small>9</small></a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#"> <span>2015 год</span><small>6544</small></a>
-                                    <ul>
-                                        <li><a href="#"><span>Январь</span><small>54</small></a></li>
-                                        <li><a href="#"><span>Февраль	</span><small>354</small></a></li>
-                                        <li><a href="#"><span>Апрель	</span><small>98</small></a></li>
-                                        <li><a href="#"><span>Май	</span><small>354</small></a></li>
-                                        <li><a href="#"><span>Июнь	</span><small>874</small></a></li>
-                                        <li><a href="#"><span>Ноябрь	</span><small>9</small></a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#"> <span>2014 год</span><small>9874</small></a>
-                                    <ul>
-                                        <li><a href="#"><span>Январь</span><small>54</small></a></li>
-                                        <li><a href="#"><span>Февраль	</span><small>354</small></a></li>
-                                        <li><a href="#"><span>Апрель	</span><small>98</small></a></li>
-                                        <li><a href="#"><span>Май	</span><small>354</small></a></li>
-                                        <li><a href="#"><span>Июнь	</span><small>874</small></a></li>
-                                        <li><a href="#"><span>Ноябрь	</span><small>9</small></a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="tag"><a href="#" class="active">Запчасти</a><a href="#">audi</a><a href="#">Wv</a><a href="#">mercedes benz</a><a href="#">ВАз</a><a href="#">Газ</a><a href="#">Газель</a></div>
                     </div>
                     <div class="col-sm-9 col-xs-12">
-                        <!-- News-->
-                        <div class="news row">
-                            <div class="col-sm-4 col-xs-6 col-xxs-12">
-                                <div class="news__block">
-                                    <div class="news__line1"><i></i></div>
-                                    <div class="news__line2"><i></i></div>
-                                    <div class="news__line3"><i></i></div>
-                                    <div class="news__line4"><i></i></div><a href="#" class="news__link"></a>
-                                    <div class="news__wrapper">
-                                        <div style="background-image: url('./tmp/blog.png')" class="news__img"></div>
-                                        <div class="news__date">2 ноября 2016</div>
-                                        <p>Бизнесмен подарил сотрудникам 1260 машин и 400 квартир</p>
-                                    </div>
-                                    <div class="news__wrapper__hover">
-                                        <p>Бизнесмен подарил сотрудникам 1260 машин и 400 квартир</p>
-                                        <div class="news__readmore">Читать новость</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4 col-xs-6 col-xxs-12">
-                                <div class="news__block">
-                                    <div class="news__line1"><i></i></div>
-                                    <div class="news__line2"><i></i></div>
-                                    <div class="news__line3"><i></i></div>
-                                    <div class="news__line4"><i></i></div><a href="#" class="news__link"></a>
-                                    <div class="news__wrapper">
-                                        <div style="background-image: url('./tmp/blog2.png')" class="news__img"></div>
-                                        <div class="news__date">1 ноября 2016</div>
-                                        <p>Новый тип разметки в России: вафли</p>
-                                    </div>
-                                    <div class="news__wrapper__hover">
-                                        <p>Новый тип разметки в России: вафли</p>
-                                        <div class="news__readmore">Читать новость</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4 col-xs-6 col-xxs-12">
-                                <div class="news__block">
-                                    <div class="news__line1"><i></i></div>
-                                    <div class="news__line2"><i></i></div>
-                                    <div class="news__line3"><i></i></div>
-                                    <div class="news__line4"><i></i></div><a href="#" class="news__link"></a>
-                                    <div class="news__wrapper">
-                                        <div style="background-image: url('./tmp/blog3.png')" class="news__img"></div>
-                                        <div class="news__date">30 октября 2016</div>
-                                        <p>Шипы или не шипы? Отвечаем на главные вопросы</p>
-                                    </div>
-                                    <div class="news__wrapper__hover">
-                                        <p>Шипы или не шипы? Отвечаем на главные вопросы</p>
-                                        <div class="news__readmore">Читать новость</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4 col-xs-6 col-xxs-12">
-                                <div class="news__block">
-                                    <div class="news__line1"><i></i></div>
-                                    <div class="news__line2"><i></i></div>
-                                    <div class="news__line3"><i></i></div>
-                                    <div class="news__line4"><i></i></div><a href="#" class="news__link"></a>
-                                    <div class="news__wrapper">
-                                        <div style="background-image: url('./tmp/blog4.png')" class="news__img"></div>
-                                        <div class="news__date">29 октября 2016</div>
-                                        <p>Бизнесмен подарил сотрудникам 1260 машин и 400 квартир Бизнесмен подарил сотрудникам 1260 машин и 400 квартир</p>
-                                    </div>
-                                    <div class="news__wrapper__hover">
-                                        <p>Бизнесмен подарил сотрудникам 1260 машин и 400 квартир Бизнесмен подарил сотрудникам 1260 машин и 400 квартир</p>
-                                        <div class="news__readmore">Читать новость</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4 col-xs-6 col-xxs-12">
-                                <div class="news__block">
-                                    <div class="news__line1"><i></i></div>
-                                    <div class="news__line2"><i></i></div>
-                                    <div class="news__line3"><i></i></div>
-                                    <div class="news__line4"><i></i></div><a href="#" class="news__link"></a>
-                                    <div class="news__wrapper">
-                                        <div style="background-image: url('./tmp/blog.png')" class="news__img"></div>
-                                        <div class="news__date">28 октября 2016</div>
-                                        <p>Полностью новая Mazda CX-5: первый тизер и дата премьеры</p>
-                                    </div>
-                                    <div class="news__wrapper__hover">
-                                        <p>Полностью новая Mazda CX-5: первый тизер и дата премьеры</p>
-                                        <div class="news__readmore">Читать новость</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4 col-xs-6 col-xxs-12">
-                                <div class="news__block">
-                                    <div class="news__line1"><i></i></div>
-                                    <div class="news__line2"><i></i></div>
-                                    <div class="news__line3"><i></i></div>
-                                    <div class="news__line4"><i></i></div><a href="#" class="news__link"></a>
-                                    <div class="news__wrapper">
-                                        <div style="background-image: url('./tmp/blog2.png')" class="news__img"></div>
-                                        <div class="news__date">27 октября 2016</div>
-                                        <p>Автопроизводители откажутся от маленьких турбомоторов</p>
-                                    </div>
-                                    <div class="news__wrapper__hover">
-                                        <p>Автопроизводители откажутся от маленьких турбомоторов</p>
-                                        <div class="news__readmore">Читать новость</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Pagination-->
-                        <div class="pagination">
-                            <ul>
-                                <li><span class="line"></span></li>
-                                <li><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li class="active"><span>4</span></li>
-                                <li><a href="#">5</a></li>
-                                <li><a href="#">6</a></li>
-                                <li><span>...</span></li>
-                                <li><a href="#">99</a></li>
-                                <li><span class="line"></span></li>
-                            </ul>
+                        <h1>Заказ&nbsp;<strong>№56465453</strong></h1>
+                        <table class="table-basic table-basic--data">
+                            <thead>
+                                <tr>
+                                    <th>№ заказа</th>
+                                    <th>Номер детали</th>
+                                    <th>Статус</th>
+                                    <th>Название/Коммен-рий мен-ра</th>
+                                    <th>Срок, дн.</th>
+                                    <th>Кол-во</th>
+                                    <th>Цена</th>
+                                    <th>Сумма</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="tr--separator-top">
+                                    <td colspan="2">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>11654534</td>
+                                    <td>MK016</td>
+                                    <td>
+                                        <div class="info-status info-status--inwork">В работе</div>
+                                    </td>
+                                    <td>Амортизатора компл. монтажный</td>
+                                    <td>12</td>
+                                    <td>20</td>
+                                    <td class="nowrap">654 руб</td>
+                                    <td class="nowrap">6 546 574 руб</td>
+                                </tr>
+                                <tr>
+                                    <td>11654534</td>
+                                    <td>MK016</td>
+                                    <td>
+                                        <div class="info-status info-status--cancel">Отменен</div>
+                                    </td>
+                                    <td>Амортизатора компл. монтажный</td>
+                                    <td>12</td>
+                                    <td>20</td>
+                                    <td class="nowrap">654 руб</td>
+                                    <td class="nowrap">6 546 574 руб</td>
+                                </tr>
+                                <tr>
+                                    <td>11654534</td>
+                                    <td>MK016</td>
+                                    <td>
+                                        <div class="info-status info-status--custom">Под заказ</div>
+                                    </td>
+                                    <td>Амортизатора компл. монтажный</td>
+                                    <td>12</td>
+                                    <td>20</td>
+                                    <td class="nowrap">654 руб</td>
+                                    <td class="nowrap">6 546 574 руб</td>
+                                </tr>
+                                <tr>
+                                    <td>11654534</td>
+                                    <td>MK016</td>
+                                    <td>
+                                        <div class="info-status info-status--issued">Выдан</div>
+                                    </td>
+                                    <td>Амортизатора компл. монтажный</td>
+                                    <td>12</td>
+                                    <td>20</td>
+                                    <td class="nowrap">654 руб</td>
+                                    <td class="nowrap">6 546 574 руб</td>
+                                </tr>
+                                <tr>
+                                    <td>11654534</td>
+                                    <td>MK016</td>
+                                    <td>
+                                        <div class="info-status info-status--inwork">В работе</div>
+                                    </td>
+                                    <td>Амортизатора компл. монтажный</td>
+                                    <td>12</td>
+                                    <td>20</td>
+                                    <td class="nowrap">654 руб</td>
+                                    <td class="nowrap">6 546 574 руб</td>
+                                </tr>
+                                <tr>
+                                    <td>11654534</td>
+                                    <td>MK016</td>
+                                    <td>
+                                        <div class="info-status info-status--inwork">В работе</div>
+                                    </td>
+                                    <td>Амортизатора компл. монтажный</td>
+                                    <td>12</td>
+                                    <td>20</td>
+                                    <td class="nowrap">654 руб</td>
+                                    <td class="nowrap">6 546 574 руб</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn--more"><i class="ion-refresh"></i>Загрузить еще 10 позиций</button>
                         </div>
                     </div>
                 </div>

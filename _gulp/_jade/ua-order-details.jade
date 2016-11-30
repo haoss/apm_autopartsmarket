@@ -2,8 +2,8 @@ doctype
 
 html(lang="ru")
 
-  -var active = 'Состояние счета' //активный пункт меню, список в header.jade
-  -var pageTitle = 'ЛЧ Состояние счета' + ' - Биржа автозапчастей' //title страницы для генерации верстки
+  -var active = 'Детали заказа' //активный пункт меню, список в header.jade
+  -var pageTitle = 'ЛЧ Детали заказа' + ' - Биржа автозапчастей' //title страницы для генерации верстки
   -var headerBlock = 'ЛЧ'
 
   include ./_include/_head
@@ -44,12 +44,8 @@ html(lang="ru")
     .content
       .container
 
-        a(href="#").user__menu
-          i.ion-grid
-          span Меню личного кабинета
-
         .row
-          .col-sm-3.col-xs-12.user__navigation
+          .col-sm-3.col-xs-12.hidden-xs
 
             // Profile photo
             .profile__photo
@@ -61,45 +57,99 @@ html(lang="ru")
                 li: a(href="#") Мои Заказы
                 li: a(href="#") Мои Сообщения
                   span.label 23
-                li.active: a(href="#") Состояние счета
+                li: a(href="#") Состояние счета
                 li: a(href="#") Состояние заказов
                 li: a(href="#") Спец. предложения
                 li: a(href="#") Мои Документы
                 li: a(href="#") Мои Настройки
 
           .col-sm-9.col-xs-12
-            h1 состояние счета
+            h1 Заказ&nbsp;
+              strong №56465453
 
-            table.table-basic.table-basic--hover
+            table.table-basic.table-basic--data
               thead
                 tr
-                  th(colspan="2").th--big.text--left ИНФОРМАЦИЯ
+                  th № заказа
+                  th Номер детали
+                  th Статус
+                  th Название/Коммен-рий мен-ра
+                  th Срок, дн.
+                  th Кол-во
+                  th Цена
+                  th Сумма
               tbody
                 tr.tr--separator-top
                   td(colspan="2") &nbsp;
                 tr
-                  td На счету
-                  td.table-basic--last
-                    strong € 0.00
+                  td 11654534
+                  td MK016
+                  td
+                    .info-status.info-status--inwork В работе
+                  td Амортизатора компл. монтажный
+                  td 12
+                  td 20
+                  td.nowrap 654 руб
+                  td.nowrap 6 546 574 руб
                 tr
-                  td В заказе без оплаты
-                  td.table-basic--last
-                    strong € 0.00
+                  td 11654534
+                  td MK016
+                  td
+                    .info-status.info-status--cancel Отменен
+                  td Амортизатора компл. монтажный
+                  td 12
+                  td 20
+                  td.nowrap 654 руб
+                  td.nowrap 6 546 574 руб
                 tr
-                  td Сальдо баланса
-                  td.table-basic--last
-                    strong € 0.00
+                  td 11654534
+                  td MK016
+                  td
+                    .info-status.info-status--custom Под заказ
+                  td Амортизатора компл. монтажный
+                  td 12
+                  td 20
+                  td.nowrap 654 руб
+                  td.nowrap 6 546 574 руб
                 tr
-                  td Кредит
-                  td.table-basic--last
-                    strong € 0.00
+                  td 11654534
+                  td MK016
+                  td
+                    .info-status.info-status--issued Выдан
+                  td Амортизатора компл. монтажный
+                  td 12
+                  td 20
+                  td.nowrap 654 руб
+                  td.nowrap 6 546 574 руб
                 tr
-                  td Остаток средств для заказа
-                  td.table-basic--last
-                    strong € 0.00
+                  td 11654534
+                  td MK016
+                  td
+                    .info-status.info-status--inwork В работе
+                  td Амортизатора компл. монтажный
+                  td 12
+                  td 20
+                  td.nowrap 654 руб
+                  td.nowrap 6 546 574 руб
+                tr
+                  td 11654534
+                  td MK016
+                  td
+                    .info-status.info-status--inwork В работе
+                  td Амортизатора компл. монтажный
+                  td 12
+                  td 20
+                  td.nowrap 654 руб
+                  td.nowrap 6 546 574 руб
 
-            .text-right
-              a(href="#").btn.btn--blue.btn--xxs-block Сообщить об оплате
+            .text-center
+              //- a(href="#").btn.btn--more
+              //-   i.ion-refresh
+              //-   | Загрузить еще 10 позиций
+
+              button(type="submit").btn.btn--more
+                i.ion-refresh
+                | Загрузить еще 10 позиций
 
     include ./_include/_footer
     //- div(style="height: 900px; background-color: #000")
