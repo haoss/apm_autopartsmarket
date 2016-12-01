@@ -1,27 +1,27 @@
 doctype
 
 html(lang="ru")
-  
+
   -var active = 'Главная' //активный пункт меню, список в header.jade
-  -var pageTitle = 'Главная' + ' - Биржа автозапчастей' //title страницы для генерации верстки  
+  -var pageTitle = 'Главная' + ' - Биржа автозапчастей' //title страницы для генерации верстки
   -var main = 'Yes'
 
   include ./_include/_head
 
   body
-    
+
     // Preloader
     //- include ./_include/_preloader
-    
+
     #body__main.body__main
       canvas#bg-animation
-      
+
       .body__main__wrapper
         include ./_include/_header
-        
+
         .content.content--main
           .container
-            
+
             .hay__block
               .hay__line1: i
               .hay__line2: i
@@ -31,16 +31,30 @@ html(lang="ru")
               .hay__strong хэй
               .hay__text
                 .hay__text__name apm.group
-                p 
-                  strong Auto Parts Market 
-                  | &nbsp; - инновация в сфере продажи автозапчастей. Мы объединили сервис, комфорт, ассортимент и доступные цены в одном слове 
+                p
+                  strong Auto Parts Market
+                  | &nbsp; - инновация в сфере продажи автозапчастей. Мы объединили сервис, комфорт, ассортимент и доступные цены в одном слове
                   strong apm.store
-              
 
-    
+            //- .clear
+
+            .auto__block
+              img.auto__background(src="./img/auto-background.png")
+              .auto__text
+                span Биржа
+                strong авто
+                  br
+                  | &nbsp;запчастей
+              .auto__car
+                .auto__car__border
+                img.auto__car__img(src="./img/auto-car-img.png")
+              a(href="#").btn.btn--auto-register.btn--effect1
+                span(data-hover="Зарегистрироваться на сайте") Зарегистрироваться на сайте
+
+
         include ./_include/_footer
     //- div(style="height: 900px; background-color: #000")
-    
+
     //[if gte IE 9]
       <script src='./js/libs/html5shiv/es5-shim.min.js'>
       <script src='./js/libs/html5shiv/html5shiv.min.js'>
@@ -54,7 +68,7 @@ html(lang="ru")
     include ./_include/_footer-js
     script(src='./js/common.js')
     include ./_include/_js-body-bottom
-    
+
     script(src="http://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/EasePack.min.js")
     script(src="http://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/rAF.js")
     script(src="http://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/TweenLite.min.js")

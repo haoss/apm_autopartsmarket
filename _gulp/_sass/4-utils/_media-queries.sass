@@ -71,6 +71,35 @@
       &::after
         left: 158px
 
+  .auto
+    &__block
+      margin-right: 65px
+      width: 286px
+      height: 382px
+    &__car
+      &__border
+        width: 286px
+        height: 382px
+      &__img
+        width: 348px
+    &__text
+      font-size: rem(67)
+      margin-right: 20px
+      margin-top: 55px
+      strong
+        font-size: rem(47)
+    &__background
+      width: 163px
+      top: 46px
+
+  .btn
+    &--auto-register
+      height: 54px
+      line-height: 54px
+      width: 407px
+      bottom: 63px
+      margin-right: -70px
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
   h1, .h1
@@ -143,6 +172,14 @@
     &__text
       &::after
         display: none
+
+  .auto
+    &__block
+      margin-top: 0
+
+  .content
+    &--main
+      padding-bottom: 65px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
@@ -267,7 +304,8 @@
     &__block
       width: 100%
       height: 212px
-      margin-bottom: 105px
+      // margin-bottom: 105px
+      float: none
     &__strong
       left: 40px
       right: inherit
@@ -289,6 +327,34 @@
   .content
     &--main
       padding-top: 0
+
+  .auto
+    &__block
+      width: 250px
+      height: 333px
+      margin: 250px auto 0
+      float: none
+      right: -41px
+    &__car
+      &__border
+        width: 250px
+        height: 333px
+      &__img
+        width: 303px
+    &__background
+      width: 142px
+      top: 40px
+    &__text
+      margin-top: -140px
+      margin-right: -288px
+      strong
+        br
+          display: none
+
+  .btn
+    &--auto-register
+      margin-right: -290px
+      bottom: 30px
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
@@ -434,6 +500,33 @@
       width: calc(100% - 85px)
       top: 0
 
+  .auto
+    &__block
+      width: 235px
+      height: 313px
+      margin: 285px auto 0 0
+      right: 0
+    &__car
+      &__border
+        width: 235px
+        height: 313px
+      &__img
+        width: 284px
+    &__background
+      display: none
+    &__text
+      margin-top: -190px
+      margin-right: -290px
+      strong
+        br
+          display: block
+
+  .btn
+    &--auto-register
+      margin-right: -290px
+      bottom: 35px
+      width: 290px
+      font-size: rem(13)
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 319px)

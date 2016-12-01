@@ -549,6 +549,12 @@
       img
         border: 1px solid $color-lightgray
 
+  &__manager
+    font-size: rem(14)
+    font-family: $font-roboto-light
+    b
+      font-family: $font-roboto-medium
+
 /**/
 .table-basic
   font-size: rem(14)
@@ -643,6 +649,7 @@
     width: 278px
     height: 364px
     font-size: rem(15)
+    float: left
     // overflow: hidden
 
     &:hover
@@ -774,3 +781,119 @@
       width: 4px
       top: 0
       z-index: -1
+
+/**/
+.auto
+  &__block
+    float: right
+    position: relative
+    width: 364px
+    height: 486px
+    margin-top: 85px
+    margin-right: 85px
+    +clearfix
+  &__car
+    position: relative
+    height: 100%
+    width: 100%
+    &__border
+      background-color: $color-white
+      border: 4px solid $color-blue
+      position: absolute
+      left: 0
+      top: 0
+      right: 0
+      bottom: 0
+      z-index: 10
+    &__img
+      position: absolute
+      z-index: 20
+      top: 4px
+      left: 4px
+
+  &__text
+    font-family: $font-roboto-thin
+    font-size: rem(85)
+    text-align: right
+    text-transform: uppercase
+    position: absolute
+    right: 100%
+    margin-right: 28px
+    margin-top: 65px
+    z-index: 50
+    strong
+      display: block
+      line-height: 1.2
+      font-size: rem(60)
+    span
+      display: block
+      line-height: 1
+
+  &__background
+    position: absolute
+    right: 100%
+    z-index: 25
+    top: 58px
+
+/**/
+.nano
+  height: 630px
+
+/**/
+.chat
+  &__body
+    border-top: 1px solid #e9e9e9
+    padding-top: 15px
+    padding-bottom: 15px
+
+  &__block
+    width: 100%
+    font-size: rem(14)
+    margin-bottom: 45px
+    &>div
+      vertical-align: top
+      &+div
+        padding-left: 15px !important
+
+    p
+      margin-bottom: 0
+      &+p
+        margin-top: 15px
+
+    &__img
+      width: 67px
+
+    &__name
+      margin-bottom: 15px
+      font-size: rem(15)
+      color: #b4b4b4
+      strong
+        color: $color-blue
+      span
+        display: inline-block
+        margin-left: 10px
+
+  &__date
+    font-size: rem(14)
+    color: #949494
+    margin-bottom: 60px
+    &__wrapper
+      display: table
+      width: 294px
+      margin: 0 auto
+
+      &::before, &::after
+        background-image: linear-gradient($color-lightgray, $color-lightgray)
+        content: ''
+        display: table-cell
+        background-size: 100% 1px
+        background-repeat: no-repeat
+        background-position: center
+      span
+        width: 100px
+        position: relative
+        text-align: center
+        display: table-cell
+        padding-left: 20px
+        padding-right: 20px
+        white-space: nowrap

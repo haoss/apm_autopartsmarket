@@ -1,39 +1,39 @@
 doctype
 
 html(lang="ru")
-  
+
   -var active = 'Новости' //активный пункт меню, список в header.jade
-  -var pageTitle = 'Список новостей' + ' - Биржа автозапчастей' //title страницы для генерации верстки  
+  -var pageTitle = 'Список новостей' + ' - Биржа автозапчастей' //title страницы для генерации верстки
 
   include ./_include/_head
 
   body
-    
+
     // Preloader
     //- include ./_include/_preloader
-    
+
     include ./_include/_header
-    
+
     // Content
     .content
       .container
-        
+
         .row
           .col-sm-3.col-xs-12
-            
+
             .h1.h1--dark Новости
-            
+
             nav(role="navigation").navigation-level2.navigation-level2--border
               ul
                 li.active: a(href="#") Все
                 li: a(href="#") Тест-драйвы
                 li: a(href="#") Водителям
                 li: a(href="#") Покупка и продажа
-            
+
             .news__calendar
               ul
                 li.active
-                  a(href="#") 
+                  a(href="#")
                     span 2016 год
                     small 2105
                   ul
@@ -41,22 +41,22 @@ html(lang="ru")
                       span Январь
                       small 54
                     li: a(href="#")
-                      span Февраль	
+                      span Февраль
                       small 354
                     li.active: a(href="#")
-                      span Апрель	
+                      span Апрель
                       small 98
                     li: a(href="#")
-                      span Май	
+                      span Май
                       small 354
                     li: a(href="#")
-                      span Июнь	
+                      span Июнь
                       small 874
                     li: a(href="#")
-                      span Ноябрь	
+                      span Ноябрь
                       small 9
                 li
-                  a(href="#") 
+                  a(href="#")
                     span 2015 год
                     small 6544
                   ul
@@ -64,22 +64,22 @@ html(lang="ru")
                       span Январь
                       small 54
                     li: a(href="#")
-                      span Февраль	
+                      span Февраль
                       small 354
                     li: a(href="#")
-                      span Апрель	
+                      span Апрель
                       small 98
                     li: a(href="#")
-                      span Май	
+                      span Май
                       small 354
                     li: a(href="#")
-                      span Июнь	
+                      span Июнь
                       small 874
                     li: a(href="#")
-                      span Ноябрь	
+                      span Ноябрь
                       small 9
                 li
-                  a(href="#") 
+                  a(href="#")
                     span 2014 год
                     small 9874
                   ul
@@ -87,21 +87,21 @@ html(lang="ru")
                       span Январь
                       small 54
                     li: a(href="#")
-                      span Февраль	
+                      span Февраль
                       small 354
                     li: a(href="#")
-                      span Апрель	
+                      span Апрель
                       small 98
                     li: a(href="#")
-                      span Май	
+                      span Май
                       small 354
                     li: a(href="#")
-                      span Июнь	
+                      span Июнь
                       small 874
                     li: a(href="#")
-                      span Ноябрь	
+                      span Ноябрь
                       small 9
-            
+
             .tag
               a(href="#").active Запчасти
               a(href="#") audi
@@ -110,12 +110,12 @@ html(lang="ru")
               a(href="#") ВАз
               a(href="#") Газ
               a(href="#") Газель
-            
+
           .col-sm-9.col-xs-12
-            
+
             // News
             .news.row
-              
+
               .col-sm-4.col-xs-6.col-xxs-12
                 .news__block
                   .news__line1: i
@@ -130,7 +130,7 @@ html(lang="ru")
                   .news__wrapper__hover
                     p Бизнесмен подарил сотрудникам 1260 машин и 400 квартир
                     .news__readmore Читать новость
-                    
+
               .col-sm-4.col-xs-6.col-xxs-12
                 .news__block
                   .news__line1: i
@@ -145,7 +145,7 @@ html(lang="ru")
                   .news__wrapper__hover
                     p Новый тип разметки в России: вафли
                     .news__readmore Читать новость
-                    
+
               .col-sm-4.col-xs-6.col-xxs-12
                 .news__block
                   .news__line1: i
@@ -160,7 +160,7 @@ html(lang="ru")
                   .news__wrapper__hover
                     p Шипы или не шипы? Отвечаем на главные вопросы
                     .news__readmore Читать новость
-                    
+
               .col-sm-4.col-xs-6.col-xxs-12
                 .news__block
                   .news__line1: i
@@ -175,7 +175,7 @@ html(lang="ru")
                   .news__wrapper__hover
                     p Бизнесмен подарил сотрудникам 1260 машин и 400 квартир Бизнесмен подарил сотрудникам 1260 машин и 400 квартир
                     .news__readmore Читать новость
-                    
+
               .col-sm-4.col-xs-6.col-xxs-12
                 .news__block
                   .news__line1: i
@@ -190,7 +190,7 @@ html(lang="ru")
                   .news__wrapper__hover
                     p Полностью новая Mazda CX-5: первый тизер и дата премьеры
                     .news__readmore Читать новость
-                    
+
               .col-sm-4.col-xs-6.col-xxs-12
                 .news__block
                   .news__line1: i
@@ -205,7 +205,7 @@ html(lang="ru")
                   .news__wrapper__hover
                     p Автопроизводители откажутся от маленьких турбомоторов
                     .news__readmore Читать новость
-            
+
             // Pagination
             .pagination
               ul
@@ -220,10 +220,10 @@ html(lang="ru")
                 li: a(href="#") 99
                 li: span.line
 
-    
+
     include ./_include/_footer
     //- div(style="height: 900px; background-color: #000")
-    
+
     //[if gte IE 9]
       <script src='./js/libs/html5shiv/es5-shim.min.js'>
       <script src='./js/libs/html5shiv/html5shiv.min.js'>
@@ -237,4 +237,3 @@ html(lang="ru")
     include ./_include/_footer-js
     script(src='./js/common.js')
     include ./_include/_js-body-bottom
-  
