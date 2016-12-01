@@ -129,7 +129,6 @@ html(lang="ru")
                           p Поделился с Вами документом. Его можете загрузить, нажав на эту 
                             a(href="#") ссылку
                             | .
-                    
                     - }    
                     
               .chat__form
@@ -137,9 +136,17 @@ html(lang="ru")
                   .form__group.form__group--chat
                     div
                       input(type="text" placeholder="Введите сообщение").form-control
-                    div 1
+                    div.center
+                      a(href="#")
+                        i.ion-ios-download-outline
                     div
-                      button(type="submit").btn.btn--blue Отправить
+                      button(type="submit").btn.btn--blue.btn--chat.btn--xxs-block Отправить
+                      
+                .chat__form__file
+                  a(href="#") 
+                    i.ion-android-close
+                  | Document_price_new_9.11.2016.xls
+                    
 
     include ./_include/_footer
     //- div(style="height: 900px; background-color: #000")

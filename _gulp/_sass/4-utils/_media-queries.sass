@@ -100,6 +100,10 @@
       bottom: 63px
       margin-right: -70px
 
+  .chat
+    &__block, &__date
+      margin-bottom: 25px
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
   h1, .h1
@@ -276,15 +280,31 @@
       display: block
 
     &__navigation
-      position: absolute
+      position: fixed
       background-color: #f8f8f8
       // background-color: pink
       z-index: 100
-      top: 255px
-      // height: 100%
-      padding-top: 45px
+      top: 0
+      bottom: 0
+      height: 100%
+      padding-top: 15px
       width: 290px
-      display: none
+      // display: none
+      box-shadow: 0 0 10px rgba($color-black, .5)
+      overflow-y: auto
+      z-index: 1000
+      padding-bottom: 10px
+      transform: translateX(-110%)
+      transition: transform 0.7s cubic-bezier(0.545, 0, 0.05, 1)
+      will-change: transform
+      &.is-active
+        transform: translateX(0)
+
+      &__close
+        color: $color-red
+        font-size: rem(14)
+        margin-bottom: 10px
+        display: inline-block
 
     &__product
       &>div
@@ -299,6 +319,27 @@
         display: block
         max-width: 500px
         margin: 0 auto
+
+  .navigation-level2
+    border-bottom: 0
+    padding-bottom: 0
+    ul
+      li
+        border-bottom: 1px solid $color-gray
+        a
+          padding-top: 12px
+          padding-bottom: 12px
+        .label
+          top: 13px
+        &.active
+          &::before
+            top: 50%
+
+  .mobile-logo
+    position: absolute
+    bottom: 10px
+    text-align: center
+    width: 260px
 
   .hay
     &__block
@@ -443,30 +484,53 @@
         display: block
         &+div
           padding-top: 5px
-    &__group--captcha
-      display: block
-      &>div
+    &__group
+      &--captcha
         display: block
-        float: left
-        &.first
-          width: calc(100% - 130px)
+        &>div
+          display: block
+          float: left
+          &.first
+            width: calc(100% - 130px)
 
-        &.first
-          label
-            padding-top: 12px
-            display: block
-        &.center
-          overflow: hidden
-          width: 130px
-          border-left: 1px solid $color-gray
-          border-right: 1px solid $color-gray
-          .captcha
-            position: relative
-            left: 50%
-            transform: translateX(-50%)
-        &.last
-          width: 100%
-          margin-top: -1px
+          &.first
+            label
+              padding-top: 12px
+              display: block
+          &.center
+            overflow: hidden
+            width: 130px
+            border-left: 1px solid $color-gray
+            border-right: 1px solid $color-gray
+            .captcha
+              position: relative
+              left: 50%
+              transform: translateX(-50%)
+          &.last
+            width: 100%
+            margin-top: -1px
+
+      &--chat
+        display: block
+        border-top: 1px solid $color-gray
+        padding-top: 40px
+        overflow: hidden
+        &>div
+          display: block
+          &:first-child
+            width: calc(100% - 60px)
+            float: left
+          &:nth-child(2)
+            float: left
+          &:last-child
+            padding-top: 40px
+            float: left
+            width: 100%
+          &.center
+            border-top: 0
+            height: 40px
+        .form-control
+          border-top: 0
 
   .strong--frh480
     display: block
@@ -475,6 +539,7 @@
   .btn
     &--biggest
       font-size: rem(15)
+
 
   .tag
     margin-bottom: 40px
