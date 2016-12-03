@@ -75,6 +75,19 @@ button, html input[type=button], input[type=reset], input[type=submit]
               display: block
               line-height: 0
 
+    &--has-icon
+      position: relative
+      .form-control
+        padding-left: 40px
+      i
+        color: #b1b0b0
+        position: absolute
+        left: 18px
+        top: 13px
+        display: block
+        line-height: 0
+        font-size: 0.875rem
+
   &-control, &__control
     display: block
     width: 100%
@@ -109,6 +122,20 @@ button, html input[type=button], input[type=reset], input[type=submit]
       padding-top: 0
       padding-bottom: 5px
       // width: 625px
+
+    &--chat
+      width: 173px
+      height: 23px
+      padding-top: 1px
+      padding-left: 5px
+      padding-right: 5px
+      padding-bottom: 3px
+      border: 0
+      float: right
+
+    &--dark
+      background-color: $color-lightgray
+      border: 1px solid $color-lightgray
 
   &__subscription
     padding-top: 15px
@@ -324,3 +351,12 @@ label
 
 .captcha
   border: 1px solid $color-gray
+
+.price-input
+  text-align: center
+  width: 47px
+  height: 25px
+  line-height: 25px
+  border: 1px solid $color-gray
+  background: $color-white
+  vertical-align: middle

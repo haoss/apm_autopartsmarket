@@ -124,6 +124,10 @@
         &.first
           width: auto
 
+  .body__main
+    .header__wrapper > div.first
+      width: auto
+
   .content
     &__head
       &--register
@@ -185,6 +189,23 @@
     &--main
       padding-bottom: 65px
 
+  .slideout-panel
+    box-shadow: 0 0 10px rgba(0,0,0,.2)
+
+  .table-basic
+    &>tbody, &>tfoot, &>thead
+      &>tr
+        &>td, &>th,
+          padding-left: 5px
+          padding-right: 5px
+
+  .content
+    &__head
+      &--arrow
+        h1, .h1
+          &::after
+            top: 8px
+
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
 
@@ -211,7 +232,7 @@
     &__navigation
       display: none
       position: absolute
-      z-index: 1000
+      z-index: 100
       width: 100%
       top: 33px
       padding-top: 10px
@@ -256,12 +277,16 @@
   .navigation-level2
     border-bottom: 1px solid $color-gray
 
-  .form__row__group--xs-block
-    display: block
-    &>div
+  .form
+    &__row__group--xs-block
       display: block
-      &+div
-        padding-top: 5px
+      &>div
+        display: block
+        &+div
+          padding-top: 5px
+    &-control, &__control
+      &--chat
+        width: 140px
 
   .news
     &__img
@@ -278,33 +303,6 @@
   .user
     &__menu
       display: block
-
-    &__navigation
-      position: fixed
-      background-color: #f8f8f8
-      // background-color: pink
-      z-index: 100
-      top: 0
-      bottom: 0
-      height: 100%
-      padding-top: 15px
-      width: 290px
-      // display: none
-      box-shadow: 0 0 10px rgba($color-black, .5)
-      overflow-y: auto
-      z-index: 1000
-      padding-bottom: 10px
-      transform: translateX(-110%)
-      transition: transform 0.7s cubic-bezier(0.545, 0, 0.05, 1)
-      will-change: transform
-      &.is-active
-        transform: translateX(0)
-
-      &__close
-        color: $color-red
-        font-size: rem(14)
-        margin-bottom: 10px
-        display: inline-block
 
     &__product
       &>div
@@ -396,6 +394,26 @@
     &--auto-register
       margin-right: -290px
       bottom: 30px
+
+  .chat
+    &__row
+      &>div
+        &+div
+          padding-left: 15px !important
+    &__search
+      margin-right: 0
+      &.is-active
+        width: 170px
+
+  .popup
+    &__product
+      &>div:first-child
+        width: 170px
+
+  .order
+    &__form
+      &__btn
+        text-align: center
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
@@ -532,6 +550,10 @@
         .form-control
           border-top: 0
 
+    &-control, &__control
+      &--chat
+        width: calc(100% - 25px)
+
   .strong--frh480
     display: block
     margin-top: 5px
@@ -539,7 +561,6 @@
   .btn
     &--biggest
       font-size: rem(15)
-
 
   .tag
     margin-bottom: 40px
@@ -593,6 +614,42 @@
       width: 290px
       font-size: rem(13)
 
+    &--xxs-block
+      &+.btn--xxs-block
+        margin-left: 0
+        margin-top: 15px
+
+  .chat
+    &__row
+      display: block
+      overflow: hidden
+      &>div
+        display: block !important
+        &+div
+          padding-left: 0 !important
+          margin-top: 15px
+    &__search
+      float: none
+      &.is-active
+        width: 100%
+
+  .hidden-xxs
+    display: none !important
+
+  .popup
+    &__product
+      display: block
+      &>div
+        display: block !important
+        &:first-child
+          margin: 0 auto
+        &+div
+          padding-left: 0 !important
+          padding-top: 10px
+
+  .visible-xxs
+    display: block !important
+
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 319px)
   /**/
@@ -612,6 +669,9 @@
 @media only screen and (min-width : 768px)
   .container
     width: 750px
+
+  .slideout-panel
+    transform: translateX(0) !important
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px)

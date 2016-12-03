@@ -65,7 +65,7 @@ html(lang="ru")
                       .form__group
                         label.form__radio.form__radio--head
                           span.span
-                            input(type="radio" name="radio11" checked)
+                            input(type="radio" name="radio11")
                             span.input-radio
                           span.span
                             span.input-label По телефону
@@ -389,11 +389,12 @@ html(lang="ru")
                           span.span
                             span.input-label отправка через ТК
                       div
-                        select.sumoselect
-                          option(value="Новая Почта" selected) Новая Почта
-                          option(value="УкрПочта") УкрПочта
-                          option(value="РусПочта") РусПочта
-                          option(value="Курьер") Курьер
+                        .select-thin
+                          select.sumoselect
+                            option(value="Новая Почта" selected) Новая Почта
+                            option(value="УкрПочта") УкрПочта
+                            option(value="РусПочта") РусПочта
+                            option(value="Курьер") Курьер
               
                 .register-info спасибо за регистрацию, после обработки вашей информации менеджером вы получите файл с договором на Email
                 

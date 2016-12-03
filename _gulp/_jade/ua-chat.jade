@@ -12,155 +12,169 @@ html(lang="ru")
 
     // Preloader
     //- include ./_include/_preloader
+    
+    include ./_include/_user__navigation
+  
+    #panel
 
-    include ./_include/_header
+      include ./_include/_header
 
-    // Search
-    .user__search
-      .container
+      // Search
+      .user__search
+        .container
 
-          form(action="#")
-            .user__search__wrapper.table
-              div.table__cell
-                .user__search__body
-                  input(type="text" placeholder="Введите номер детали").form-control
-                  button(type="submit")
-                    i.ion-android-search
+            form(action="#")
+              .user__search__wrapper.table
+                div.table__cell
+                  .user__search__body
+                    input(type="text" placeholder="Введите номер детали").form-control
+                    button(type="submit")
+                      i.ion-android-search
 
-                a(href="#").link-catalog.pull-left Оригинальный каталог
-                a(href="#").link-history.pull-right История запросов
+                  a(href="#").link-catalog.pull-left Оригинальный каталог
+                  a(href="#").link-history.pull-right История запросов
 
-              div.table__cell
-                a(href="#").btn.btn--xsl
-                  svg(xmlns='http://www.w3.org/2000/svg', version='1.2', viewbox='0 0 47.106934 50.000001', width='27', height='29')
-                    path(d='M26.355 28.015c-.22-.354-.525-.635-.916-.842-.39-.208-.99-.403-1.796-.598-.806-.196-1.318-.38-1.538-.55-.17-.134-.244-.305-.244-.5 0-.22.085-.39.268-.513.27-.195.66-.293 1.137-.293.463 0 .817.096 1.062.28.23.182.39.487.46.915l1.674-.074c-.025-.756-.305-1.366-.83-1.82-.525-.45-1.306-.68-2.344-.68-.634 0-1.17.096-1.623.292-.45.195-.793.476-1.025.842-.244.366-.354.757-.354 1.184 0 .658.256 1.208.757 1.66.366.317.99.597 1.88.817.696.17 1.135.293 1.33.366.28.1.49.22.6.355.108.135.17.306.17.5 0 .306-.135.575-.403.794-.27.232-.672.342-1.21.342-.512 0-.914-.122-1.207-.378-.293-.257-.5-.66-.6-1.197l-1.622.16c.11.927.44 1.623 1 2.11.562.49 1.368.72 2.406.72.72 0 1.316-.096 1.792-.304.476-.195.855-.513 1.11-.916.27-.415.392-.854.392-1.33 0-.55-.11-.99-.33-1.343zM15.05 30.347v-6.8h-1.67v8.19h5.81v-1.39h-4.14zM9.668 27.49l2.563-4.016h-1.926l-1.624 2.65-1.66-2.65H5.065L7.63 27.43l-2.82 4.308h2.002l1.83-2.856 1.832 2.856h2.014l-2.82-4.248zm0 0').path-color
-                    path(d='M31.726 20.19v14.43c0 1.586-1.294 2.88-2.88 2.88H12.5v8.655c0 1.062.867 1.916 1.93 1.916h28.83c1.062 0 1.928-.864 1.928-1.914V15.393h-12.5c-.537 0-.964-.427-.964-.964V1.93H14.43c-1.063 0-1.93.865-1.93 1.927V17.31h16.345c1.587 0 2.88 1.294 2.88 2.88z', fill='none')
-                    path(fill='none', d='M33.655 13.464h10.46L33.655 2.6M2.88 35.583h25.965c.525 0 .965-.427.965-.964V20.19c0-.524-.428-.964-.965-.964H2.88c-.524 0-.963.427-.963.964v14.43c.012.524.44.963.964.963z')
-                    path(d='M2.88 37.5h7.69v8.655c0 2.124 1.735 3.845 3.86 3.845h28.83c2.05 0 3.735-1.61 3.845-3.638V14.1c-.024-.208-.11-.416-.27-.562L34.108.293C33.922.11 33.678 0 33.41 0H14.43c-2.125 0-3.86 1.733-3.86 3.857V17.31H2.88C1.295 17.31 0 18.604 0 20.19v14.43c0 1.586 1.294 2.88 2.88 2.88zM33.656 2.6l10.46 10.864h-10.46V2.6zM12.5 3.857c0-1.062.867-1.928 1.93-1.928h17.296v12.5c0 .535.427.962.964.962h12.5v30.774c0 1.062-.866 1.916-1.928 1.916H14.43c-1.063 0-1.93-.866-1.93-1.916V37.51h16.345c1.587 0 2.88-1.293 2.88-2.88V20.19c0-1.586-1.293-2.88-2.88-2.88H12.5V3.857zM1.93 20.19c0-.524.426-.964.963-.964h25.964c.525 0 .965.427.965.964v14.43c0 .524-.427.963-.965.963H2.88c-.524 0-.963-.427-.963-.964V20.19z').path-color
+                div.table__cell
+                  a(href="#").btn.btn--xsl
+                    svg(xmlns='http://www.w3.org/2000/svg', version='1.2', viewbox='0 0 47.106934 50.000001', width='27', height='29')
+                      path(d='M26.355 28.015c-.22-.354-.525-.635-.916-.842-.39-.208-.99-.403-1.796-.598-.806-.196-1.318-.38-1.538-.55-.17-.134-.244-.305-.244-.5 0-.22.085-.39.268-.513.27-.195.66-.293 1.137-.293.463 0 .817.096 1.062.28.23.182.39.487.46.915l1.674-.074c-.025-.756-.305-1.366-.83-1.82-.525-.45-1.306-.68-2.344-.68-.634 0-1.17.096-1.623.292-.45.195-.793.476-1.025.842-.244.366-.354.757-.354 1.184 0 .658.256 1.208.757 1.66.366.317.99.597 1.88.817.696.17 1.135.293 1.33.366.28.1.49.22.6.355.108.135.17.306.17.5 0 .306-.135.575-.403.794-.27.232-.672.342-1.21.342-.512 0-.914-.122-1.207-.378-.293-.257-.5-.66-.6-1.197l-1.622.16c.11.927.44 1.623 1 2.11.562.49 1.368.72 2.406.72.72 0 1.316-.096 1.792-.304.476-.195.855-.513 1.11-.916.27-.415.392-.854.392-1.33 0-.55-.11-.99-.33-1.343zM15.05 30.347v-6.8h-1.67v8.19h5.81v-1.39h-4.14zM9.668 27.49l2.563-4.016h-1.926l-1.624 2.65-1.66-2.65H5.065L7.63 27.43l-2.82 4.308h2.002l1.83-2.856 1.832 2.856h2.014l-2.82-4.248zm0 0').path-color
+                      path(d='M31.726 20.19v14.43c0 1.586-1.294 2.88-2.88 2.88H12.5v8.655c0 1.062.867 1.916 1.93 1.916h28.83c1.062 0 1.928-.864 1.928-1.914V15.393h-12.5c-.537 0-.964-.427-.964-.964V1.93H14.43c-1.063 0-1.93.865-1.93 1.927V17.31h16.345c1.587 0 2.88 1.294 2.88 2.88z', fill='none')
+                      path(fill='none', d='M33.655 13.464h10.46L33.655 2.6M2.88 35.583h25.965c.525 0 .965-.427.965-.964V20.19c0-.524-.428-.964-.965-.964H2.88c-.524 0-.963.427-.963.964v14.43c.012.524.44.963.964.963z')
+                      path(d='M2.88 37.5h7.69v8.655c0 2.124 1.735 3.845 3.86 3.845h28.83c2.05 0 3.735-1.61 3.845-3.638V14.1c-.024-.208-.11-.416-.27-.562L34.108.293C33.922.11 33.678 0 33.41 0H14.43c-2.125 0-3.86 1.733-3.86 3.857V17.31H2.88C1.295 17.31 0 18.604 0 20.19v14.43c0 1.586 1.294 2.88 2.88 2.88zM33.656 2.6l10.46 10.864h-10.46V2.6zM12.5 3.857c0-1.062.867-1.928 1.93-1.928h17.296v12.5c0 .535.427.962.964.962h12.5v30.774c0 1.062-.866 1.916-1.928 1.916H14.43c-1.063 0-1.93-.866-1.93-1.916V37.51h16.345c1.587 0 2.88-1.293 2.88-2.88V20.19c0-1.586-1.293-2.88-2.88-2.88H12.5V3.857zM1.93 20.19c0-.524.426-.964.963-.964h25.964c.525 0 .965.427.965.964v14.43c0 .524-.427.963-.965.963H2.88c-.524 0-.963-.427-.963-.964V20.19z').path-color
 
-    // Content
-    .content
-      .container
+      // Content
+      .content
+        .container
 
-        a(href="#").user__menu
-          i.ion-grid
-          span Меню личного кабинета
+          a(href="#").user__menu
+            i.ion-grid
+            span Меню личного кабинета
 
-        .row
-          .col-sm-3.col-xs-12.user__navigation
+          .row
+            .col-sm-3.col-xs-12.hidden-xs
 
-            // Profile photo
-            .profile__photo
-              img(src="./tmp/profile-photo.png", alt="").img-responsive
+              // Profile photo
+              .profile__photo
+                img(src="./tmp/profile-photo.png", alt="").img-responsive
 
-            nav(role="navigation").navigation-level2.navigation-level2--user
-              ul
-                li.active: a(href="#") Личный кабинет
-                li: a(href="#") Мои Заказы
-                li: a(href="#") Мои Сообщения
-                  span.label 23
-                li: a(href="#") Состояние счета
-                li: a(href="#") Состояние заказов
-                li: a(href="#") Спец. предложения
-                li: a(href="#") Мои Документы
-                li: a(href="#") Мои Настройки
+              nav(role="navigation").navigation-level2.navigation-level2--user
+                ul
+                  li.active: a(href="#") Личный кабинет
+                  li: a(href="#") Мои Заказы
+                  li: a(href="#") Мои Сообщения
+                    span.label 23
+                  li: a(href="#") Состояние счета
+                  li: a(href="#") Состояние заказов
+                  li: a(href="#") Спец. предложения
+                  li: a(href="#") Мои Документы
+                  li: a(href="#") Мои Настройки
 
-          .col-sm-9.col-xs-12
+            .col-sm-9.col-xs-12
 
-            .user__head
-              .h1 чат с менеджером
+              .user__head
+                .h1 чат с менеджером
+                
+              .chat__row.table
+                div.table__cell
+                  .user__manager Ваш менеджер: 
+                    b Петров Петр Петрович
+                div.table__cell
+                  .chat__search
+                    .chat__search__form
+                      form(action="#" method="post")
+                        input(type="text" name="text").form-control.form-control--chat
+                        input(type="submit" value="Найти").hidden
+                    .chat__search__button
+                      i.ion-ios-search-strong
               
-            .user__manager Ваш менеджер: 
-              b Петров Петр Петрович
-            
-            // Chat
-            .chat
-              
-              .chat__body
-                .chat__wrapper.nano
-                  .nano-content
-                    
-                    - for (var i = 0; i<3; i++) {
-                    
-                      .chat__block.table
-                        .chat__block__img.table__cell
-                          img(src="./img/chat-placeholder.png", alt="").img-responsive
-                        .chat__block__text.table__cell
-                          .chat__block__name
-                            strong Иванов Иван Иванович
-                            span 16:53
-                            
-                          p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна маленькая строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир грамматики.
-                          
-                      .chat__block.table
-                        .chat__block__img.table__cell
-                          img(src="./tmp/chat.png", alt="").img-responsive
-                        .chat__block__text.table__cell
-                          .chat__block__name
-                            strong Петров Петр Петрович 
-                            span 16:53
-                            
-                          p Великий Оксмокс предупреждал ее о злых запятых, диких знаках вопроса и коварных точках с запятой, но текст не дал сбить себя с толку. Он собрал семь своих заглавных букв, подпоясал инициал за пояс и пустился в дорогу. Взобравшись на первую вершину курсивных гор, бросил он последний взгляд назад, на силуэт своего родного города Буквоград, на заголовок деревни Алфавит и на подзаголовок своего переулка Строчка. Грустный реторический вопрос скатился по его щеке и он продолжил свой путь. По дороге встретил текст рукопись.
-                          
-                      .chat__block.table
-                        .chat__block__img.table__cell
-                          img(src="./tmp/chat.png", alt="").img-responsive
-                        .chat__block__text.table__cell
-                          .chat__block__name
-                            strong Петров Петр Петрович 
-                            span 16:53
-                            
-                          p Поделился с Вами документом. Его можете загрузить, нажав на эту 
-                            a(href="#") ссылку
-                            | .
-                            
-                      .chat__date
-                        .chat__date__wrapper
-                          span 5 ноября 2016
-                            
-                      .chat__block.table
-                        .chat__block__img.table__cell
-                          img(src="./tmp/chat.png", alt="").img-responsive
-                        .chat__block__text.table__cell
-                          .chat__block__name
-                            strong Петров Петр Петрович 
-                            span 16:53
-                            
-                          p Поделился с Вами документом. Его можете загрузить, нажав на эту 
-                            a(href="#") ссылку
-                            | .
-                    - }    
-                    
-              .chat__form
-                form(action="#")
-                  .form__group.form__group--chat
-                    div
-                      input(type="text" placeholder="Введите сообщение").form-control
-                    div.center
-                      a(href="#")
-                        i.ion-ios-download-outline
-                    div
-                      button(type="submit").btn.btn--blue.btn--chat.btn--xxs-block Отправить
+              // Chat
+              .chat
+                
+                .chat__body
+                  .chat__wrapper.nano
+                    .nano-content
                       
-                .chat__form__file
-                  a(href="#") 
-                    i.ion-android-close
-                  | Document_price_new_9.11.2016.xls
-                    
+                      - for (var i = 0; i<3; i++) {
+                      
+                        .chat__block.table
+                          .chat__block__img.table__cell
+                            img(src="./img/chat-placeholder.png", alt="").img-responsive
+                          .chat__block__text.table__cell
+                            .chat__block__name
+                              strong Иванов Иван Иванович
+                              span 16:53
+                              
+                            p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна маленькая строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир грамматики.
+                            
+                        .chat__block.table
+                          .chat__block__img.table__cell
+                            img(src="./tmp/chat.png", alt="").img-responsive
+                          .chat__block__text.table__cell
+                            .chat__block__name
+                              strong Петров Петр Петрович 
+                              span 16:53
+                              
+                            p Великий Оксмокс предупреждал ее о злых запятых, диких знаках вопроса и коварных точках с запятой, но текст не дал сбить себя с толку. Он собрал семь своих заглавных букв, подпоясал инициал за пояс и пустился в дорогу. Взобравшись на первую вершину курсивных гор, бросил он последний взгляд назад, на силуэт своего родного города Буквоград, на заголовок деревни Алфавит и на подзаголовок своего переулка Строчка. Грустный реторический вопрос скатился по его щеке и он продолжил свой путь. По дороге встретил текст рукопись.
+                            
+                        .chat__block.table
+                          .chat__block__img.table__cell
+                            img(src="./tmp/chat.png", alt="").img-responsive
+                          .chat__block__text.table__cell
+                            .chat__block__name
+                              strong Петров Петр Петрович 
+                              span 16:53
+                              
+                            p Поделился с Вами документом. Его можете загрузить, нажав на эту 
+                              a(href="#") ссылку
+                              | .
+                              
+                        .chat__date
+                          .chat__date__wrapper
+                            span 5 ноября 2016
+                              
+                        .chat__block.table
+                          .chat__block__img.table__cell
+                            img(src="./tmp/chat.png", alt="").img-responsive
+                          .chat__block__text.table__cell
+                            .chat__block__name
+                              strong Петров Петр Петрович 
+                              span 16:53
+                              
+                            p Поделился с Вами документом. Его можете загрузить, нажав на эту 
+                              a(href="#") ссылку
+                              | .
+                      - }    
+                      
+                .chat__form
+                  form(action="#")
+                    .form__group.form__group--chat
+                      div
+                        input(type="text" placeholder="Введите сообщение").form-control
+                      div.center
+                        a(href="#")
+                          i.ion-ios-download-outline
+                      div
+                        button(type="submit").btn.btn--blue.btn--chat.btn--xxs-block Отправить
+                        
+                  .chat__form__file
+                    a(href="#") 
+                      i.ion-android-close
+                    | Document_price_new_9.11.2016.xls
+                      
 
-    include ./_include/_footer
-    //- div(style="height: 900px; background-color: #000")
+      include ./_include/_footer
+      //- div(style="height: 900px; background-color: #000")
 
-    //[if gte IE 9]
-      <script src='./js/libs/html5shiv/es5-shim.min.js'>
-      <script src='./js/libs/html5shiv/html5shiv.min.js'>
-      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
-      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+      //[if gte IE 9]
+        <script src='./js/libs/html5shiv/es5-shim.min.js'>
+        <script src='./js/libs/html5shiv/html5shiv.min.js'>
+        <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+        <script src='./js/libs/html5shiv/respond.min.js'><![endif]
 
-    // Vendor.js
-       Modernizr v2.8.3
-       Plugins-scroll
-    script(src='./js/libs/vendor.js')
-    include ./_include/_footer-js
-    script(src='./js/common.js')
-    include ./_include/_js-body-bottom
+      // Vendor.js
+         Modernizr v2.8.3
+         Plugins-scroll
+      script(src='./js/libs/vendor.js')
+      include ./_include/_footer-js
+      script(src='./js/common.js')
+      include ./_include/_js-body-bottom

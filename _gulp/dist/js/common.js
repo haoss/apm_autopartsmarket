@@ -137,7 +137,7 @@ $(document).ready(function(){
   });
 
   // Mobile menu
-  $('.user__menu').on('click', function(e){
+  /*$('.user__menu').on('click', function(e){
     e.preventDefault();
     $('.user__navigation').toggleClass('is-active');
     $('.header__menu').removeClass('is-open');
@@ -145,7 +145,51 @@ $(document).ready(function(){
   $('.user__navigation__close').on('click', function(e){
     e.preventDefault();
     $('.user__navigation').removeClass('is-active');
-  })
+  })*/
+  var slideout = new Slideout({
+    'panel': document.getElementById('panel'),
+    'menu': document.getElementById('menu'),
+    'padding': 290,
+    'tolerance': 70
+  });
+
+  $('.user__navigation__close').on('click', function(e){
+    e.preventDefault();
+    slideout.close();
+  });
+  $('.user__menu').on('click', function(e){
+    e.preventDefault();
+    slideout.toggle();
+  });
+
+  // Popup block
+  $('.open-popup-link').magnificPopup({
+    type:'inline',
+    midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+  });
+
+  // Chat search
+  $('.chat__search__button').on('click', function(){
+    $(this).parent().toggleClass('is-active');
+    $('.form-control--chat').focus();
+  });
+
+  // Popup btn cart
+  $('.btn--test-popup').each(function(){
+    var __this = $(this);
+    // e.preventDefault();
+    $(__this).on('click', function(e){
+      e.preventDefault();
+      $(__this).parent().addClass('is-active');
+
+      setTimeout(function(){
+        $(__this).parent().removeClass('is-active');
+      }, 3500)
+    });
+  });
+
+  // Datepicker
+  $('#input-datepicker').data('datepicker')
 
   // simpleForm version 2015-09-23 14:30 GMT +2
   simpleForm('form.form-callback');
@@ -173,9 +217,7 @@ function mobileLogo() {
 $(document).on('ready', mobileLogo);
 $(window).on('resize', mobileLogo);
 
-
-/*
-version 2015-09-23 14:30 GMT +2
+/*version 2015-09-23 14:30 GMT +2
 */
 function simpleForm(form, callback) {
   $(document).on('submit', form, function(e){

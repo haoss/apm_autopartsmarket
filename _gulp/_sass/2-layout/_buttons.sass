@@ -40,6 +40,23 @@
       color: $color-blue
       background-color: $color-white
 
+  &--red
+    color: $color-white
+    background: $color-red
+    border-color: $color-red
+    &:hover, &:focus
+      color: $color-red
+      background-color: $color-white
+
+    &.btn--border
+      color: $color-red
+      &:hover
+        background: $color-red
+        color: $color-white
+
+  &--border
+    background: $color-white
+
   &--effect1
     padding: 0
     position: relative
@@ -125,6 +142,8 @@
     background: none
     text-transform: none
     color: $color-blue
+    padding-left: 0
+    padding-right: 0
     .ion-refresh
       margin-right: 10px
       transform: rotate(0)
@@ -154,3 +173,20 @@
     padding-bottom: 6px
     width: 165px
     font-size: rem(19)
+
+  &--cart, &--edit
+    width: auto
+    min-width: inherit
+    background: transparent
+    padding: 0
+    margin: 0
+    color: $color-blue
+    font-size: rem(20)
+    border: 0
+    height: auto
+    i
+      display: block
+      line-height: 0
+
+  &+.btn
+    margin-left: 30px
