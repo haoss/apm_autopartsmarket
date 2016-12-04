@@ -110,7 +110,7 @@
     display: block
     max-width: 516px
     width: 100%
-    margin: 0 auto 5px
+    margin: 0 auto 25px
     font-size: rem(16)
     padding-top: 25px
     padding-bottom: 25px
@@ -187,6 +187,19 @@
     i
       display: block
       line-height: 0
+      &.ion-close
+        color: $color-red
+        font-size: rem(14)
 
   &+.btn
     margin-left: 30px
+
+  &--settings
+    width: auto
+    background: $color-white
+    color: $color-gray
+    min-width: inherit
+    padding-left: 10px
+    padding-right: 10px
+    border: 0
+    font-size: rem(16)

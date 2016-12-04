@@ -2,8 +2,8 @@ doctype
 
 html(lang="ru")
 
-  -var active = 'Мои заказы' //активный пункт меню, список в header.jade
-  -var pageTitle = 'ЛЧ Мои заказы' + ' - Биржа автозапчастей' //title страницы для генерации верстки
+  -var active = 'Выставленные документы' //активный пункт меню, список в header.jade
+  -var pageTitle = 'ЛЧ Выставленные документы' + ' - Биржа автозапчастей' //title страницы для генерации верстки
   -var headerBlock = 'ЛЧ'
 
   include ./_include/_head
@@ -41,59 +41,6 @@ html(lang="ru")
                       path(fill='none', d='M33.655 13.464h10.46L33.655 2.6M2.88 35.583h25.965c.525 0 .965-.427.965-.964V20.19c0-.524-.428-.964-.965-.964H2.88c-.524 0-.963.427-.963.964v14.43c.012.524.44.963.964.963z')
                       path(d='M2.88 37.5h7.69v8.655c0 2.124 1.735 3.845 3.86 3.845h28.83c2.05 0 3.735-1.61 3.845-3.638V14.1c-.024-.208-.11-.416-.27-.562L34.108.293C33.922.11 33.678 0 33.41 0H14.43c-2.125 0-3.86 1.733-3.86 3.857V17.31H2.88C1.295 17.31 0 18.604 0 20.19v14.43c0 1.586 1.294 2.88 2.88 2.88zM33.656 2.6l10.46 10.864h-10.46V2.6zM12.5 3.857c0-1.062.867-1.928 1.93-1.928h17.296v12.5c0 .535.427.962.964.962h12.5v30.774c0 1.062-.866 1.916-1.928 1.916H14.43c-1.063 0-1.93-.866-1.93-1.916V37.51h16.345c1.587 0 2.88-1.293 2.88-2.88V20.19c0-1.586-1.293-2.88-2.88-2.88H12.5V3.857zM1.93 20.19c0-.524.426-.964.963-.964h25.964c.525 0 .965.427.965.964v14.43c0 .524-.427.963-.965.963H2.88c-.524 0-.963-.427-.963-.964V20.19z').path-color
       
-      // popup-about
-      #popup-about.popup.popup-about.mfp-hide
-        .popup__title VW / AUDI 044121058A
-        .popup__product.table
-          .table__cell
-            .user__product__img
-              img(src="./tmp/product.png", alt="").img-responsive
-          
-          .table__cell
-            table.table-basic.table-basic--thin
-              thead
-                tr
-                  th(colspan="2").text--upper.text--left Главная Информация
-              tbody
-                tr.tr--separator
-                  td(colspan="2") &nbsp;
-                tr
-                  td Номер детали:
-                  td
-                    strong 044121058A
-                tr
-                  td Имя производитель: 
-                  td
-                    strong VW / AUDI
-                tr
-                  td Вес: 
-                  td
-                    strong 0,05 кг
-                tr
-                  td Цена:	
-                  td
-                    strong 589 руб
-                tr
-                  td Минимальный объем заказа:
-                  td
-                    strong 0
-                tr
-                  td Срок поставки:
-                  td
-                    strong 10 дней
-                tr
-                  td Дата:
-                  td
-                    strong 12.10.2016
-                tr.tr--separator
-                  td(colspan="2") &nbsp;
-                tr
-                  th(colspan="2").text--upper.text--left Комментарий в прайс-листе:
-                tr.tr--separator
-                  td(colspan="2") &nbsp;
-                tr
-                  td(colspan="2") SCHLAUCH
-      
       // Content
       .content
         .container
@@ -122,9 +69,9 @@ html(lang="ru")
                   li: a(href="#") Мои Настройки
 
             .col-sm-9.col-xs-12
-              h1 Мои заказы
+              h1 Выставленные документы
               
-              .order__form
+              .order__form.order__form__documents
                 form(action="#")
                   
                   .row
@@ -140,89 +87,100 @@ html(lang="ru")
                         i.ion-android-calendar
                   .row
                     .col-sm-6.col-xs-12
-                      .form-group.select-medium
-                        label.hidden Статус заказа
-                        select.sumoselect
-                          option(value="Статус заказа" selected) Статус заказа
-                          option(value="В работе") В работе
-                          option(value="Выдан") Выдан
-                          option(value="В ожидании") В ожидании
+                      .form-group
+                        label.hidden Сумма от
+                        input(type="text" placeholder="Сумма от").form-control.form-control--dark
                     .col-sm-6.col-xs-12
                       .form-group
-                        label.hidden № декларации
-                        input(type="text" placeholder="№ декларации").form-control.form-control--dark
+                        label.hidden Сумма до
+                        input(type="text" placeholder="Сумма до").form-control.form-control--dark
                   .row
-                    .col-xs-12
+                    .col-sm-6.col-xs-12
+                      .form-group.select-medium
+                        label.hidden Тип платежа
+                        select.sumoselect
+                          option(value="Тип платежа" selected) Тип платежа
+                          option(value="Счет") Счет
+                          option(value="Перевод") Перевод
+                          option(value="Безнал") Безнал
+                    .col-sm-6.col-xs-12
+                      .form-group
+                        label.hidden Заказ
+                        input(type="text" placeholder="Заказ").form-control.form-control--dark
+                  .row
+                    .col-sm-6.col-xs-12
+                      .form-group.no--margin
+                        label.hidden № счета
+                        input(type="text" placeholder="№ счета").form-control.form-control--dark
+                    .col-sm-6.col-xs-12
                       .order__form__btn
                         button(type="submit").btn.btn--blue.btn--xxs-block Искать
                         a(href="#").btn.btn--red.btn--border.btn--xxs-block очистить
               
-              table.table-basic.table-basic--data
+              table.table-basic.table-basic--data.table-basic--border
                 thead
                   tr
-                    th № счета
-                    th.hidden-xxs Статус
-                    th.hidden-xxs Сумма
-                    th.hidden-xs Комментарий 
-                    th.hidden-xs № декларации 
+                    th № документа
+                    th.hidden-xxs Тип
                     th Дата
-                    th.text-center.visible-xs Инфо
+                    th Сумма
+                    th.hidden-xxs Заказ-основание
                     th.th-btn &nbsp;
                 tbody
                   tr.tr--separator
                     td &nbsp;
                   tr
-                    td 87654534 
-                      
-                    td.hidden-xxs
-                      .info-status.info-status--inwork В работе
-                    td.hidden-xxs 654 987 324 руб 
-                    td.hidden-xs Доставить на дом
-                    td.hidden-xs 576162684 
-                    td 12.09.2016
-                      .visible-xxs
-                        .clear5
-                      .info-status.info-status--inwork.visible-xxs В работе
-                    td.text-center.visible-xs
-                      a(href="#popup-about").icon.icon--info.open-popup-link
-                        i.ion-ios-information
+                    td 87654534
+                    td.hidden-xxs Счет
+                    td 10.09.2016
+                    td 546 987 543 руб
+                    td.hidden-xxs Просьба президента ООО АвтоВАЗ
                     td 
                       .edit__btn
                         .edit__info
                           a(href="#").info-link
-                            i.ion-document-text
-                            | Экспорт в Exel
+                            i.ion-android-print
+                            | Печать
+                          a(href="#").info-link
+                            i.ion-cloud
+                            | Скачать
                           a(href="#").info-link
                             i.ion-close
                             | Удалить
                         button(type="submit").btn.btn--edit.btn--edit-popup
                           i.ion-gear-a
+                  tr.visible-xxs
+                    td(colspan="4").no--padding-top Счет
+                      br
+                      | Просьба президента ООО АвтоВАЗ
+                      
+                  tr.tr--separator.visible-xxs
+                    td(colspan="4") &nbsp;
+                      
                   tr
                     td 87654534
-                      
-                    td.hidden-xxs
-                      .info-status.info-status--issued Выдан
-                    td.hidden-xxs 654 987 324 руб 
-                    td.hidden-xs Доставить на дом
-                    td.hidden-xs 576162684 
-                    td 12.09.2016
-                      .visible-xxs
-                        .clear5
-                      .info-status.info-status--issued.visible-xxs Выдан
-                    td.text-center.visible-xs
-                      a(href="#popup-about").icon.icon--info.open-popup-link
-                        i.ion-ios-information
+                    td.hidden-xxs Счет
+                    td 10.09.2016
+                    td 546 987 543 руб
+                    td.hidden-xxs Просьба президента ООО АвтоВАЗ
                     td 
                       .edit__btn
                         .edit__info
                           a(href="#").info-link
-                            i.ion-document-text
-                            | Экспорт в Exel
+                            i.ion-android-print
+                            | Печать
+                          a(href="#").info-link
+                            i.ion-cloud
+                            | Скачать
                           a(href="#").info-link
                             i.ion-close
                             | Удалить
                         button(type="submit").btn.btn--edit.btn--edit-popup
                           i.ion-gear-a
+                  tr.visible-xxs
+                    td(colspan="4").no--padding-top Счет
+                      br
+                      | Просьба президента ООО АвтоВАЗ
               
               .text-center
                 //- a(href="#").btn.btn--more

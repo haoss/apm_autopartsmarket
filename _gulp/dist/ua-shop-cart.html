@@ -2,7 +2,7 @@
 <html lang="ru">
     <head>
         <meta charset="utf-8">
-        <title>ЛЧ Cпециальные предложения - Биржа автозапчастей</title>
+        <title>ЛЧ Корзина казазов - Биржа автозапчастей</title>
         <meta name="description" content="">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -124,6 +124,69 @@
                     </form>
                 </div>
             </div>
+            <!-- popup-about-->
+            <div id="popup-about" class="popup popup-about mfp-hide">
+                <div class="popup__title">VW / AUDI 044121058A</div>
+                <div class="popup__product table">
+                    <div class="table__cell">
+                        <div class="user__product__img"><img src="./tmp/product.png" alt="" class="img-responsive"></div>
+                    </div>
+                    <div class="table__cell">
+                        <table class="table-basic table-basic--thin">
+                            <thead>
+                                <tr>
+                                    <th colspan="2" class="text--upper text--left">Главная Информация</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="tr--separator">
+                                    <td colspan="2">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Номер детали:</td>
+                                    <td><strong>044121058A</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Имя производитель: </td>
+                                    <td><strong>VW / AUDI</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Вес: </td>
+                                    <td><strong>0,05 кг</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Цена:	</td>
+                                    <td><strong>589 руб</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Минимальный объем заказа:</td>
+                                    <td><strong>0</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Срок поставки:</td>
+                                    <td><strong>10 дней</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Дата:</td>
+                                    <td><strong>12.10.2016</strong></td>
+                                </tr>
+                                <tr class="tr--separator">
+                                    <td colspan="2">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2" class="text--upper text--left">Комментарий в прайс-листе:</th>
+                                </tr>
+                                <tr class="tr--separator">
+                                    <td colspan="2">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">SCHLAUCH</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
             <!-- Content-->
             <div class="content">
                 <div class="container"><a href="#" class="user__menu"><i class="ion-grid"></i><span>Меню личного кабинета</span></a>
@@ -145,46 +208,205 @@
                             </nav>
                         </div>
                         <div class="col-sm-9 col-xs-12">
-                            <h1>специальные предложения</h1>
-                            <!-- Spesial offers-->
-                            <div class="special-offers">
-                                <div class="special-offers__block table">
-                                    <div class="table__cell first"><a href="#"><img src="./tmp/blog.png" alt="" class="img-responsive"></a></div>
-                                    <div class="table__cell"><a href="#" class="special-offers__title">Правильные «Жигули»: 500 лошадиных сил и 1,5 миллиона рублей</a>
-                                        <div class="special-offers__date">2 ноября 2016</div>
-                                        <p>ВАЗ в Российской Дрифт Серии один, зато какой! «Пятерка» Федора Воробьева настолько неординарна, что привлекла даже организаторов шоу «Гонка Тысячелетия», пригласивших Федю и его автомобиль. <a href="#" class="link-nounderline">Читать полностью...</a></p>
+                            <div class="h1">Корзина казазов</div>
+                            <form action="#">
+                                <table class="table-basic table-basic--data table-basic--history">
+                                    <thead>
+                                        <tr>
+                                            <th class="hidden-xs">Производитель</th>
+                                            <th>Артикул</th>
+                                            <th class="hidden-xxs">Название детали</th>
+                                            <th class="hidden-xs">Срок</th>
+                                            <th class="visible-xs text-center noPW">инфо</th>
+                                            <th class="noPW text-center">Кол-во</th>
+                                            <th>Цена</th>
+                                            <th>Cумма</th>
+                                            <th class="th-btn">&nbsp;</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="tr--separator">
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hidden-xs">VW / AUDI</td>
+                                            <td>044121058A</td>
+                                            <td class="hidden-xxs">SCHLAUCH</td>
+                                            <td class="hidden-xs">1</td>
+                                            <td class="noPW text-center visible-xs"><a href="#popup-about" class="icon icon--info open-popup-link"><i class="ion-ios-information"></i></a></td>
+                                            <td class="noPW text-center">
+                                                <input type="text" name="text" value="10" class="price-input">
+                                            </td>
+                                            <td>€ 5,89</td>
+                                            <td>€ 58,9</td>
+                                            <td>
+                                                <div class="history-search__btn">
+                                                    <button type="submit" class="btn btn--cart"><i class="ion-close"></i></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hidden-xs">TOYOTA</td>
+                                            <td>044121058A</td>
+                                            <td class="hidden-xxs">SCHLAUCH</td>
+                                            <td class="hidden-xs">2</td>
+                                            <td class="noPW text-center visible-xs"><a href="#popup-about" class="icon icon--info open-popup-link"><i class="ion-ios-information"></i></a></td>
+                                            <td class="noPW text-center">
+                                                <input type="text" name="text" value="100" class="price-input">
+                                            </td>
+                                            <td>€ 4,89</td>
+                                            <td>€ 489</td>
+                                            <td>
+                                                <div class="history-search__btn">
+                                                    <button type="submit" class="btn btn--cart"><i class="ion-close"></i></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hidden-xs">OPEL</td>
+                                            <td>044121058A</td>
+                                            <td class="hidden-xxs">SCHLAUCH</td>
+                                            <td class="hidden-xs">3</td>
+                                            <td class="noPW text-center visible-xs"><a href="#popup-about" class="icon icon--info open-popup-link"><i class="ion-ios-information"></i></a></td>
+                                            <td class="noPW text-center">
+                                                <input type="text" name="text" value="1000" class="price-input">
+                                            </td>
+                                            <td>€ 3,89</td>
+                                            <td>€ 3890</td>
+                                            <td>
+                                                <div class="history-search__btn">
+                                                    <button type="submit" class="btn btn--cart"><i class="ion-close"></i></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="tr--separator">
+                                            <td colspan="6">&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table class="table-basic table-basic--total">
+                                    <tbody>
+                                        <tr>
+                                            <td>&nbsp;<a href="#" class="btn btn--red btn--border btn--xxs-block visible-xxs">Очистить корзину</a></td>
+                                            <td> <span class="total">Итого: <strong>1110 шт. € 4500</strong></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hidden-xxs"> <a href="#" class="btn btn--red btn--border btn--xxs-block">Очистить корзину</a></td>
+                                            <td>
+                                                <button type="submit" class="btn btn--blue btn--xxs-block">Оформить заказ</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="form form--order">
+                                    <div class="form__order__wrapper">
+                                        <h1>Оформление заказа</h1>
+                                        <div class="row">
+                                            <div class="col-lg-3 col-md-3">
+                                                <label class="form__block__label">Введите ваши данные</label>
+                                                <div class="form__block">
+                                                    <div class="form__group form__group--slim has-feedback">
+                                                        <label class="hidden">ФИО</label>
+                                                        <input type="text" placeholder="ФИО" class="form-control"><span class="form__feedback"> 
+                                                            <div class="feedback-info">Обязательное поле!</div><i class="ion-close"></i></span>
+                                                    </div>
+                                                    <div class="form__group form__group--slim">
+                                                        <label class="hidden">Город</label>
+                                                        <input type="text" placeholder="Город" class="form-control">
+                                                    </div>
+                                                    <div class="form__group form__group--slim">
+                                                        <label class="hidden">Адрес</label>
+                                                        <input type="text" placeholder="Адрес" class="form-control">
+                                                    </div>
+                                                    <div class="form__group form__group--slim">
+                                                        <label class="hidden">Телефон</label>
+                                                        <input type="text" placeholder="Телефон" class="form-control">
+                                                    </div>
+                                                    <div class="form__group">
+                                                        <label class="hidden">Комментарий</label>
+                                                        <input type="text" placeholder="Комментарий" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-ld-4 col-md-4">
+                                                <label class="form__block__label">Способ оплаты</label>
+                                                <div class="form__block">
+                                                    <div class="form__group">
+                                                        <label class="form__radio"><span class="span">
+                                                                <input type="radio" name="radio4" checked><span class="input-radio"></span></span><span class="span"><span class="input-label">Наличными<em>Курьеру. При самовывозе.</em></span></span></label>
+                                                    </div>
+                                                    <div class="clear10"></div>
+                                                    <div class="form__group">
+                                                        <label class="form__radio"><span class="span">
+                                                                <input type="radio" name="radio4"><span class="input-radio"></span></span><span class="span"><span class="input-label">Картой<em>Курьеру. На сайте. При самовывозе.</em></span></span></label>
+                                                    </div>
+                                                    <div class="clear10"></div>
+                                                    <div class="form__group">
+                                                        <label class="form__radio"><span class="span">
+                                                                <input type="radio" name="radio4"><span class="input-radio"></span></span><span class="span"><span class="input-label">Безналичным платежом<em>Для физических и юридических лиц.</em></span></span></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-5 col-md-5">
+                                                <label class="form__block__label">Способ доставки</label>
+                                                <div class="form__block">
+                                                    <div class="form__group">
+                                                        <label class="form__radio"><span class="span">
+                                                                <input type="radio" name="radio5" checked><span class="input-radio"></span></span><span class="span"><span class="input-label">Самовывоз</span></span></label>
+                                                    </div>
+                                                    <div class="form__group">
+                                                        <label class="form__radio"><span class="span">
+                                                                <input type="radio" name="radio5"><span class="input-radio"></span></span><span class="span"><span class="input-label">Доставка по Киеву</span></span></label>
+                                                    </div>
+                                                    <div class="form__group form__group--sumoselect">
+                                                        <div>
+                                                            <label class="form__radio"><span class="span">
+                                                                    <input type="radio" name="radio5"><span class="input-radio"></span></span><span class="span"><span class="input-label">Отправка через ТК</span></span></label>
+                                                        </div>
+                                                        <div>
+                                                            <div class="select-thin">
+                                                                <select class="sumoselect">
+                                                                    <option value="Новая Почта" selected>Новая Почта</option>
+                                                                    <option value="УкрПочта">УкрПочта</option>
+                                                                    <option value="РусПочта">РусПочта</option>
+                                                                    <option value="Курьер">Курьер</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clear10"></div>
+                                                    <div class="form__group form__group--slim">
+                                                        <label class="hidden">Город</label>
+                                                        <input type="text" placeholder="Город" class="form-control">
+                                                    </div>
+                                                    <div class="form__group form__group--slim">
+                                                        <label class="hidden">Улица</label>
+                                                        <input type="text" placeholder="Улица" class="form-control">
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-xs-6">
+                                                            <div class="form__group">
+                                                                <label class="hidden">Дом</label>
+                                                                <input type="text" placeholder="Дом" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xs-6">
+                                                            <div class="form__group">
+                                                                <label class="hidden">Кв</label>
+                                                                <input type="text" placeholder="Кв" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn--blue btn--biggest">подтвердить</button>
+                                        <div class="text-center"><a href="#" class="btn btn--blue btn--xxs-block">выгрузить позиции в ексель</a></div>
                                     </div>
                                 </div>
-                                <div class="special-offers__block table">
-                                    <div class="table__cell first"><a href="#"><img src="./tmp/blog2.png" alt="" class="img-responsive"></a></div>
-                                    <div class="table__cell"><a href="#" class="special-offers__title">Новый тип разметки в России: вафли</a>
-                                        <div class="special-offers__date">1 ноября 2016</div>
-                                        <p>ВАЗ в Российской Дрифт Серии один, зато какой! «Пятерка» Федора Воробьева настолько неординарна, что привлекла даже организаторов шоу «Гонка Тысячелетия», пригласивших Федю и его автомобиль. <a href="#" class="link-nounderline">Читать полностью...</a></p>
-                                    </div>
-                                </div>
-                                <div class="special-offers__block table">
-                                    <div class="table__cell first"><a href="#"><img src="./tmp/blog3.png" alt="" class="img-responsive"></a></div>
-                                    <div class="table__cell"><a href="#" class="special-offers__title">Шипы или не шипы? Отвечаем на главные вопросы</a>
-                                        <div class="special-offers__date">1 ноября 2016</div>
-                                        <p>ВАЗ в Российской Дрифт Серии один, зато какой! «Пятерка» Федора Воробьева настолько неординарна, что привлекла даже организаторов шоу «Гонка Тысячелетия», пригласивших Федю и его автомобиль. <a href="#" class="link-nounderline">Читать полностью...</a></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Pagination-->
-                            <div class="pagination">
-                                <ul>
-                                    <li class="hidden-xs"><span class="line"></span></li>
-                                    <li><a href="#">1</a></li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                    <li class="active"><span>4</span></li>
-                                    <li><a href="#">5</a></li>
-                                    <li><a href="#">6</a></li>
-                                    <li><span>...</span></li>
-                                    <li><a href="#">99</a></li>
-                                    <li class="hidden-xs"><span class="line"></span></li>
-                                </ul>
-                            </div>
+                            </form>
                         </div>
                     </div>
                 </div>

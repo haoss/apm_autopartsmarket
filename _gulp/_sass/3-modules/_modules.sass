@@ -284,25 +284,71 @@
     width: 100%
     &>.CaptionCont
       border-radius: 0
-      height: 40px
+      height: 34px
       border-color: #e7e7e7
       font-size: rem(12)
       color: #b1b0b0
       padding-left: 17px
-      padding-top: 10px
+      padding-top: 8px
+      &>label
+        margin-bottom: 0
+        padding-left: 0
+        width: 33px
+        &>i
+          background: none
+          &::before
+            display: inline-block
+            font-family: "Ionicons"
+            speak: none
+            font-style: normal
+            font-weight: normal
+            font-variant: normal
+            text-transform: none
+            text-rendering: auto
+            line-height: 1
+            content: "\f123"
+            margin-left: 3px
+            color: $color-blue
+            font-size: rem(12)
     &:focus, &:hover, &.open
       &>.CaptionCont
         box-shadow: none
     &> .optWrapper
       border-radius: 0
     &.open > .optWrapper
-      top: 39px
+      top: 33px
     &>.optWrapper
       &>.options
         li.opt
           padding: 8px 5px 9px 5px
           label
             margin-bottom: 0
+    &> .optWrapper > .options  li
+      &.opt
+        border-bottom: 0
+        color: $primary-color
+        padding: 10px 12px
+        cursor: pointer
+        &:first-child
+          border-radius: 0 !important
+        &:last-child
+          border-radius: 0 !important
+        &:hover
+          background: $color-white
+          color: $color-blue
+        &.selected
+          display: none
+      label
+        padding-left: 0
+
+    &.open
+      &>.optWrapper
+        border-radius: 0
+        box-shadow: none
+        &>.options
+          li
+            label
+              margin-bottom: 0
 
 /**/
 .body
@@ -314,6 +360,7 @@
     background-size: cover
     background-position: center center
     z-index: 1
+    // height: 100% !important
     &__wrapper
       position: relative
       z-index: 10
@@ -682,6 +729,27 @@
       vertical-align: middle
     border-bottom: 2px solid $color-lightgray
 
+  &--total
+    margin-top: -15px
+    margin-bottom: 40px
+    &>tbody
+      &>tr
+        &>td
+          width: 50%
+          &:first-child
+            padding-left: 0
+          &:last-child
+            padding-right: 0
+            text-align: right
+
+    .btn
+      width: 206px
+
+    .total
+      font-size: rem(16)
+      strong
+        font-size: rem(20)
+
 .info-status
   display: inline-block
   height: 20px
@@ -715,6 +783,7 @@
 
   &--info
     font-size: rem(16)
+    text-decoration: none
     i
       display: block
       line-height: 1
@@ -1078,7 +1147,7 @@ html
     &>div
       vertical-align: top
       &:first-child
-        width: 242px
+        max-width: 242px
     .table-basic
       margin-bottom: 0
 
@@ -1123,6 +1192,7 @@ html
 
   &__btn
     position: relative
+    margin-top: -2px
     &.is-active
       .edit__info
         display: block
@@ -1168,8 +1238,12 @@ html
       .btn--red
         width: 143px
 
-    .form-group
-      margin-bottom: 15px
+    .form
+      &-group, &__group
+        margin-bottom: 15px
+
+      &-control, &__control
+        height: 34px
 
 .datepickers-container
   z-index: 1000

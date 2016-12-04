@@ -104,6 +104,14 @@
     &__block, &__date
       margin-bottom: 25px
 
+  .order
+    &__form
+      &__documents
+        .btn
+          width: 140px
+          &--blue
+            float: left
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
   h1, .h1
@@ -206,6 +214,19 @@
           &::after
             top: 8px
 
+  .order
+    &__form
+      &__documents
+        .btn
+          width: 95px
+          padding-left: 0
+          padding-right: 0
+          min-width: inherit
+
+  .form--order
+    padding: 0
+    border: 0
+
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
 
@@ -232,7 +253,7 @@
     &__navigation
       display: none
       position: absolute
-      z-index: 100
+      z-index: 1000
       width: 100%
       top: 33px
       padding-top: 10px
@@ -414,6 +435,16 @@
     &__form
       &__btn
         text-align: center
+
+      &__documents
+        .btn
+          margin-top: 15px
+          width: 214px
+          &--border
+            float: right
+            width: 160px
+
+
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
@@ -649,6 +680,27 @@
 
   .visible-xxs
     display: block !important
+  tr.visible-xxs
+    display: table-row !important
+  td.visible-xxs
+    display: table-cell !important
+
+  .table-basic
+    &--total
+      &>tbody
+        &>tr
+          &>td
+            display: block
+            width: 100%
+            &:last-child
+              padding-left: 0 !important
+              padding-right: 0 !important
+
+  .table-basic--total .total
+    text-align: center
+
+  .pagination ul li
+    margin: 0 2px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 319px)

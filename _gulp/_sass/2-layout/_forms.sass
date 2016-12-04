@@ -83,10 +83,25 @@ button, html input[type=button], input[type=reset], input[type=submit]
         color: #b1b0b0
         position: absolute
         left: 18px
-        top: 13px
+        top: 11px
         display: block
         line-height: 0
         font-size: 0.875rem
+
+    &--settings
+      display: table
+      width: 100%
+      margin-bottom: 0
+      &>div
+        display: table-cell
+        vertical-align: middle
+        width: 100%
+        border-top: 1px solid $color-gray
+        &.last
+          width: 1px
+      .form-control
+        border: 0
+
 
   &-control, &__control
     display: block
@@ -257,12 +272,34 @@ button, html input[type=button], input[type=reset], input[type=submit]
           &--register
             width: 160px
 
+  &--settings
+    .form-control
+      font-size: rem(14)
+    .form-label
+      font-size: rem(14)
+      margin-bottom: 0
+    .select-thin
+      display: inline-block
+      margin-top: 10px
+
+  &--order
+    border: 1px solid $color-lightgray
+    padding: 15px 20px 15px 20px
+    .form__block
+      margin-bottom: 25px !important
+
+
 .input-label
   font-size: rem(12)
   font-family: $font-roboto-medium
   display: block
   line-height: 1.2
   transition: color 0.2s linear
+  margin-top: 1px
+  em
+    font-size: rem(11)
+    display: block
+    color: $primary-color !important
   a
     color: $primary-color
 
@@ -301,6 +338,17 @@ label
   font-weight: 400
   font-size: rem(12)
   padding-left: 12px
+
+.label
+  &--settings
+    font-size: rem(14)
+    margin-bottom: 0
+    display: block
+    padding-left: 0
+    padding-top: 11px
+
+  &--currency
+    margin-right: 15px
 
 .has
   &-success .form-control, &-success .form__control
@@ -356,7 +404,7 @@ label
   text-align: center
   width: 47px
   height: 25px
-  line-height: 25px
+  line-height: 21px
   border: 1px solid $color-gray
   background: $color-white
   vertical-align: middle
