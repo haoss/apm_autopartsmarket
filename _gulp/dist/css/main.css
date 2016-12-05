@@ -6679,9 +6679,9 @@ ol.list--mark {
     .hay__strong::after {
       content: '';
       position: absolute;
-      height: 4px;
+      height: 6px;
       top: 50%;
-      margin-top: -3px;
+      margin-top: -4px;
       background-color: #ffffff;
       width: 100%;
       z-index: -1;
