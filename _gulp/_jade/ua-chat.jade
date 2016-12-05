@@ -149,7 +149,7 @@ html(lang="ru")
                   form(action="#")
                     .form__group.form__group--chat
                       div
-                        input(type="text" placeholder="Введите сообщение").form-control
+                        textarea(placeholder="Введите сообщение").form-control
                       div.center
                         a(href="#")
                           i.ion-ios-download-outline
@@ -178,3 +178,21 @@ html(lang="ru")
       include ./_include/_footer-js
       script(src='./js/common.js')
       include ./_include/_js-body-bottom
+
+      script.
+        // Menu user account
+        var slideout = new Slideout({
+          'panel': document.getElementById('panel'),
+          'menu': document.getElementById('menu'),
+          'padding': 290,
+          'tolerance': 70
+        });
+      
+        $('.user__navigation__close').on('click', function(e){
+          e.preventDefault();
+          slideout.close();
+        });
+        $('.user__menu').on('click', function(e){
+          e.preventDefault();
+          slideout.toggle();
+        });

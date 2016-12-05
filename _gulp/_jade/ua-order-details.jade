@@ -125,6 +125,88 @@ html(lang="ru")
               .content__head.content__head--arrow
                 h1 Заказ&nbsp;
                   strong №56465453
+                  
+              table.table-basic.table-basic--data.table-basic--history
+                thead
+                  tr
+                    th.hidden-xs Производитель
+                    th Артикул
+                    th.hidden-xxs Название детали
+                    th.hidden-xs Срок
+                    th.visible-xs.text-center.noPW инфо
+                    th.noPW.text-center Кол-во
+                    th Цена
+                    th Cумма
+                    th.th-btn &nbsp;
+                tbody
+                  tr.tr--separator
+                    td &nbsp;
+                  tr
+                    td.hidden-xs VW / AUDI
+                    td 044121058A
+                    td.hidden-xxs SCHLAUCH
+                    td.hidden-xs 1
+                    td.noPW.text-center.visible-xs
+                      a(href="#popup-about").icon.icon--info.open-popup-link
+                        i.ion-ios-information
+                    td.noPW.text-center
+                      input(type="text" name="text" value="10").price-input
+                    td € 5,89
+                    td € 58,9
+                    td
+                      .history-search__btn
+                        button(type="submit").btn.btn--cart
+                          i.ion-close
+                  tr
+                    td.hidden-xs TOYOTA
+                    td 044121058A
+                    td.hidden-xxs SCHLAUCH
+                    td.hidden-xs 2
+                    td.noPW.text-center.visible-xs
+                      a(href="#popup-about").icon.icon--info.open-popup-link
+                        i.ion-ios-information
+                    td.noPW.text-center
+                      input(type="text" name="text" value="100").price-input
+                    td € 4,89
+                    td € 489
+                    td
+                      .history-search__btn
+                        button(type="submit").btn.btn--cart
+                          i.ion-close
+                  tr
+                    td.hidden-xs OPEL
+                    td 044121058A
+                    td.hidden-xxs SCHLAUCH
+                    td.hidden-xs 3
+                    td.noPW.text-center.visible-xs
+                      a(href="#popup-about").icon.icon--info.open-popup-link
+                        i.ion-ios-information
+                    td.noPW.text-center
+                      input(type="text" name="text" value="1000").price-input
+                    td € 3,89
+                    td € 3890
+                    td
+                      .history-search__btn
+                        button(type="submit").btn.btn--cart
+                          i.ion-close
+                  tr.tr--separator
+                    td(colspan="6") &nbsp;
+                    td &nbsp;
+                    td &nbsp;
+              
+              table.table-basic.table-basic--total
+                tbody
+                  tr
+                    td &nbsp;
+                      a(href="#").btn.btn--red.btn--border.btn--xxs-block.visible-xxs Очистить корзину
+                    td 
+                      span.total Итого: 
+                        strong 1110 шт. € 4500
+                  tr
+                    td.hidden-xxs 
+                      a(href="#").btn.btn--red.btn--border.btn--xxs-block Очистить корзину
+                    td
+                      button(type="submit").btn.btn--blue.btn--xxs-block Оформить заказ
 
               table.table-basic.table-basic--data
                 thead
@@ -148,7 +230,8 @@ html(lang="ru")
                     td.hidden-xs MK016
                     td
                       .info-status.info-status--inwork В работе
-                    td.hidden-xxs Амортизатора компл. монтажный
+                    td.hidden-xxs 
+                      a(href="#") Амортизатора компл. монтажный
                     td.hidden-xs.hidden-sm 12
                     td.hidden-xs.hidden-sm 20
                     td.nowrap.hidden-xs.hidden-sm 654 руб
@@ -161,7 +244,8 @@ html(lang="ru")
                     td.hidden-xs MK016
                     td
                       .info-status.info-status--cancel Отменен
-                    td.hidden-xxs Амортизатора компл. монтажный
+                    td.hidden-xxs 
+                      a(href="#") Амортизатора компл. монтажный
                     td.hidden-xs.hidden-sm 12
                     td.hidden-xs.hidden-sm 20
                     td.nowrap.hidden-xs.hidden-sm 654 руб
@@ -174,7 +258,8 @@ html(lang="ru")
                     td.hidden-xs MK016
                     td
                       .info-status.info-status--custom Под заказ
-                    td.hidden-xxs Амортизатора компл. монтажный
+                    td.hidden-xxs 
+                      a(href="#") Амортизатора компл. монтажный
                     td.hidden-xs.hidden-sm 12
                     td.hidden-xs.hidden-sm 20
                     td.nowrap.hidden-xs.hidden-sm 654 руб
@@ -187,7 +272,8 @@ html(lang="ru")
                     td.hidden-xs MK016
                     td
                       .info-status.info-status--issued Выдан
-                    td.hidden-xxs Амортизатора компл. монтажный
+                    td.hidden-xxs 
+                      a(href="#") Амортизатора компл. монтажный
                     td.hidden-xs.hidden-sm 12
                     td.hidden-xs.hidden-sm 20
                     td.nowrap.hidden-xs.hidden-sm 654 руб
@@ -200,7 +286,8 @@ html(lang="ru")
                     td.hidden-xs MK016
                     td
                       .info-status.info-status--inwork В работе
-                    td.hidden-xxs Амортизатора компл. монтажный
+                    td.hidden-xxs 
+                      a(href="#") Амортизатора компл. монтажный
                     td.hidden-xs.hidden-sm 12
                     td.hidden-xs.hidden-sm 20
                     td.nowrap.hidden-xs.hidden-sm 654 руб
@@ -213,7 +300,8 @@ html(lang="ru")
                     td.hidden-xs MK016
                     td
                       .info-status.info-status--inwork В работе
-                    td.hidden-xxs Амортизатора компл. монтажный
+                    td.hidden-xxs 
+                      a(href="#") Амортизатора компл. монтажный
                     td.hidden-xs.hidden-sm 12
                     td.hidden-xs.hidden-sm 20
                     td.nowrap.hidden-xs.hidden-sm 654 руб
@@ -247,3 +335,21 @@ html(lang="ru")
       include ./_include/_footer-js
       script(src='./js/common.js')
       include ./_include/_js-body-bottom
+
+      script.
+        // Menu user account
+        var slideout = new Slideout({
+          'panel': document.getElementById('panel'),
+          'menu': document.getElementById('menu'),
+          'padding': 290,
+          'tolerance': 70
+        });
+      
+        $('.user__navigation__close').on('click', function(e){
+          e.preventDefault();
+          slideout.close();
+        });
+        $('.user__menu').on('click', function(e){
+          e.preventDefault();
+          slideout.toggle();
+        });

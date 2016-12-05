@@ -65,7 +65,7 @@ html(lang="ru")
                       .form__group
                         label.form__radio.form__radio--head
                           span.span
-                            input(type="radio" name="radio11")
+                            input#form__radio__tab1(type="radio" name="radio11")
                             span.input-radio
                           span.span
                             span.input-label По телефону
@@ -73,328 +73,338 @@ html(lang="ru")
                       .form__group
                         label.form__radio.form__radio--head
                           span.span
-                            input(type="radio" name="radio11")
+                            input#form__radio__tab2(type="radio" name="radio11" checked)
                             span.input-radio
                           span.span
                             span.input-label онлайн и получить 
-                              a(href="#") 
+                              a(href="#").color.color--red
                                 strong.strong--frh480 максимальную скидку
                 
-                fieldset.form__fieldset
-                  .form__group.form__group--slim.has-error.has-feedback
-                    label.hidden Страна
-                    input(type="text" placeholder="Страна").form-control
-                    span.form__feedback 
-                      .feedback-info Обязательное поле!
-                      i.ion-close
-                    
-                  .form__group.form__group--slim.has-feedback
-                    label.hidden Город
-                    input(type="text" placeholder="Город").form-control
-                    span.form__feedback 
-                      .feedback-info Обязательное поле!
-                      i.ion-close
-                        
-                  .form__group.form__group--slim.has-feedback
-                    label.hidden Наименование организации
-                    input(type="text" placeholder="Наименование организации").form-control
-                    span.form__feedback 
-                      .feedback-info Обязательное поле!
-                      i.ion-close
-                        
-                  .form__group.form__group--slim.has-feedback
-                    label.hidden Регистрационный №
-                    input(type="text" placeholder="Регистрационный №").form-control
-                    span.form__feedback 
-                      .feedback-info Обязательное поле!
-                      i.ion-close
-                        
-                  .form__group.form__group--slim.has-feedback
-                    label.hidden Регистрационный № ндс
-                    input(type="text" placeholder="Регистрационный № ндс").form-control
-                    span.form__feedback 
-                      .feedback-info Обязательное поле!
-                      i.ion-close
-                        
-                  .form__group.form__group--slim.has-feedback
-                    label.hidden Юридичиский адрес
-                    input(type="text" placeholder="Юридичиский адрес").form-control
-                    span.form__feedback 
-                      .feedback-info Обязательное поле!
-                      i.ion-close
-                        
-                  .form__group.form__group--slim.has-feedback
-                    label.hidden Фамилия Имя
-                    input(type="text" placeholder="Фамилия Имя").form-control
-                    span.form__feedback 
-                      .feedback-info Обязательное поле!
-                      i.ion-close
-                        
-                  .form__group.form__group--slim.has-feedback
-                    label.hidden Должность
-                    input(type="text" placeholder="Должность").form-control
-                    span.form__feedback 
-                      .feedback-info Обязательное поле!
-                      i.ion-close
-                        
-                  .form__group.form__group--slim.has-feedback
-                    label.hidden Телефон
-                    input(type="text" placeholder="Телефон").form-control
-                    span.form__feedback 
-                      .feedback-info Обязательное поле!
-                      i.ion-close
-                        
-                  .form__group.form__group--slim.has-feedback
-                    label.hidden E-mail
-                    input(type="text" placeholder="E-mail").form-control
-                    span.form__feedback 
-                      .feedback-info Обязательное поле!
-                      i.ion-close
-                        
-                  .form__group.form__group--slim.has-feedback
-                    label.hidden Пароль
-                    input(type="text" placeholder="Пароль").form-control
-                    span.form__feedback 
-                      .feedback-info Обязательное поле!
-                      i.ion-close
-                        
-                  .form__group
-                    label.hidden Подтвердить пароль
-                    input(type="text" placeholder="Подтвердить пароль").form-control
-                    span.form__feedback 
-                      .feedback-info Обязательное поле!
-                      i.ion-close
-                        
-                  .form__group.form__group--captcha
-                    div.first
-                      label Картинка для проверки 
-                    div.center
-                      img(src="./tmp/captcha.gif", alt="").captcha
-                    div.last
-                      input(type="text").form-control
-                
-                fieldset.form__fieldset
-                  legend.form__legend Анкета
-                  
-                  .form__block
-                    .form__group.form__group--slim
-                      label.hidden Торговое название компании
-                      input(type="text" placeholder="Торговое название компании").form-control
-                    .form__group.form__group--slim
-                      label.hidden Сайт компании
-                      input(type="text" placeholder="Сайт компании").form-control
-                    .form__group
-                      label.hidden Сколько лет на рынке
-                      input(type="text" placeholder="Сколько лет на рынке").form-control
+                div#form__tab1.form__tab
+                  fieldset.form__fieldset
+                    .form__group.has-feedback
+                      label.hidden Телефон
+                      input(type="text" placeholder="Телефон").form-control
+                      span.form__feedback 
+                        .feedback-info Обязательное поле!
+                        i.ion-alert
+                          
+                div#form__tab2.form__tab
+                  fieldset.form__fieldset
+                    .form__group.form__group--slim.has-error.has-feedback
+                      label.hidden Страна
+                      input(type="text" placeholder="Страна").form-control
+                      span.form__feedback 
+                        .feedback-info Обязательное поле!
+                        i.ion-alert
                       
-                  .form__block
-                    label.form__block__label В каком формате работает ваша компания: 
+                    .form__group.form__group--slim.has-feedback
+                      label.hidden Город
+                      input(type="text" placeholder="Город").form-control
+                      span.form__feedback 
+                        .feedback-info Обязательное поле!
+                        i.ion-alert
+                          
+                    .form__group.form__group--slim.has-feedback
+                      label.hidden Наименование организации
+                      input(type="text" placeholder="Наименование организации").form-control
+                      span.form__feedback 
+                        .feedback-info Обязательное поле!
+                        i.ion-alert
+                          
+                    .form__group.form__group--slim.has-feedback
+                      label.hidden Регистрационный №
+                      input(type="text" placeholder="Регистрационный №").form-control
+                      span.form__feedback 
+                        .feedback-info Обязательное поле!
+                        i.ion-alert
+                          
+                    .form__group.form__group--slim.has-feedback
+                      label.hidden Регистрационный № ндс
+                      input(type="text" placeholder="Регистрационный № ндс").form-control
+                      span.form__feedback 
+                        .feedback-info Обязательное поле!
+                        i.ion-alert
+                          
+                    .form__group.form__group--slim.has-feedback
+                      label.hidden Юридичиский адрес
+                      input(type="text" placeholder="Юридичиский адрес").form-control
+                      span.form__feedback 
+                        .feedback-info Обязательное поле!
+                        i.ion-alert
+                          
+                    .form__group.form__group--slim.has-feedback
+                      label.hidden Фамилия Имя
+                      input(type="text" placeholder="Фамилия Имя").form-control
+                      span.form__feedback 
+                        .feedback-info Обязательное поле!
+                        i.ion-alert
+                          
+                    .form__group.form__group--slim.has-feedback
+                      label.hidden Должность
+                      input(type="text" placeholder="Должность").form-control
+                      span.form__feedback 
+                        .feedback-info Обязательное поле!
+                        i.ion-alert
+                          
+                    .form__group.form__group--slim.has-feedback
+                      label.hidden Телефон
+                      input(type="text" placeholder="Телефон").form-control
+                      span.form__feedback 
+                        .feedback-info Обязательное поле!
+                        i.ion-alert
+                          
+                    .form__group.form__group--slim.has-feedback
+                      label.hidden E-mail
+                      input(type="text" placeholder="E-mail").form-control
+                      span.form__feedback 
+                        .feedback-info Обязательное поле!
+                        i.ion-alert
+                          
+                    .form__group.form__group--slim.has-feedback
+                      label.hidden Пароль
+                      input(type="text" placeholder="Пароль").form-control
+                      span.form__feedback 
+                        .feedback-info Обязательное поле!
+                        i.ion-alert
+                          
+                    .form__group
+                      label.hidden Подтвердить пароль
+                      input(type="text" placeholder="Подтвердить пароль").form-control
+                      span.form__feedback 
+                        .feedback-info Обязательное поле!
+                        i.ion-alert
+                          
+                    .form__group.form__group--captcha
+                      div.first
+                        label Картинка для проверки 
+                      div.center
+                        img(src="./tmp/captcha.gif", alt="").captcha
+                      div.last
+                        input(type="text").form-control
                   
-                    .form__group
-                      label.form__radio
-                        span.span
-                          input(type="radio" name="radio" checked)
-                          span.input-radio
-                        span.span
-                          span.input-label интернет-магазин (оптовая торговля) 
-                          
-                    .form__group
-                      label.form__radio
-                        span.span
-                          input(type="radio" name="radio")
-                          span.input-radio
-                        span.span
-                          span.input-label интернет магазин (розничная торговля) 
-                          
-                    .form__group
-                      label.form__radio
-                        span.span
-                          input(type="radio" name="radio")
-                          span.input-radio
-                        span.span
-                          span.input-label интернет-магазин (опт и розница) 
-                          
-                    .form__group
-                      label.form__radio
-                        span.span
-                          input(type="radio" name="radio")
-                          span.input-radio
-                        span.span
-                          span.input-label оптовый склад
-                          
-                    .form__group
-                      label.form__radio
-                        span.span
-                          input(type="radio" name="radio")
-                          span.input-radio
-                        span.span
-                          span.input-label СТО
-                          
-                    .form__group
-                      label.form__radio
-                        span.span
-                          input(type="radio" name="radio")
-                          span.input-radio
-                        span.span
-                          span.input-label сеть магазинов розничной торговли (или мелкий опт)
-                          
-                    .form__group
-                      label.form__radio
-                        span.span
-                          input(type="radio" name="radio")
-                          span.input-radio
-                        span.span
-                          span.input-label другое (указать)
+                  fieldset.form__fieldset
+                    legend.form__legend Анкета
+                    
+                    .form__block
+                      .form__group.form__group--slim
+                        label.hidden Торговое название компании
+                        input(type="text" placeholder="Торговое название компании").form-control
+                      .form__group.form__group--slim
+                        label.hidden Сайт компании
+                        input(type="text" placeholder="Сайт компании").form-control
+                      .form__group
+                        label.hidden Сколько лет на рынке
+                        input(type="text" placeholder="Сколько лет на рынке").form-control
+                        
+                    .form__block
+                      label.form__block__label В каком формате работает ваша компания: 
+                    
+                      .form__group
+                        label.form__radio
+                          span.span
+                            input(type="radio" name="radio" checked)
+                            span.input-radio
+                          span.span
+                            span.input-label интернет-магазин (оптовая торговля) 
+                            
+                      .form__group
+                        label.form__radio
+                          span.span
+                            input(type="radio" name="radio")
+                            span.input-radio
+                          span.span
+                            span.input-label интернет магазин (розничная торговля) 
+                            
+                      .form__group
+                        label.form__radio
+                          span.span
+                            input(type="radio" name="radio")
+                            span.input-radio
+                          span.span
+                            span.input-label интернет-магазин (опт и розница) 
+                            
+                      .form__group
+                        label.form__radio
+                          span.span
+                            input(type="radio" name="radio")
+                            span.input-radio
+                          span.span
+                            span.input-label оптовый склад
+                            
+                      .form__group
+                        label.form__radio
+                          span.span
+                            input(type="radio" name="radio")
+                            span.input-radio
+                          span.span
+                            span.input-label СТО
+                            
+                      .form__group
+                        label.form__radio
+                          span.span
+                            input(type="radio" name="radio")
+                            span.input-radio
+                          span.span
+                            span.input-label сеть магазинов розничной торговли (или мелкий опт)
+                            
+                      .form__group
+                        label.form__radio
+                          span.span
+                            input(type="radio" name="radio")
+                            span.input-radio
+                          span.span
+                            span.input-label другое (указать)
+                        
+                    
+                    .form__block
+                      .form__group.form__group--slim
+                        label.hidden Какие марки автомобилей являются приоритетными для вас
+                        input(type="text" placeholder="Какие марки автомобилей являются приоритетными для вас").form-control
+                      .form__group.form__group--slim
+                        label.hidden Количество номенклатурных позиций на складе
+                        input(type="text" placeholder="Количество номенклатурных позиций на складе").form-control
+                      .form__group
+                        label.hidden Соотношение оригинала / неоригинала (например, 70/30
+                        input(type="text" placeholder="Соотношение оригинала / неоригинала (например, 70/30").form-control
+                    
+                    .form__block
+                      label.form__block__label Интересующая вас форма работы: 
                       
-                  
-                  .form__block
-                    .form__group.form__group--slim
-                      label.hidden Какие марки автомобилей являются приоритетными для вас
-                      input(type="text" placeholder="Какие марки автомобилей являются приоритетными для вас").form-control
-                    .form__group.form__group--slim
-                      label.hidden Количество номенклатурных позиций на складе
-                      input(type="text" placeholder="Количество номенклатурных позиций на складе").form-control
-                    .form__group
-                      label.hidden Соотношение оригинала / неоригинала (например, 70/30
-                      input(type="text" placeholder="Соотношение оригинала / неоригинала (например, 70/30").form-control
-                  
-                  .form__block
-                    label.form__block__label Интересующая вас форма работы: 
-                    
-                    .form__group
-                      label.form__radio
-                        span.span
-                          input(type="radio" name="radio2" checked)
-                          span.input-radio
-                        span.span
-                          span.input-label только по наличию Киев
-                          
-                    .form__group
-                      label.form__radio
-                        span.span
-                          input(type="radio" name="radio2")
-                          span.input-radio
-                        span.span
-                          span.input-label контейнерные и авиапоставки «под заказ»
-                          
-                    .form__group
-                      label.form__radio
-                        span.span
-                          input(type="radio" name="radio2")
-                          span.input-radio
-                        span.span
-                          span.input-label оба варианта
-                    
-                  .form__block
-                    label.form__block__label Вы осуществляете закупки: 
-                    
-                    .form__group
-                      label.form__radio
-                        span.span
-                          input(type="radio" name="radio3" checked)
-                          span.input-radio
-                        span.span
-                          span.input-label под склад
-                          
-                    .form__group
-                      label.form__radio
-                        span.span
-                          input(type="radio" name="radio3")
-                          span.input-radio
-                        span.span
-                          span.input-label только под клиентов
-                          
-                    .form__group
-                      label.form__radio
-                        span.span
-                          input(type="radio" name="radio3")
-                          span.input-radio
-                        span.span
-                          span.input-label оба варианта
-                    
-                  .form__block
-                    label.form__block__label Кто является вашими основными клиентами: 
-                    
-                    .form__group
-                      label.form__radio
-                        span.span
-                          input(type="radio" name="radio4" checked)
-                          span.input-radio
-                        span.span
-                          span.input-label физ. лица
-                          
-                    .form__group
-                      label.form__radio
-                        span.span
-                          input(type="radio" name="radio4")
-                          span.input-radio
-                        span.span
-                          span.input-label СТО
-                          
-                    .form__group
-                      label.form__radio
-                        span.span
-                          input(type="radio" name="radio4")
-                          span.input-radio
-                        span.span
-                          span.input-label розничные и мелкооптовые магазины
-                          
-                    .form__group
-                      label.form__radio
-                        span.span
-                          input(type="radio" name="radio4")
-                          span.input-radio
-                        span.span.span--nowrap
-                          span.input-label другое (указать)
-                        span.span.span--w100
-                          input(type="text").form-control.form-control--other
-                  
-                  .form__block
-                    label.form__block__label Укажите эл. адреса для отправки: 
-                    .form__group.form__group--slim
-                      label.hidden Укажите эл. адреса для отправки документов (упд, счета)
-                      input(type="text" placeholder="документов (упд, счета)").form-control
-                    .form__group.form__group--slim
-                      label.hidden Укажите эл. адреса для отправки ответа на заказ
-                      input(type="text" placeholder="ответа на заказ").form-control
-                    .form__group
-                      label.hidden Укажите эл. адреса для отправки прайс-листа
-                      input(type="text" placeholder="прайс-листа").form-control
+                      .form__group
+                        label.form__radio
+                          span.span
+                            input(type="radio" name="radio2" checked)
+                            span.input-radio
+                          span.span
+                            span.input-label только по наличию Киев
+                            
+                      .form__group
+                        label.form__radio
+                          span.span
+                            input(type="radio" name="radio2")
+                            span.input-radio
+                          span.span
+                            span.input-label контейнерные и авиапоставки «под заказ»
+                            
+                      .form__group
+                        label.form__radio
+                          span.span
+                            input(type="radio" name="radio2")
+                            span.input-radio
+                          span.span
+                            span.input-label оба варианта
                       
-                  .form__block
-                    label.form__block__label Способ получения заказов:
+                    .form__block
+                      label.form__block__label Вы осуществляете закупки: 
+                      
+                      .form__group
+                        label.form__radio
+                          span.span
+                            input(type="radio" name="radio3" checked)
+                            span.input-radio
+                          span.span
+                            span.input-label под склад
+                            
+                      .form__group
+                        label.form__radio
+                          span.span
+                            input(type="radio" name="radio3")
+                            span.input-radio
+                          span.span
+                            span.input-label только под клиентов
+                            
+                      .form__group
+                        label.form__radio
+                          span.span
+                            input(type="radio" name="radio3")
+                            span.input-radio
+                          span.span
+                            span.input-label оба варианта
+                      
+                    .form__block
+                      label.form__block__label Кто является вашими основными клиентами: 
+                      
+                      .form__group
+                        label.form__radio
+                          span.span
+                            input(type="radio" name="radio4" checked)
+                            span.input-radio
+                          span.span
+                            span.input-label физ. лица
+                            
+                      .form__group
+                        label.form__radio
+                          span.span
+                            input(type="radio" name="radio4")
+                            span.input-radio
+                          span.span
+                            span.input-label СТО
+                            
+                      .form__group
+                        label.form__radio
+                          span.span
+                            input(type="radio" name="radio4")
+                            span.input-radio
+                          span.span
+                            span.input-label розничные и мелкооптовые магазины
+                            
+                      .form__group
+                        label.form__radio
+                          span.span
+                            input(type="radio" name="radio4")
+                            span.input-radio
+                          span.span.span--nowrap
+                            span.input-label другое (указать)
+                          span.span.span--w100
+                            input(type="text").form-control.form-control--other
                     
-                    .form__group
-                      label.form__radio
-                        span.span
-                          input(type="radio" name="radio5" checked)
-                          span.input-radio
-                        span.span
-                          span.input-label самовывоз
-                          
-                    .form__group
-                      label.form__radio
-                        span.span
-                          input(type="radio" name="radio5")
-                          span.input-radio
-                        span.span
-                          span.input-label доставка по Киеву
-                          
-                    .form__group.form__group--sumoselect
-                      div
+                    .form__block
+                      label.form__block__label Укажите эл. адреса для отправки: 
+                      .form__group.form__group--slim
+                        label.hidden Укажите эл. адреса для отправки документов (упд, счета)
+                        input(type="text" placeholder="документов (упд, счета)").form-control
+                      .form__group.form__group--slim
+                        label.hidden Укажите эл. адреса для отправки ответа на заказ
+                        input(type="text" placeholder="ответа на заказ").form-control
+                      .form__group
+                        label.hidden Укажите эл. адреса для отправки прайс-листа
+                        input(type="text" placeholder="прайс-листа").form-control
+                        
+                    .form__block
+                      label.form__block__label Способ получения заказов:
+                      
+                      .form__group
+                        label.form__radio
+                          span.span
+                            input(type="radio" name="radio5" checked)
+                            span.input-radio
+                          span.span
+                            span.input-label самовывоз
+                            
+                      .form__group
                         label.form__radio
                           span.span
                             input(type="radio" name="radio5")
                             span.input-radio
                           span.span
-                            span.input-label отправка через ТК
-                      div
-                        .select-thin
-                          select.sumoselect
-                            option(value="Новая Почта" selected) Новая Почта
-                            option(value="УкрПочта") УкрПочта
-                            option(value="РусПочта") РусПочта
-                            option(value="Курьер") Курьер
+                            span.input-label доставка по Киеву
+                            
+                      .form__group.form__group--sumoselect
+                        div
+                          label.form__radio
+                            span.span
+                              input(type="radio" name="radio5")
+                              span.input-radio
+                            span.span
+                              span.input-label отправка через ТК
+                        div
+                          .select-thin
+                            select.sumoselect
+                              option(value="Новая Почта" selected) Новая Почта
+                              option(value="УкрПочта") УкрПочта
+                              option(value="РусПочта") РусПочта
+                              option(value="Курьер") Курьер
               
                 .register-info спасибо за регистрацию, после обработки вашей информации менеджером вы получите файл с договором на Email
                 

@@ -75,6 +75,14 @@ button, html input[type=button], input[type=reset], input[type=submit]
               display: block
               line-height: 0
 
+      textarea
+        height: 40px
+        resize: vertical
+        overflow: hidden
+
+    &--address
+      margin-top: -9px
+
     &--has-icon
       position: relative
       .form-control
@@ -102,6 +110,13 @@ button, html input[type=button], input[type=reset], input[type=submit]
       .form-control
         border: 0
 
+  &__tab
+    display: none
+    opacity: 0
+    animation: visible 0.3s linear
+    &.is-active
+      display: block
+      opacity: 1
 
   &-control, &__control
     display: block
@@ -167,7 +182,7 @@ button, html input[type=button], input[type=reset], input[type=submit]
     top: 0
     height: 40px
     line-height: 41px
-    padding: 0 4px
+    padding: 0 10px
     font-size: rem(14)
     cursor: pointer
     display: none
@@ -408,3 +423,7 @@ label
   border: 1px solid $color-gray
   background: $color-white
   vertical-align: middle
+
+.form-control[disabled], .form-control[readonly]
+  background: none
+  opacity: 1

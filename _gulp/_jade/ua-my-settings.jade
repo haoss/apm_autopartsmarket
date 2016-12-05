@@ -80,7 +80,7 @@ html(lang="ru")
                     .col-lg-9.col-md-8.col-sm-7.col-xs-12
                       .form__group.form__group--settings
                         div
-                          input(id="input1" type="text" value="Россия").form-control
+                          input(id="input1" type="text" value="Россия" disabled).form-control
                         div.last
                           a(href="#").btn.btn--settings
                             i.ion-edit
@@ -231,3 +231,21 @@ html(lang="ru")
       include ./_include/_footer-js
       script(src='./js/common.js')
       include ./_include/_js-body-bottom
+
+      script.
+        // Menu user account
+        var slideout = new Slideout({
+          'panel': document.getElementById('panel'),
+          'menu': document.getElementById('menu'),
+          'padding': 290,
+          'tolerance': 70
+        });
+      
+        $('.user__navigation__close').on('click', function(e){
+          e.preventDefault();
+          slideout.close();
+        });
+        $('.user__menu').on('click', function(e){
+          e.preventDefault();
+          slideout.toggle();
+        });

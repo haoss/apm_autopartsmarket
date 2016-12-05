@@ -17,30 +17,31 @@
     overflow: hidden
     p
       margin-bottom: 10px
-      // padding-left: 10px
-      // padding-right: 10px
+      padding-left: 7px
+      padding-right: 7px
       // margin-left: -10px
+      overflow: hidden
+      height: 60px
 
     &:hover
       .news__line1 i
-        transition: width .3s ease-out
+        transition: width .4s ease-out
       .news__line2 i
-        transition: height .3s ease-out .3s
+        transition: height .4s ease-out .4s
       .news__line3 i
-        transition: width .3s ease-out .6s
+        transition: width .4s ease-out .8s
       .news__line4 i
-        transition: height .3s ease-out 0.9s
+        transition: height .4s ease-out 1.2s
       .news__line1, .news__line2, .news__line3, .news__line4
         i
           width: 100%
           height: 100%
-          opacity: 1
       .news__wrapper
+        transform: translateY(-19px)
+      .news__readmore
+        opacity: 1
+      .news__img, .news__date
         opacity: 0
-        transition: opacity .4s ease
-        &__hover
-          opacity: 1
-          transition: opacity .4s ease 0.4s
 
   &__link
     position: absolute
@@ -53,19 +54,23 @@
   &__img
     height: 264px
     width: 100%
+    opacity: 1
     background:
       position: center
       repeat: no-repeat
       size: cover
     margin-bottom: 15px
     // opacity: 1
-    // transition: opacity 0.3s linear
+    transition: opacity 0.1s linear
 
   &__date
     font-size: rem(12)
     color: #636363
     margin-bottom: 10px
     font-family: $font-roboto-light
+    transition: opacity 0.1s linear
+    opacity: 1
+    padding-left: 7px
 
   &__readmore
     font-family: $font-roboto
@@ -73,8 +78,10 @@
     color: $color-blue
     text-transform: uppercase
     // display: none
-    margin-bottom: 10px
     margin-left: 10px
+    position: absolute
+    opacity: 0
+    transition: opacity 0.2s linear
     &::before
       content: ''
       width: 23px
@@ -97,7 +104,6 @@
       height: 100%
       width: 0
       background: $color-blue
-      opacity: 0
 
   &__line1
     top: 0
@@ -106,7 +112,7 @@
     i
       left: 0
       top: 0
-      transition: width .4s ease-out 1.2s, opacity 0.4s ease-out .4s
+      transition: width .4s ease-out 1.2s
 
   &__line3
     right: 0
@@ -115,7 +121,7 @@
     i
       right: 0
       top: 0
-      transition: width .4s ease-out .4s, opacity 0.4s ease-out .4s
+      transition: width .4s ease-out .4s
 
   &__line2, &__line4
     width: 4px
@@ -129,7 +135,6 @@
       position: absolute
       width: 100%
       height: 0
-      opacity: 0
       background: $color-blue
 
   &__line2
@@ -139,7 +144,7 @@
     i
       top: 0
       left: 0
-      transition: height .4s ease-out .8s, opacity 0.4s ease-out .4s
+      transition: height .4s ease-out .8s
 
   &__line4
     bottom: 0
@@ -148,23 +153,13 @@
     i
       bottom: 0
       left: 0
-      transition: height .4s ease-out 0s, opacity 0.4s ease-out 0s
+      transition: height .4s ease-out
 
   &__wrapper
-    opacity: 1
-    transition: opacity .4s ease 0.4s
-    &__hover
-      opacity: 0
-      position: absolute
-      // top: 0
-      left: 0
-      right: 0
-      bottom: 0
-      padding-bottom: 10px
-      transition: opacity 0.4s ease
-      p
-        padding-left: 10px
-        padding-right: 10px
+    position: relative
+    transform: translateY(0)
+    transition: transform 0.2s linear
+
 
 /* tag */
 .tag
@@ -172,13 +167,13 @@
   text-transform: uppercase
   overflow: hidden
   margin-left: -10px
-  margin-bottom: 55px
+  margin-bottom: 25px
   a
     display: inline-block
     float: left
     background: #e8e8e8
     height: 20px
-    line-height: 21px
+    line-height: 20px
     text-decoration: none
     color: $primary-color
     padding: 0 7px
@@ -789,6 +784,11 @@
       line-height: 1
 
 /**/
+
+
+
+
+
 .hay
   &__block
     position: relative
@@ -800,13 +800,13 @@
 
     &:hover
       .hay__line1 i
-        transition: width .4s ease-out
+        transition: width .6s ease-out
       .hay__line2 i
-        transition: height .4s ease-out 1.2s
+        transition: height .6s ease-out 1.8s
       .hay__line3 i
-        transition: width .4s ease-out .8s
+        transition: width .6s ease-out 1.2s
       .hay__line4 i
-        transition: height .4s ease-out 0.4s
+        transition: height .6s ease-out 0.6s
       .hay__line1, .hay__line2, .hay__line3, .hay__line4
         i
           width: 100%
@@ -814,6 +814,13 @@
       .hay__strong
         transition: color .4s ease-out 1.6s
         color: $color-blue
+
+      .hay__strong__mask
+        transform: translateX(0)
+        transition: transform .6s ease-out 1.2s
+        .hay__strong__text--progress
+          transform: translateX(0)
+          transition: transform .6s ease-out 1.2s
   p
     margin: 0
   &__link
@@ -844,7 +851,7 @@
     i
       right: 0
       top: 0
-      transition: width .4s ease-out 1.6s
+      transition: width .6s ease-out 2.4s
 
   &__line3
     left: 0
@@ -853,7 +860,7 @@
     i
       left: 0
       bottom: 0
-      transition: width .4s ease-out .8s
+      transition: width .6s ease-out 1.2s
 
   &__line2, &__line4
     width: 4px
@@ -876,7 +883,7 @@
     i
       bottom: 0
       right: 0
-      transition: height .4s ease-out .4s
+      transition: height .6s ease-out .6s
 
   &__line4
     top: 0
@@ -885,7 +892,7 @@
     i
       top: 0
       left: 0
-      transition: height .4s ease-out 1.2s
+      transition: height .6s ease-out 1.8s
 
 
   &__strong
@@ -893,11 +900,27 @@
     font-family: $font-intro
     color: $primary-color
     display: block
-    line-height: 0.7
+    line-height: 1.2
     left: 24px
-    bottom: 34px
+    bottom: 10px
     position: absolute
     transition: color .4s ease-out 0s
+    user-select: none
+
+    &__mask
+      position: absolute
+      overflow: hidden
+      transform: translateX(-100%)
+      transition: transform .6s ease-out 1.2s
+      pointer-events: none
+
+    &__text--preload
+      color: $primary-color
+
+    &__text--progress
+      color: $color-blue
+      transform: translateX(100%)
+      transition: transform .6s ease-out 1.2s
 
   &__text
     position: absolute
@@ -1018,6 +1041,7 @@
       span
         display: inline-block
         margin-left: 10px
+        font-family: $font-roboto-light
 
   &__date
     font-size: rem(14)

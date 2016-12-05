@@ -160,7 +160,7 @@ html(lang="ru")
               table.table-basic.table-basic--data
                 thead
                   tr
-                    th № счета
+                    th № заказа
                     th.hidden-xxs Статус
                     th.hidden-xxs Сумма
                     th.hidden-xs Комментарий 
@@ -172,8 +172,8 @@ html(lang="ru")
                   tr.tr--separator
                     td &nbsp;
                   tr
-                    td 87654534 
-                      
+                    td 
+                      a(href="#") 87654534 
                     td.hidden-xxs
                       .info-status.info-status--inwork В работе
                     td.hidden-xxs 654 987 324 руб 
@@ -198,8 +198,8 @@ html(lang="ru")
                         button(type="submit").btn.btn--edit.btn--edit-popup
                           i.ion-gear-a
                   tr
-                    td 87654534
-                      
+                    td 
+                      a(href="#") 87654534
                     td.hidden-xxs
                       .info-status.info-status--issued Выдан
                     td.hidden-xxs 654 987 324 руб 
@@ -249,3 +249,21 @@ html(lang="ru")
       include ./_include/_footer-js
       script(src='./js/common.js')
       include ./_include/_js-body-bottom
+
+      script.
+        // Menu user account
+        var slideout = new Slideout({
+          'panel': document.getElementById('panel'),
+          'menu': document.getElementById('menu'),
+          'padding': 290,
+          'tolerance': 70
+        });
+      
+        $('.user__navigation__close').on('click', function(e){
+          e.preventDefault();
+          slideout.close();
+        });
+        $('.user__menu').on('click', function(e){
+          e.preventDefault();
+          slideout.toggle();
+        });

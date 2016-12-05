@@ -122,12 +122,11 @@ html(lang="ru")
                   li: a(href="#") Мои Настройки
 
             .col-sm-9.col-xs-12
-              h1 Результат поиска зпчасти по коду
+              h1 Результаты поиска запчасти по коду
               
               form(action="#")
                 
                 .history-search
-                  .history-search__title Вчера Вы искали:
                     
                   table.table-basic.table-basic--data.table-basic--history
                     thead
@@ -236,7 +235,7 @@ html(lang="ru")
                     //-   i.ion-refresh
                     //-   | Загрузить еще 10 позиций
                 
-                    button(type="submit").btn.btn--blue Загрузить позиции в ексель
+                    button(type="submit").btn.btn--blue Выгрузить позиции в exel
                 
                 .history-search
                   .history-search__title Ранее Вы искали:
@@ -336,3 +335,21 @@ html(lang="ru")
       include ./_include/_footer-js
       script(src='./js/common.js')
       include ./_include/_js-body-bottom
+
+      script.
+        // Menu user account
+        var slideout = new Slideout({
+          'panel': document.getElementById('panel'),
+          'menu': document.getElementById('menu'),
+          'padding': 290,
+          'tolerance': 70
+        });
+      
+        $('.user__navigation__close').on('click', function(e){
+          e.preventDefault();
+          slideout.close();
+        });
+        $('.user__menu').on('click', function(e){
+          e.preventDefault();
+          slideout.toggle();
+        });

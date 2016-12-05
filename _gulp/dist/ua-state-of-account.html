@@ -212,7 +212,7 @@
                             <div class="footer__button hidden">Меню</div>
                         </div>
                         <div class="last hidden-xs">
-                            <div class="copyright">© 2016 arm.group<br>Все права защищены</div>
+                            <div class="copyright">© 2016 apm.group<br>Все права защищены</div>
                         </div>
                     </div>
                 </div>
@@ -237,6 +237,24 @@
             <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
             <script src="./js/libs/air-datepicker/dist/js/datepicker.min.js"></script>
             <script src="./js/common.js"></script>
+            <script>
+                // Menu user account
+                var slideout = new Slideout({
+                  'panel': document.getElementById('panel'),
+                  'menu': document.getElementById('menu'),
+                  'padding': 290,
+                  'tolerance': 70
+                });
+                
+                $('.user__navigation__close').on('click', function(e){
+                  e.preventDefault();
+                  slideout.close();
+                });
+                $('.user__menu').on('click', function(e){
+                  e.preventDefault();
+                  slideout.toggle();
+                });
+            </script>
         </div>
     </body>
 </html>

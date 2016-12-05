@@ -2,8 +2,8 @@ doctype
 
 html(lang="ru")
   
-  -var active = 'Новости' //активный пункт меню, список в header.jade
-  -var pageTitle = 'Список новостей' + ' - Биржа автозапчастей' //title страницы для генерации верстки  
+  -var active = 'Новость' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Новость' + ' - Биржа автозапчастей' //title страницы для генерации верстки  
 
   include ./_include/_head
 
@@ -19,18 +19,7 @@ html(lang="ru")
       .container
         
         .row
-          .col-sm-3.col-xs-12
-            
-            .h1.h1--dark Новости
-            
-            nav(role="navigation").navigation-level2
-              ul
-                li.active: a(href="#") Все
-                li: a(href="#") Тест-драйвы
-                li: a(href="#") Водителям
-                li: a(href="#") Покупка и продажа
-            
-          .col-sm-9.col-xs-12
+          .col-sm-9.col-sm-push-3.col-xs-12
             h1 Полностью новая Mazda CX-5: первый тизер и дата премьеры
             
             p
@@ -70,6 +59,16 @@ html(lang="ru")
                   .table__cell
                     button(type="submit").btn.btn--blue.btn--big.btn--xxs-block Подписаться
 
+          .col-sm-3.col-sm-pull-9.col-xs-12
+            
+            .h1.h1--dark Новости
+            
+            nav(role="navigation").navigation-level2
+              ul
+                li.active: a(href="#") Все
+                li: a(href="#") Тест-драйвы
+                li: a(href="#") Водителям
+                li: a(href="#") Покупка и продажа
     
     include ./_include/_footer
     //- div(style="height: 900px; background-color: #000")

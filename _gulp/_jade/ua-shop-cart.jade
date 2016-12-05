@@ -124,7 +124,7 @@ html(lang="ru")
 
             .col-sm-9.col-xs-12
 
-              .h1 Корзина казазов
+              .h1 Корзина заказов
                 
               form(action="#")
                 
@@ -276,63 +276,66 @@ html(lang="ru")
                                   em Для физических и юридических лиц.
                         
                       .col-lg-5.col-md-5
-                        label.form__block__label Способ доставки
                         
-                        .form__block
-                          .form__group
-                            label.form__radio
-                              span.span
-                                input(type="radio" name="radio5" checked)
-                                span.input-radio
-                              span.span
-                                span.input-label Самовывоз
-                                
-                          .form__group
-                            label.form__radio
-                              span.span
-                                input(type="radio" name="radio5")
-                                span.input-radio
-                              span.span
-                                span.input-label Доставка по Киеву
+                        .form__block__delivery
+                          label.form__block__label Способ доставки
                           
-                          .form__group.form__group--sumoselect
-                            div
+                          .form__block
+                            .form__group
+                              label.form__radio
+                                span.span
+                                  input(type="radio" name="radio5" checked)
+                                  span.input-radio
+                                span.span
+                                  span.input-label Самовывоз
+                                  
+                            .form__group
                               label.form__radio
                                 span.span
                                   input(type="radio" name="radio5")
                                   span.input-radio
                                 span.span
-                                  span.input-label Отправка через ТК
-                            div
-                              .select-thin
-                                select.sumoselect
-                                  option(value="Новая Почта" selected) Новая Почта
-                                  option(value="УкрПочта") УкрПочта
-                                  option(value="РусПочта") РусПочта
-                                  option(value="Курьер") Курьер
-                          
-                          .clear10
-                          
-                          .form__group.form__group--slim
-                            label.hidden Город
-                            input(type="text" placeholder="Город").form-control
-                          .form__group.form__group--slim
-                            label.hidden Улица
-                            input(type="text" placeholder="Улица").form-control
-                          .row
-                            .col-xs-6
-                              .form__group
-                                label.hidden Дом
-                                input(type="text" placeholder="Дом").form-control
-                            .col-xs-6
-                              .form__group
-                                label.hidden Кв
-                                input(type="text" placeholder="Кв").form-control
-
+                                  span.input-label Доставка по Киеву
+                            
+                            .form__group.form__group--sumoselect
+                              div
+                                label.form__radio
+                                  span.span
+                                    input(type="radio" name="radio5")
+                                    span.input-radio
+                                  span.span
+                                    span.input-label Отправка через ТК
+                              div
+                                .select-thin
+                                  select.sumoselect
+                                    option(value="Новая Почта" selected) Новая Почта
+                                    option(value="УкрПочта") УкрПочта
+                                    option(value="РусПочта") РусПочта
+                                    option(value="Курьер") Курьер
+                            
+                        .clear
+                        
+                        .form__group.form__group--slim
+                          label.hidden Город
+                          input(type="text" placeholder="Город").form-control
+                        .form__group
+                          label.hidden Улица
+                          input(type="text" placeholder="Улица").form-control
+                        .row
+                          .col-xs-6
+                            .form__group.form__group--address
+                              label.hidden Дом
+                              input(type="text" placeholder="Дом").form-control
+                          .col-xs-6
+                            .form__group.form__group--address
+                              label.hidden Кв
+                              input(type="text" placeholder="Кв").form-control
+                    
+                    .clear30
                     button(type="submit").btn.btn--blue.btn--biggest подтвердить
                     
                     .text-center
-                      a(href="#").btn.btn--blue.btn--xxs-block выгрузить позиции в ексель
+                      a(href="#").btn.btn--blue.btn--xxs-block выгрузить позиции в exel
 
       include ./_include/_footer
       //- div(style="height: 900px; background-color: #000")
@@ -350,3 +353,21 @@ html(lang="ru")
       include ./_include/_footer-js
       script(src='./js/common.js')
       include ./_include/_js-body-bottom
+
+      script.
+        // Menu user account
+        var slideout = new Slideout({
+          'panel': document.getElementById('panel'),
+          'menu': document.getElementById('menu'),
+          'padding': 290,
+          'tolerance': 70
+        });
+      
+        $('.user__navigation__close').on('click', function(e){
+          e.preventDefault();
+          slideout.close();
+        });
+        $('.user__menu').on('click', function(e){
+          e.preventDefault();
+          slideout.toggle();
+        });
