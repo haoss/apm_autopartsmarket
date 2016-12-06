@@ -67,4 +67,110 @@ html(lang="ru")
     script(src='./js/common.js')
     include ./_include/_js-body-bottom
 
+    script.
+      
+      jQuery(function($){
+      
+        //slider
+        function slider() {
+            var slider = $('#client .slider'),
+                text_box = slider.siblings('.text_box'),
+                text_item = text_box.find('.item'),
+                viewport = slider.find('.viewport'),
+                items_container = slider.find('.items_container'),
+                item = items_container.children('.item'),
+                item_num = item.length,
+                item_width = item.width(),
+                slider_nav = slider.find('.nav_container'),
+                left_nav = slider_nav.find('.left'),
+                right_nav = slider_nav.find('.right'),
+                dots_container = slider.find('.dots_container'),
+                dot = function (index) {return '<li class="dot"><div class="highlight"></div><span>'+index+'</span></li>'},
+                shift = 0,
+                count = 0,
+                true_count = 4,
+                direction;
+      
+            console.log(item_width);
+      
+            items_container.css('width', item_num*item_width);
+            item.each(function (index) {
+                index++;
+                dots_container.append(dot(index));
+            });
+            var dots = dots_container.find('.dot');
+            dots.css('width', 100/item_num + '%');
+      
+            function setActive(count) {
+                var eq = count;
+                item.removeClass('active pre_active');
+                item.eq(eq).addClass('active');
+                item.eq(eq-1).addClass('pre_active');
+                item.eq(eq+1).addClass('pre_active');
+                text_item.removeClass('active');
+                text_item.eq(eq).addClass('active');
+            }
+            setActive(count);
+      
+            function dots_magic(count, direction){
+                var eq = count;
+                dots.removeClass('active dir_left dir_right');
+                if(direction == 'left'){
+                    dots.eq(eq+1).addClass('dir_left');
+                    dots.eq(eq).addClass('dir_right');
+                    dots.eq(eq-1).addClass('dir_right');
+                }else if(direction == 'right'){
+                    dots.eq(eq-1).addClass('dir_right');
+                    dots.eq(eq).addClass('dir_left');
+                    dots.eq(eq+1).addClass('dir_left');
+                }
+                dots.eq(eq).addClass('active');
+            }
+            dots_magic(count);
+      
+            function unbin() {
+                right_nav.off('click');
+                left_nav.off('click');
+            }
+            function bin() {
+                setTimeout(function () {
+                    if (count < item_num-1){
+                        right_nav.on('click', function (e) {
+                            if(e.hasOwnProperty('originalEvent')){
+                                unbin();
+                                right();
+                            }
+                        });
+                    }
+                    if (count > 0){
+                        left_nav.on('click', function (e) {
+                            if(e.hasOwnProperty('originalEvent')) {
+                                unbin();
+                                left();
+                            }
+                        });
+                    }
+                }, 800);
+            }
+            function stage(count, direction) {
+                shift = count*item_width;
+                setActive(count);
+                dots_magic(count, direction);
+                items_container.css('left', -shift);
+                bin();
+            }
+            function right() {
+                count++;
+                stage(count, 'right');
+            }
+            function left() {
+                count--;
+                stage(count, 'left');
+            }
+            bin();
+      
+        };
+        slider();
+      
+      })
   
