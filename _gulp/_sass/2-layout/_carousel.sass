@@ -1,7 +1,218 @@
 /* carousel */
-.carousel
-  ul, li
+
+#client
+  position: relative
+  ul
     margin: 0
     padding: 0
-  li
-    list-style: none
+    li
+      margin: 0
+  h2
+    padding-top: 0
+  .slider
+    width: 745px
+    margin-left: auto
+    margin-right: auto
+    text-align: center
+    margin-top: 30px
+    padding-bottom: 0
+    .viewport
+      position: relative
+      width: 555px
+      height: 235px
+      margin-left: auto
+      margin-right: auto
+      overflow: hidden
+      &:after
+        content: ''
+        position: absolute
+        height: 100%
+        width: 40px
+        top: 0
+        background: #fff
+        z-index: 2
+      &:before
+        content: ''
+        position: absolute
+        height: 100%
+        width: 40px
+        top: 0
+        background: #fff
+        z-index: 2
+        left: 0
+        background: linear-gradient(90deg, #fff 0, hsla(0, 0%, 100%, 0))
+      &:after
+        right: 0
+        background: linear-gradient(270deg, #fff 0, hsla(0, 0%, 100%, 0))
+      .items_container
+        width: 555px
+        position: relative
+        transition: all 0.8s ease-in-out
+        .item
+          float: left
+          transition: all .8s ease-in-out
+          line-height: 235px
+          width: 555px
+          img
+            transition: all .8s ease-in-out
+            transform: scale(0.6)
+            opacity: .6
+            max-width: 235px
+          &.active img
+            transform: scale(1)
+            opacity: 1
+    .slider_navigation
+      position: relative
+      width: 100%
+      height: 40px
+      margin: 39px auto 0
+      .dots_container
+        width: 555px
+        height: 40px
+        margin: 0 auto
+        line-height: 40px
+        .dot
+          display: inline-block
+          position: relative
+          width: 20%
+          height: 1px
+          padding: 10px 0
+          float: left
+          cursor: pointer
+          &:before
+            content: ''
+            display: block
+            position: absolute
+            width: 100%
+            height: 1px
+            top: 0
+            left: 0
+            background: #acacac
+          span
+            position: relative
+            top: 0px
+            color: #adacb1
+            opacity: 0
+            transition: all .8s ease-in-out
+            font-weight: 400
+            font-style: normal
+            font-size: rem(20)
+            font-family: $font-intro
+            display: inline-block
+            padding: 0 1px
+            &:before
+              content: "0"
+          .highlight
+            content: ''
+            position: absolute
+            width: 0
+            height: 3px
+            top: 0
+            left: 0
+            right: 0
+            margin: 0 auto
+            background: $color-blue
+            transition: all 0.8s ease-in-out
+          &:hover
+            .highlight
+              width: 100%
+              transition: all 0.4s ease-in-out
+            span
+              top: -10px
+              opacity: 1
+              transition: all 0.4s ease-in-out
+          &.active
+            span
+              top: -28px
+              background: $color-white
+              color: $color-blue
+              opacity: 1
+              font-weight: 400
+              font-style: normal
+              font-size: 20px
+            .highlight
+              width: 100%
+          &.dir_left .highlight
+            right: auto
+            left: 0
+          &.dir_right .highlight
+            left: auto
+            right: 0
+      .nav_container
+        position: absolute
+        width: 100%
+        top: -16px
+        .nav
+          width: 30px
+          height: 30px
+          cursor: pointer
+          &.left
+            float: left
+            background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAIAAAC0Ujn1AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjhFODcxRkVFQkJCMDExRTZCRjAyQ0FCNUQ4OTRFOUVGIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjhFODcxRkVGQkJCMDExRTZCRjAyQ0FCNUQ4OTRFOUVGIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6OEU4NzFGRUNCQkIwMTFFNkJGMDJDQUI1RDg5NEU5RUYiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6OEU4NzFGRURCQkIwMTFFNkJGMDJDQUI1RDg5NEU5RUYiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7dVESyAAAAnElEQVR42mI0OPKZgTaAiYFmYNToUaOHjtHBEqw0MTpRhq1Gmb1LnYPKRgPNzZNn+/Tn/9qXv6lpNNzcsps/Tn74SzWjyTCXKKPJM5ew0XwsjEHiLEDG9S//SDKXsNFAx2Ze/fHkxz9zAWYiEwYJAQI0F2K6qwgLSaYTFY3kmU5s4iPDdBKyDMR0YHwSmWUYR6vdUaNHjSYFAAQYAKvOXFiPMDafAAAAAElFTkSuQmCC') no-repeat 50%
+          &.right
+            float: right
+            background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAIAAAC0Ujn1AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkQ4NzgwQTE3QkJCMDExRTZCMTkxREI2MkFERDRBNTE1IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkQ4NzgwQTE4QkJCMDExRTZCMTkxREI2MkFERDRBNTE1Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RDg3ODBBMTVCQkIwMTFFNkIxOTFEQjYyQURENEE1MTUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RDg3ODBBMTZCQkIwMTFFNkIxOTFEQjYyQURENEE1MTUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz71qXifAAAAo0lEQVR42mI0OPKZgTaAiYFmYNToUaMHvdHBEqykGs1CjKIudQ5XERY+Fsb5T35R2dVrX/7+9Od/njxbogwblY0++eFv2c0fpJpObFiTYToJKYRU00lLfEDTr3/5B2QEiYNilZpGA5OKuQDzkx//Mq+CnE81oyFJEGIukKRagJBqLrFGk2EusbkRmGVkOJiAyYN4c4GAcbTaHTV61GhSAECAAQBYAFuOtSsmmwAAAABJRU5ErkJggg==') no-repeat 50%
+  .text_box
+    position: relative
+    height: 100px
+    text-align: center
+    // margin-top: 15px
+    color: #636363
+    .item
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      margin: 0 auto
+      height: 70px
+      z-index: 1
+      animation: i .4s ease-in-out
+      animation-fill-mode: both
+      p
+        font-size: 18px
+        line-height: 28px
+        margin-bottom: 10px
+        transition: all 0.4s ease-in-out
+        font-family: PT Sans, sans-serif
+        font-weight: 400
+        font-style: normal
+        opacity: 0
+        &.link
+          font-family: PT Sans, sans-serif
+          font-weight: 400
+          font-style: normal
+          opacity: 0
+          color: #adacb1
+          line-height: 20px
+          font-size: 14px
+        a
+          text-decoration: underline
+      &.active
+        z-index: 2
+        animation: h .4s ease-in-out
+        animation-fill-mode: both
+        // margin-top: 60px
+        transition-delay: 0.4s
+        a, p
+          opacity: 1
+          transition-delay: 0.4s
+        a
+          visibility: visible
+
+// @keyframes h
+//   0%
+//     opacity: 0
+//     transform: translateZ(0)
+//
+//   to
+//     opacity: 1
+//     transform: translate3d(0, -60px, 0)
+//
+// @keyframes i
+//   0%
+//     opacity: 1
+//     transform: translateZ(0)
+//
+//   to
+//     opacity: 0
+//     transform: translate3d(0, -60px, 0)

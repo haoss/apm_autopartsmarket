@@ -112,6 +112,10 @@
           &--blue
             float: left
 
+  #client
+    .slider
+      width: 720px
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
   h1, .h1
@@ -457,6 +461,16 @@
     float: none
     margin-top: 0
 
+  #client
+    .slider
+      width: 440px
+      .viewport
+        width: 350px
+        .items_container .item
+          width: 350px
+      .slider_navigation .dots_container
+        width: 350px
+
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
 
@@ -712,6 +726,24 @@
 
   .pagination ul li
     margin: 0 2px
+
+  #client
+    .slider
+      width: 290px
+      .viewport
+        width: 290px
+        .items_container .item
+          width: 290px
+      .slider_navigation
+        .dots_container
+          width: 290px
+        .nav_container
+          // position: absolute
+          // width: 80px
+          top: -45px
+          z-index: 1000
+          // left: 50%
+          // transform: translateX(-50%)
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 319px)

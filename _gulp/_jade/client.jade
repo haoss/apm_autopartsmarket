@@ -18,13 +18,37 @@ html(lang="ru")
     .content
       .container
         
-        .h1 Стать клиентом
-        
-        .clients
-          .clients__casousel
-            ul
-              li
-                .clients__casousel__block
+        #client    
+          .slider
+            .h1.h1--dark.text-center Стать клиентом
+            
+            .viewport
+              .items_container(style='left: 0;')
+                .item
+                  img(src='./tmp/slider/slider-1.png', alt='')
+                .item
+                  img(src='./tmp/slider/slider-2.png', alt='')
+                .item
+                  img(src='./tmp/slider/slider-3.png', alt='')
+                .item
+                  img(src='./tmp/slider/slider-4.png', alt='')
+            .slider_navigation
+              .nav_container
+                .nav.left
+                .nav.right
+              ul.dots_container
+          .text_box
+            .item.active
+              p Заполняем анкету онлайн
+              p.link
+                a(href='#!') Зарегистрироваться
+            .item
+              p Заключаем договор
+            .item
+              p Подключаем вас к прайсу
+            .item
+              p Включаем вас в маршрут доставок
+
     
     include ./_include/_footer
     //- div(style="height: 900px; background-color: #000")
