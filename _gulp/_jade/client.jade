@@ -2,8 +2,8 @@ doctype
 
 html(lang="ru")
   
-  -var active = 'Новости' //активный пункт меню, список в header.jade
-  -var pageTitle = 'Список новостей' + ' - Биржа автозапчастей' //title страницы для генерации верстки  
+  -var active = 'Стать клиентом' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Стать клиентом' + ' - Биржа автозапчастей' //title страницы для генерации верстки  
 
   include ./_include/_head
 
@@ -139,6 +139,12 @@ html(lang="ru")
                             if(e.hasOwnProperty('originalEvent')){
                                 unbin();
                                 right();
+                            }
+                        });
+                    } else {
+                        right_nav.on('click', function (e) {
+                            if(e.hasOwnProperty('originalEvent')){
+                                window.location.href='index.html';
                             }
                         });
                     }

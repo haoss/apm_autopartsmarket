@@ -2,7 +2,7 @@
 <html lang="ru">
     <head>
         <meta charset="utf-8">
-        <title>Список новостей - Биржа автозапчастей</title>
+        <title>Стать клиентом - Биржа автозапчастей</title>
         <meta name="description" content="">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -49,9 +49,9 @@
                         <div class="header__menu"><a href="#" class="header__button"><i class="ion-grid"></i>Меню сайта</a>
                             <nav role="navigation" class="header__navigation">
                                 <ul>
-                                    <li class="active"><a href="#" title="Новости">Новости</a></li>
+                                    <li><a href="#" title="Новости">Новости</a></li>
                                     <li><a href="#" title="О компании">О компании</a></li>
-                                    <li><a href="#" title="Стать клиентом">Стать клиентом</a></li>
+                                    <li class="active"><a href="#" title="Стать клиентом">Стать клиентом</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -268,6 +268,12 @@
                                   if(e.hasOwnProperty('originalEvent')){
                                       unbin();
                                       right();
+                                  }
+                              });
+                          } else {
+                              right_nav.on('click', function (e) {
+                                  if(e.hasOwnProperty('originalEvent')){
+                                      window.location.href='index.html';
                                   }
                               });
                           }

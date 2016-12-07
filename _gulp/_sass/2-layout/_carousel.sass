@@ -71,6 +71,7 @@
         height: 40px
         margin: 0 auto
         line-height: 40px
+        border-top: 1px solid #acacac
         .dot
           display: inline-block
           position: relative
@@ -87,7 +88,7 @@
             height: 1px
             top: 0
             left: 0
-            background: #acacac
+            // background: #acacac
           span
             position: relative
             top: 0px
@@ -107,7 +108,7 @@
             position: absolute
             width: 0
             height: 3px
-            top: 0
+            top: -1px
             left: 0
             right: 0
             margin: 0 auto
@@ -146,30 +147,31 @@
           width: 30px
           height: 30px
           cursor: pointer
+          position: relative
+          border: 1px solid $color-blue
+          color: $color-white
+          background: $color-blue
+          transition: all 0.3s linear
+          font-size: rem(14)
+          &::after
+            line-height: 0
+            font-family: $font-ionicons
+            position: absolute
+            left: 50%
+            top: 50%
+            transform: translate(-50%, -50%)
+          &:hover
+            background: $color-white
+            color: $color-blue
           &.left
             float: left
             &::after
-              content: ''
-              display: block
-              width: 30px
-              height: 30px
-              background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAIAAAC0Ujn1AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjhFODcxRkVFQkJCMDExRTZCRjAyQ0FCNUQ4OTRFOUVGIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjhFODcxRkVGQkJCMDExRTZCRjAyQ0FCNUQ4OTRFOUVGIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6OEU4NzFGRUNCQkIwMTFFNkJGMDJDQUI1RDg5NEU5RUYiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6OEU4NzFGRURCQkIwMTFFNkJGMDJDQUI1RDg5NEU5RUYiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7dVESyAAAAnElEQVR42mI0OPKZgTaAiYFmYNToUaOHjtHBEqw0MTpRhq1Gmb1LnYPKRgPNzZNn+/Tn/9qXv6lpNNzcsps/Tn74SzWjyTCXKKPJM5ew0XwsjEHiLEDG9S//SDKXsNFAx2Ze/fHkxz9zAWYiEwYJAQI0F2K6qwgLSaYTFY3kmU5s4iPDdBKyDMR0YHwSmWUYR6vdUaNHjSYFAAQYAKvOXFiPMDafAAAAAElFTkSuQmCC') no-repeat 50%
-              transition: background 0.3s linear
-            &:hover
-              &::after
-                background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAIAAAC0Ujn1AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTExIDc5LjE1ODMyNSwgMjAxNS8wOS8xMC0wMToxMDoyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjNGOTE2NUU1QkJFNjExRTZCQzA0Rjc5RDQxMTFFMEM5IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjNGOTE2NUU2QkJFNjExRTZCQzA0Rjc5RDQxMTFFMEM5Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6M0Y5MTY1RTNCQkU2MTFFNkJDMDRGNzlENDExMUUwQzkiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6M0Y5MTY1RTRCQkU2MTFFNkJDMDRGNzlENDExMUUwQzkiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5oIr1XAAAArElEQVR42mJ0cHBkoA1gYqAZGDV61OihY7SPjw+RKpkVFBSJNzcyMjI3N0dBQeHgwYPUdDXQ3LS01M+fP2/ZsoWaAQI3t7Gx6ezZs1QzmgxziTKaPHMJG83Ly+vrC0oSt27dIslcwink169fx44dt7KyUlNTIzJhkJD4vnz5AjFdV1eHJNOJStfkmU5sliHDdBKyzPPnz4uLS4DxSWSWYRytdkeNHjWaFAAQYABiKF6Bv29wlAAAAABJRU5ErkJggg==')
+              content: "\f124"
           &.right
             float: right
             &::after
-              content: ''
-              display: block
-              width: 30px
-              height: 30px
-              background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAIAAAC0Ujn1AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkQ4NzgwQTE3QkJCMDExRTZCMTkxREI2MkFERDRBNTE1IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkQ4NzgwQTE4QkJCMDExRTZCMTkxREI2MkFERDRBNTE1Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RDg3ODBBMTVCQkIwMTFFNkIxOTFEQjYyQURENEE1MTUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RDg3ODBBMTZCQkIwMTFFNkIxOTFEQjYyQURENEE1MTUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz71qXifAAAAo0lEQVR42mI0OPKZgTaAiYFmYNToUaMHvdHBEqykGs1CjKIudQ5XERY+Fsb5T35R2dVrX/7+9Od/njxbogwblY0++eFv2c0fpJpObFiTYToJKYRU00lLfEDTr3/5B2QEiYNilZpGA5OKuQDzkx//Mq+CnE81oyFJEGIukKRagJBqLrFGk2EusbkRmGVkOJiAyYN4c4GAcbTaHTV61GhSAECAAQBYAFuOtSsmmwAAAABJRU5ErkJggg==') no-repeat 50%
-              transition: background 0.3s linear
-            &:hover
-              &::after
-                background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAIAAAC0Ujn1AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTExIDc5LjE1ODMyNSwgMjAxNS8wOS8xMC0wMToxMDoyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjQ4MUQwRjA3QkJFNjExRTY4MjJFQ0NDNTFEODMzRTIzIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjQ4MUQwRjA4QkJFNjExRTY4MjJFQ0NDNTFEODMzRTIzIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NDgxRDBGMDVCQkU2MTFFNjgyMkVDQ0M1MUQ4MzNFMjMiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NDgxRDBGMDZCQkU2MTFFNjgyMkVDQ0M1MUQ4MzNFMjMiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7F3FIMAAAArElEQVR42mJ0cHBkoA1gYqAZGDV61OhBb7SPjw+pRrMQo6i+vt7BwZ6Xl3f58uXEG82soKBIUNGXL18sLS2trCx//fp15coVahr9/PnzW7duk2o6UUaTZzqxRpNhOmmJ7+zZs7du3QIyfH19gLFKTaOBScXY2Bjo/OLiks+fP1PNaEgShJgLJKmWZUg1l1ijyTCXhCyjoKBQVVVNvLlAwDha7Y4aPWo0KQAgwACoVGf1DMcICwAAAABJRU5ErkJggg==')
+              line-height: 0
+              content: "\f125"
   .text_box
     position: relative
     height: 100px
@@ -184,8 +186,8 @@
       margin: 0 auto
       height: 70px
       z-index: 1
-      animation: i .4s ease-in-out
-      animation-fill-mode: both
+      // animation: i .4s ease-in-out
+      // animation-fill-mode: both
       p
         font-size: 18px
         line-height: 28px
@@ -207,8 +209,8 @@
           text-decoration: underline
       &.active
         z-index: 2
-        animation: h .4s ease-in-out
-        animation-fill-mode: both
+        // animation: h .4s ease-in-out
+        // animation-fill-mode: both
         // margin-top: 60px
         transition-delay: 0.4s
         a, p
