@@ -4603,33 +4603,33 @@ button, html input[type=button], input[type=reset], input[type=submit] {
       padding-left: 10px;
       margin-bottom: 20px; }
 
-.form__radio {
+.form__radio, .form__check {
   display: table;
   line-height: 1;
   cursor: pointer;
   margin-left: 10px;
   padding-left: 2px; }
-  .form__radio.is-selected .input-label {
+  .form__radio.is-selected .input-label, .form__check.is-selected .input-label {
     color: #30c4f3; }
-  .form__radio > .span {
+  .form__radio > .span, .form__check > .span {
     display: table-cell;
     vertical-align: top;
     line-height: 0; }
-    .form__radio > .span + .span {
+    .form__radio > .span + .span, .form__check > .span + .span {
       padding-left: 15px; }
-    .form__radio > .span--nowrap {
+    .form__radio > .span--nowrap, .form__check > .span--nowrap {
       white-space: nowrap; }
-    .form__radio > .span--w100 {
+    .form__radio > .span--w100, .form__check > .span--w100 {
       width: 100%; }
-  .form__radio input[type="radio"] {
+  .form__radio input[type="radio"], .form__radio input[type="checkbox"], .form__check input[type="radio"], .form__check input[type="checkbox"] {
     display: none; }
-    .form__radio input[type="radio"]:checked ~ .input-radio {
+    .form__radio input[type="radio"]:checked ~ .input-radio, .form__radio input[type="radio"]:checked ~ .input-check, .form__radio input[type="checkbox"]:checked ~ .input-radio, .form__radio input[type="checkbox"]:checked ~ .input-check, .form__check input[type="radio"]:checked ~ .input-radio, .form__check input[type="radio"]:checked ~ .input-check, .form__check input[type="checkbox"]:checked ~ .input-radio, .form__check input[type="checkbox"]:checked ~ .input-check {
       border-color: #30c4f3; }
-      .form__radio input[type="radio"]:checked ~ .input-radio::after {
+      .form__radio input[type="radio"]:checked ~ .input-radio::after, .form__radio input[type="radio"]:checked ~ .input-check::after, .form__radio input[type="checkbox"]:checked ~ .input-radio::after, .form__radio input[type="checkbox"]:checked ~ .input-check::after, .form__check input[type="radio"]:checked ~ .input-radio::after, .form__check input[type="radio"]:checked ~ .input-check::after, .form__check input[type="checkbox"]:checked ~ .input-radio::after, .form__check input[type="checkbox"]:checked ~ .input-check::after {
         background-color: #30c4f3; }
-    .form__radio input[type="radio"]:checked ~ .input-label {
+    .form__radio input[type="radio"]:checked ~ .input-label, .form__radio input[type="checkbox"]:checked ~ .input-label, .form__check input[type="radio"]:checked ~ .input-label, .form__check input[type="checkbox"]:checked ~ .input-label {
       color: #30c4f3; }
-  .form__radio .input-radio {
+  .form__radio .input-radio, .form__radio .input-check, .form__check .input-radio, .form__check .input-check {
     display: inline-block;
     width: 16px;
     height: 16px;
@@ -4637,7 +4637,7 @@ button, html input[type=button], input[type=reset], input[type=submit] {
     border-radius: 50%;
     background-color: #ffffff;
     position: relative; }
-    .form__radio .input-radio::after {
+    .form__radio .input-radio::after, .form__radio .input-check::after, .form__check .input-radio::after, .form__check .input-check::after {
       content: '';
       position: absolute;
       top: 1px;
@@ -4646,14 +4646,18 @@ button, html input[type=button], input[type=reset], input[type=submit] {
       height: 12px;
       background-color: #ffffff;
       border-radius: 50%; }
-  .form__radio--head {
+  .form__radio .input-check, .form__check .input-check {
+    border-radius: 0; }
+    .form__radio .input-check::after, .form__check .input-check::after {
+      border-radius: 0; }
+  .form__radio--head, .form__check--head {
     margin-left: 0; }
-    .form__radio--head .input-label {
+    .form__radio--head .input-label, .form__check--head .input-label {
       text-transform: uppercase;
       font-size: 0.9375rem;
       line-height: 1.1;
       color: #636363; }
-    .form__radio--head .span + .span {
+    .form__radio--head .span + .span, .form__check--head .span + .span {
       padding-left: 10px; }
 
 .form__row__group {

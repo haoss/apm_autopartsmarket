@@ -122,10 +122,16 @@ $(document).ready(function(){
 
   // Radio
   $('.form__radio input[type="radio"]:checked').parents('.form__radio').addClass("is-selected");
+  $('.form__check input[type="checkbox"]:checked').parents('.form__check').addClass("is-selected");
 
   $('.form__radio input[type="radio"]').on('click', function(){
     $('input:not(:checked)').parents('.form__radio').removeClass("is-selected");
     $('input:checked').parents('.form__radio').addClass("is-selected");
+  });
+
+  $('.form__check input[type="checkbox"]').on('click', function(){
+    $('input:not(:checked)').parents('.form__check').removeClass("is-selected");
+    $('input:checked').parents('.form__check').addClass("is-selected");
   });
 
   // Registration

@@ -222,7 +222,7 @@ button, html input[type=button], input[type=reset], input[type=submit]
         padding-left: 10px
         margin-bottom: 20px
 
-  &__radio
+  &__radio, &__check
     display: table
     line-height: 1
     cursor: pointer
@@ -241,16 +241,16 @@ button, html input[type=button], input[type=reset], input[type=submit]
         white-space: nowrap
       &--w100
         width: 100%
-    input[type="radio"]
+    input[type="radio"], input[type="checkbox"]
       display: none
       &:checked
-        ~.input-radio
+        ~.input-radio, ~.input-check
           border-color: $color-blue
           &::after
             background-color: $color-blue
         ~.input-label
           color: $color-blue
-    .input-radio
+    .input-radio, .input-check
       display: inline-block
       width: 16px
       height: 16px
@@ -267,6 +267,10 @@ button, html input[type=button], input[type=reset], input[type=submit]
         height: 12px
         background-color: $color-white
         border-radius: 50%
+    .input-check
+      border-radius: 0
+      &::after
+        border-radius: 0
     &--head
       margin-left: 0
       .input-label
