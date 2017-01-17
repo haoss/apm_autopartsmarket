@@ -1,0 +1,417 @@
+@import 0-vendors/bourbon/bourbon
+// @import 0-vendors/bootstrap/bootstrap
+@import 1-base/font
+@import 1-base/variables
+// @import 1-base/mixins
+// @import 1-base/functions
+
+/* 16.01.2017 */
+h5, .h5
+  &--intro
+    font-family: $font-intro
+    text-transform: uppercase
+    margin-bottom: 15px
+
+.text
+  &-justify, &--justify
+    text-align: justify
+
+.list
+  padding-left: 0
+  font-size: rem(15)
+  &--check
+    li
+      list-style: none
+      margin-left: 0
+      position: relative
+      padding-left: 30px
+      &::before
+        content: "\f382"
+        position: absolute
+        font-family: "Ionicons"
+        left: 0
+        top: 6px
+        font-size: rem(16)
+        color: #30c4f3
+        display: block
+        line-height: 1
+
+.about
+  &__block
+    border: 2px solid $color-blue
+    padding: 20px
+    position: relative
+    margin-bottom: 20px
+    margin-top: 50px
+    &--why
+      margin-bottom: 65px
+    p
+      &:last-child
+        margin-bottom: 0
+
+    .h1, h1
+      margin-bottom: 20px
+      margin-top: -40px
+      position: relative
+      font-size: rem(35)
+      &::after
+        content: ''
+        position: absolute
+        left: -13px
+        right: 0
+        top: 16px
+        height: 6px
+        background: $color-white
+        width: 175px
+        z-index: 1
+      span
+        position: relative
+        z-index: 5
+        display: block
+        line-height: 1
+      small
+        display: block
+        color: $primary-color
+        font-size: rem(18)
+
+    .list
+      margin-top: 0
+      margin-bottom: 35px
+
+    &--clients
+      .h1, h1
+        float: right
+        text-align: right
+        &::after
+          width: 226px
+          right: -10px
+          left: inherit
+
+      .h5
+        text-align: right
+
+    &__map
+      position: relative
+      float: right
+      margin-top: -84px
+      margin-bottom: -100px
+      img
+        position: relative
+        z-index: 10
+      &::after
+        position: absolute
+        width: 300px
+        height: 6px
+        background: $color-white
+        z-index: 5
+        content: ''
+        left: 25px
+        top: 50%
+        transform: translateY(-4px)
+
+    &__p
+      width: 425px
+
+/**/
+.vote
+  display: table
+  font-size: rem(12)
+  &>div
+    display: table-cell
+    vertical-align: baseline
+    white-space: nowrap
+    &+div
+      padding-left: 15px
+  i
+    font-size: rem(20)
+    vertical-align: middle
+    display: inline-block
+    line-height: 0
+    &.ion-thumbsup
+      margin-left: 5px
+      color: #7dc924
+      vertical-align: -1px
+    &.ion-thumbsdown
+      margin-right: 5px
+      color: #f7574b
+      vertical-align: -5px
+
+.table
+  &--w100
+    width: 100%
+
+.form__row__group
+  margin-bottom: 10px
+  .form__group
+    margin-bottom: 0
+    .input-label
+      margin-top: 0
+      font-size: rem(15)
+      line-height: 1
+      // font-family: $font-roboto-light
+    &__label
+      color: $color-blue
+      line-height: 1
+      font-family: $font-roboto-medium
+  .form__radio
+    margin-bottom: 0
+
+  &>div
+    &+div
+      padding-left: 10px
+  &--new
+    &>div
+      &+div
+        padding-left: 30px
+
+  .form__radio
+    margin-left: 0
+  .form__radio > .span + .span, .form__check > .span + .span
+    padding-left: 5px
+
+.form__group
+  &--message
+    margin-bottom: 40px
+    textarea
+      resize: none
+      height: 38px
+    .btn
+      height: 38px
+      width: 165px
+      font-size: rem(18)
+
+.content__head--arrow h1::after, .content__head--arrow .h1::after
+  top: 50%
+  transform: translateY(-50%)
+
+/**/
+.tab-block
+  display: none
+  &.active
+    display: block
+
+.nav-tabs
+  border-bottom: 1px solid $color-blue
+  overflow: hidden
+  padding: 0
+  margin: 0 0 34px 0
+  font-size: rem(12)
+  li
+    list-style: none
+    float: left
+    a
+      display: block
+      height: 30px
+      line-height: 30px
+      min-width: 195px
+      padding: 0 15px
+      text-transform: uppercase
+      background: $color-white
+      color: $primary-color
+      text-decoration: none
+      position: relative
+      overflow: hidden
+      text-align: center
+      white-space: nowrap
+      b
+        font-weight: normal
+      i
+        display: none
+        font-size: rem(25)
+        color: #c8c8c8
+        line-height: 1
+        vertical-align: -5px
+      &::after
+        content: ''
+        position: absolute
+        right: -10px
+        top: 0
+        width: 0
+        height: 0
+        border-left: 10px solid transparent
+        border-right: 10px solid transparent
+        border-top: 10px solid $color-white
+        opacity: 1
+    &.active
+      a
+        background: $color-blue
+        color: $color-white
+        &::after
+          opacity: 1
+
+/**/
+.table-basic--payment
+  font-size: rem(12)
+  thead
+    &>tr
+      &>th
+        white-space: nowrap
+  tbody
+    &>tr
+      &>td
+        border-bottom: 1px solid #ebebeb
+        padding-top: 15px
+        padding-bottom: 15px
+        &:first-child
+          width: 1px
+        p
+          margin-bottom: 0
+      &:last-child, &.tr--separator
+        &>td
+          border-bottom: 0
+
+@media (max-width: 1199px)
+  .h1
+    &--adaptive
+      font-size: rem(29)
+      padding-top: 4px
+
+  .about
+    &__block
+      margin-top: 30px
+      margin-bottom: 40px
+      &__p
+        width: 290px
+      &__map
+        margin-top: -100px
+        &::after
+          transform: translateY(13px)
+
+@media (max-width: 991px)
+  .h1
+    &--adaptive
+      font-size: rem(21)
+      padding-top: 7px
+
+  .about
+    &__block
+      &__p
+        width: 230px
+      &__map
+        width: 280px
+        margin-right: -20px
+        margin-top: -160px
+        &::after
+          display: none
+
+  .nav-tabs
+    display: table
+    width: 100%
+    li
+      display: table-cell
+      float: none
+      a
+        min-width: inherit
+      &+li
+        padding-left: 1px
+
+@media (max-width: 767px)
+  .list
+    &--check
+      li
+        line-height: 16px
+        margin-bottom: 10px
+        &::before
+          top: 1px
+
+  .about
+    &__block
+      margin-bottom: 20px
+      &__p
+        width: 100%
+      &--why
+        padding-bottom: 125px
+        margin-bottom: 135px
+      &__map
+        float: none
+        margin-top: 0
+        text-align: center
+        width: auto
+        margin-right: 0
+        position: absolute
+        left: 20px
+        right: 20px
+        bottom: 0
+        img
+          margin-left: auto
+          margin-right: auto
+        &::after
+          display: block
+          left: 50%
+          transform: translate(-50%,13px)
+          // background: pink
+
+  .nav-tabs
+    li
+      a
+        background-color: #eeeeee
+        min-width: 125px
+        b
+          display: none
+        i
+          display: inline-block
+      &.active
+        a
+          min-width: inherit
+          b
+            display: inline-block
+          i
+            display: none
+
+  .table-basic--payment
+    tbody
+      &>tr
+        &>td
+          p
+            margin-bottom: 10px
+
+@media (max-width: 479px)
+  .about
+    &__block
+
+      &--why
+        padding-bottom: 85px
+        margin-bottom: 95px
+      &__map
+        margin-bottom: -65px
+        &::after
+          width: 205px
+          transform: translate(-50%, 4px)
+        img
+          max-width: 240px
+
+  .form
+    &__row
+      &__group
+        &--new
+          display: block
+          margin-bottom: 20px
+          &>div
+            display: block
+            &+div
+              padding-left: 0
+              padding-top: 10px
+
+    &__group
+      &--message
+        padding-top: 0
+        textarea
+          height: 120px
+          width: 100%
+          border-bottom: 0
+        &>div
+          &:first-child
+            width: 100% !important
+            float: none
+          &+div
+            padding-top: 0 !important
+        .btn
+          display: block
+          width: 100%
+
+  .nav-tabs
+    li
+      a
+        min-width: inherit
+        padding-left: 10px
+        padding-right: 10px

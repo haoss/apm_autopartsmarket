@@ -2,7 +2,7 @@
 <html lang="ru">
     <head>
         <meta charset="utf-8">
-        <title>ЛЧ Выставленные документы - Биржа автозапчастей</title>
+        <title>ЛЧ Состояние счета - Биржа автозапчастей</title>
         <meta name="description" content="">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -146,125 +146,150 @@
                             </nav>
                         </div>
                         <div class="col-sm-9 col-xs-12">
-                            <h1>Выставленные документы</h1>
-                            <div class="order__form order__form__documents">
-                                <form action="#">
-                                    <div class="row">
-                                        <div class="col-sm-6 col-xs-12">
-                                            <div class="form-group form-group--has-icon">
-                                                <label class="hidden">Дата от</label>
-                                                <input type="text" placeholder="Дата от" data-auto-close="true" readonly class="form-control form-control--dark datepicker-here"><i class="ion-android-calendar"></i>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6 col-xs-12">
-                                            <div class="form-group form-group--has-icon">
-                                                <label class="hidden">Дата до</label>
-                                                <input type="text" placeholder="Дата до" data-auto-close="true" readonly class="form-control form-control--dark datepicker-here"><i class="ion-android-calendar"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-sm-6 col-xs-12">
-                                            <div class="form-group">
-                                                <label class="hidden">Сумма от</label>
-                                                <input type="text" placeholder="Сумма от" class="form-control form-control--dark">
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6 col-xs-12">
-                                            <div class="form-group">
-                                                <label class="hidden">Сумма до</label>
-                                                <input type="text" placeholder="Сумма до" class="form-control form-control--dark">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-sm-6 col-xs-12">
-                                            <div class="form-group select-medium">
-                                                <label class="hidden">Тип платежа</label>
-                                                <select class="sumoselect">
-                                                    <option value="Тип платежа" selected>Тип платежа</option>
-                                                    <option value="Счет">Счет</option>
-                                                    <option value="Перевод">Перевод</option>
-                                                    <option value="Безнал">Безнал</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6 col-xs-12">
-                                            <div class="form-group">
-                                                <label class="hidden">Заказ</label>
-                                                <input type="text" placeholder="Заказ" class="form-control form-control--dark">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-sm-6 col-xs-12">
-                                            <div class="form-group no--margin">
-                                                <label class="hidden">№ счета</label>
-                                                <input type="text" placeholder="№ счета" class="form-control form-control--dark">
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6 col-xs-12">
-                                            <div class="order__form__btn">
-                                                <button type="submit" class="btn btn--blue btn--xxs-block">Искать</button><a href="#" class="btn btn--red btn--border btn--xxs-block">очистить</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                            <table class="table-basic table-basic--data table-basic--border">
+                            <h1>состояние счета</h1>
+                            <table class="table-basic table-basic--hover">
                                 <thead>
                                     <tr>
-                                        <th>№ документа</th>
-                                        <th class="hidden-xxs">Тип</th>
-                                        <th>Дата</th>
-                                        <th>Сумма</th>
-                                        <th class="hidden-xxs">Плательщик</th>
-                                        <th class="th-btn">&nbsp;</th>
+                                        <th colspan="2" class="th--big text--left">ИНФОРМАЦИЯ</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr class="tr--separator">
-                                        <td>&nbsp;</td>
+                                        <td colspan="2">&nbsp;</td>
                                     </tr>
                                     <tr>
-                                        <td>87654534</td>
-                                        <td class="hidden-xxs">Счет</td>
-                                        <td>10.09.2016</td>
-                                        <td>546 987 543 руб</td>
-                                        <td class="hidden-xxs">Просьба президента ООО АвтоВАЗ</td>
-                                        <td> 
-                                            <div class="edit__btn">
-                                                <div class="edit__info"><a href="#" class="info-link"><i class="ion-android-print"></i>Печать</a><a href="#" class="info-link"><i class="ion-cloud"></i>Скачать</a></div>
-                                                <button type="submit" class="btn btn--edit btn--edit-popup"><i class="ion-gear-a"></i></button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr class="visible-xxs">
-                                        <td colspan="4" class="no--padding-top">Счет<br>Просьба президента ООО АвтоВАЗ</td>
-                                    </tr>
-                                    <tr class="tr--separator visible-xxs">
-                                        <td colspan="4">&nbsp;</td>
+                                        <td>На счету</td>
+                                        <td class="table-basic--last"><strong>€ 0.00</strong></td>
                                     </tr>
                                     <tr>
-                                        <td>87654534</td>
-                                        <td class="hidden-xxs">Счет</td>
-                                        <td>10.09.2016</td>
-                                        <td>546 987 543 руб</td>
-                                        <td class="hidden-xxs">Просьба президента ООО АвтоВАЗ</td>
-                                        <td> 
-                                            <div class="edit__btn">
-                                                <div class="edit__info"><a href="#" class="info-link"><i class="ion-android-print"></i>Печать</a><a href="#" class="info-link"><i class="ion-cloud"></i>Скачать</a></div>
-                                                <button type="submit" class="btn btn--edit btn--edit-popup"><i class="ion-gear-a"></i></button>
-                                            </div>
-                                        </td>
+                                        <td>В заказе без оплаты</td>
+                                        <td class="table-basic--last"><strong>€ 0.00</strong></td>
                                     </tr>
-                                    <tr class="visible-xxs">
-                                        <td colspan="4" class="no--padding-top">Счет<br>Просьба президента ООО АвтоВАЗ</td>
+                                    <tr>
+                                        <td>Сальдо баланса</td>
+                                        <td class="table-basic--last"><strong>€ 0.00</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Кредит</td>
+                                        <td class="table-basic--last"><strong>€ 0.00</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Остаток средств для заказа</td>
+                                        <td class="table-basic--last"><strong>€ 0.00</strong></td>
                                     </tr>
                                 </tbody>
                             </table>
-                            <div class="text-center">
-                                <button type="submit" class="btn btn--more"><i class="ion-refresh"></i>Загрузить еще 10 позиций с архива</button>
+                            <div class="text-right"><a href="#" class="btn btn--blue btn--xxs-block">Сообщить об оплате</a></div>
+                            <div class="clear40"></div>
+                            <!-- Tab-->
+                            <ul role="tablist" class="nav nav-tabs">
+                                <li role="presentation" class="active"><a href="#tabBlock1" aria-controls="tabBlock1" role="tab" data-toggle="tab"> <b>Пополнение баланса</b><i class="ion-card"></i></a></li>
+                                <li role="presentation"><a href="#tabBlock2" aria-controls="tabBlock2" role="tab" data-toggle="tab"> <b>История платежей</b><i class="ion-document-text"></i></a></li>
+                                <li role="presentation"><a href="#tabBlock3" aria-controls="tabBlock3" role="tab" data-toggle="tab"> <b>Отправить уведомление</b><i class="ion-email-unread"></i></a></li>
+                            </ul>
+                            <!-- Tab panes-->
+                            <div class="tab-content">
+                                <div id="tabBlock1" role="tabpanel" class="tab-block active">
+                                    <table class="table-basic table-basic--payment">
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2" class="text-left">способ оплаты<span class="visible-xs-inline-block">&nbsp;/&nbsp;комиссия за перевод </span></th>
+                                                <th class="text-left hidden-xs">комиссия за перевод </th>
+                                                <th class="text-left hidden-xs">поступление на баланс</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="tr--separator">
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td class="hidden-xs">&nbsp;</td>
+                                                <td class="hidden-xs">&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td><img src="./tmp/new/icon-pay-1.png" alt=""></td>
+                                                <td> 
+                                                    <p class="color color--blue"> <strong>Наличными в любом терминале ПриватБанка<br>По наименованию "АРМ"</strong></p>
+                                                    <div class="visible-xs">
+                                                        <p>от 100 до 500 грн = 2 грн<br>от 501 до 1000 грн = 5 грн<br>от 1001 до 5000 грн = 10 грн<br>от 5001 до 7000 грн = 35 грн<br>от 7001 до 15000 грн = 50 грн</p>
+                                                        <p>Автоматически<br>Пн-Пт 9:00 - 19:00<br>Суббота 10:00 - 17:00<br>в течение 3-х часов с момента оплаты</p>
+                                                    </div>
+                                                </td>
+                                                <td class="hidden-xs"> 
+                                                    <p>от 100 до 500 грн = 2 грн<br>от 501 до 1000 грн = 5 грн<br>от 1001 до 5000 грн = 10 грн<br>от 5001 до 7000 грн = 35 грн<br>от 7001 до 15000 грн = 50 грн</p>
+                                                </td>
+                                                <td class="hidden-xs"> 
+                                                    <p>Автоматически<br>Пн-Пт 9:00 - 19:00<br>Суббота 10:00 - 17:00<br>в течение 3-х часов с момента оплаты</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><img src="./tmp/new/icon-pay-2.png" alt=""></td>
+                                                <td> 
+                                                    <p class="color color--blue"> <strong>Через Приват24 для физических лиц.<br>По наименованию "АРМ"</strong></p>
+                                                    <div class="visible-xs">
+                                                        <p>1 грн</p>
+                                                        <p>Автоматически<br>Пн-Пт 9:00 - 19:00<br>Суббота 10:00 - 17:00<br>в течение 3-х часов с момента оплаты</p>
+                                                    </div>
+                                                </td>
+                                                <td class="hidden-xs"> 
+                                                    <p>1 грн</p>
+                                                </td>
+                                                <td class="hidden-xs"> 
+                                                    <p>Автоматически<br>Пн-Пт 9:00 - 19:00<br>Суббота 10:00 - 17:00<br>в течение 3-х часов с момента оплаты</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><img src="./tmp/new/icon-pay-3.png" alt=""></td>
+                                                <td> 
+                                                    <p class="color color--blue"> <strong>Через платежные системы<br>Приват24 / Liq Pay</strong></p>
+                                                    <div class="visible-xs">
+                                                        <p>Согласно тарифам банка</p>
+                                                        <p>Мгновенно</p>
+                                                    </div>
+                                                </td>
+                                                <td class="hidden-xs"> 
+                                                    <p>Согласно тарифам банка</p>
+                                                </td>
+                                                <td class="hidden-xs"> 
+                                                    <p>Мгновенно</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><img src="./tmp/new/icon-pay-4.png" alt=""></td>
+                                                <td> 
+                                                    <p class="color color--blue"> <strong>Картой VISA / MasterCard</strong></p>
+                                                    <div class="visible-xs">
+                                                        <p>Согласно тарифам банка</p>
+                                                        <p>Мгновенно</p>
+                                                    </div>
+                                                </td>
+                                                <td class="hidden-xs"> 
+                                                    <p>Согласно тарифам банка</p>
+                                                </td>
+                                                <td class="hidden-xs"> 
+                                                    <p>Мгновенно</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><img src="./tmp/new/icon-pay-5.png" alt=""></td>
+                                                <td> 
+                                                    <p class="color color--blue"> <strong>Безналичный расчет<br>Согласно счета-фактуры</strong></p>
+                                                    <div class="visible-xs">
+                                                        <p>Согласно тарифам банка</p>
+                                                        <p>Автоматически<br>Пн-Пт 9:00 - 19:00<br>в течение 3-х часов с момента оплаты</p>
+                                                    </div>
+                                                </td>
+                                                <td class="hidden-xs"> 
+                                                    <p>Согласно тарифам банка</p>
+                                                </td>
+                                                <td class="hidden-xs"> 
+                                                    <p>Автоматически<br>Пн-Пт 9:00 - 19:00<br>в течение 3-х часов с момента оплаты</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div id="tabBlock2" role="tabpanel" class="tab-block">2</div>
+                                <div id="tabBlock3" role="tabpanel" class="tab-block">3</div>
                             </div>
                         </div>
                     </div>

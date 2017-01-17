@@ -2,7 +2,7 @@
 <html lang="ru">
     <head>
         <meta charset="utf-8">
-        <title>ЛЧ Выставленные документы - Биржа автозапчастей</title>
+        <title>ЛЧ Предложения и отзывы - Биржа автозапчастей</title>
         <meta name="description" content="">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -125,6 +125,69 @@
                     </form>
                 </div>
             </div>
+            <!-- popup-about-->
+            <div id="popup-about" class="popup popup-about mfp-hide">
+                <div class="popup__title">VW / AUDI 044121058A</div>
+                <div class="popup__product table">
+                    <div class="table__cell">
+                        <div class="user__product__img"><img src="./tmp/product.png" alt="" class="img-responsive"></div>
+                    </div>
+                    <div class="table__cell">
+                        <table class="table-basic table-basic--thin">
+                            <thead>
+                                <tr>
+                                    <th colspan="2" class="text--upper text--left">Главная Информация</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="tr--separator">
+                                    <td colspan="2">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Номер детали:</td>
+                                    <td><strong>044121058A</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Имя производитель: </td>
+                                    <td><strong>VW / AUDI</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Вес: </td>
+                                    <td><strong>0,05 кг</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Цена:	</td>
+                                    <td><strong>589 руб</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Минимальный объем заказа:</td>
+                                    <td><strong>0</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Срок поставки:</td>
+                                    <td><strong>10 дней</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Дата:</td>
+                                    <td><strong>12.10.2016</strong></td>
+                                </tr>
+                                <tr class="tr--separator">
+                                    <td colspan="2">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2" class="text--upper text--left">Комментарий в прайс-листе:</th>
+                                </tr>
+                                <tr class="tr--separator">
+                                    <td colspan="2">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">SCHLAUCH</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
             <!-- Content-->
             <div class="content">
                 <div class="container"><a href="#" class="user__menu"><i class="ion-grid"></i><span>Меню личного кабинета</span></a>
@@ -146,126 +209,57 @@
                             </nav>
                         </div>
                         <div class="col-sm-9 col-xs-12">
-                            <h1>Выставленные документы</h1>
-                            <div class="order__form order__form__documents">
-                                <form action="#">
-                                    <div class="row">
-                                        <div class="col-sm-6 col-xs-12">
-                                            <div class="form-group form-group--has-icon">
-                                                <label class="hidden">Дата от</label>
-                                                <input type="text" placeholder="Дата от" data-auto-close="true" readonly class="form-control form-control--dark datepicker-here"><i class="ion-android-calendar"></i>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6 col-xs-12">
-                                            <div class="form-group form-group--has-icon">
-                                                <label class="hidden">Дата до</label>
-                                                <input type="text" placeholder="Дата до" data-auto-close="true" readonly class="form-control form-control--dark datepicker-here"><i class="ion-android-calendar"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-sm-6 col-xs-12">
-                                            <div class="form-group">
-                                                <label class="hidden">Сумма от</label>
-                                                <input type="text" placeholder="Сумма от" class="form-control form-control--dark">
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6 col-xs-12">
-                                            <div class="form-group">
-                                                <label class="hidden">Сумма до</label>
-                                                <input type="text" placeholder="Сумма до" class="form-control form-control--dark">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-sm-6 col-xs-12">
-                                            <div class="form-group select-medium">
-                                                <label class="hidden">Тип платежа</label>
-                                                <select class="sumoselect">
-                                                    <option value="Тип платежа" selected>Тип платежа</option>
-                                                    <option value="Счет">Счет</option>
-                                                    <option value="Перевод">Перевод</option>
-                                                    <option value="Безнал">Безнал</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6 col-xs-12">
-                                            <div class="form-group">
-                                                <label class="hidden">Заказ</label>
-                                                <input type="text" placeholder="Заказ" class="form-control form-control--dark">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-sm-6 col-xs-12">
-                                            <div class="form-group no--margin">
-                                                <label class="hidden">№ счета</label>
-                                                <input type="text" placeholder="№ счета" class="form-control form-control--dark">
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6 col-xs-12">
-                                            <div class="order__form__btn">
-                                                <button type="submit" class="btn btn--blue btn--xxs-block">Искать</button><a href="#" class="btn btn--red btn--border btn--xxs-block">очистить</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
+                            <div class="content__head content__head--arrow">
+                                <h1>предложения и отзывы</h1>
                             </div>
-                            <table class="table-basic table-basic--data table-basic--border">
+                            <table class="table-basic table-basic--data">
                                 <thead>
                                     <tr>
-                                        <th>№ документа</th>
-                                        <th class="hidden-xxs">Тип</th>
-                                        <th>Дата</th>
-                                        <th>Сумма</th>
-                                        <th class="hidden-xxs">Плательщик</th>
-                                        <th class="th-btn">&nbsp;</th>
+                                        <th>Название</th>
+                                        <th class="hidden-xxs">Голосование</th>
+                                        <th class="hidden-xxs">Статус</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr class="tr--separator">
                                         <td>&nbsp;</td>
+                                        <td class="hidden-xxs">&nbsp;</td>
+                                        <td class="hidden-xxs">&nbsp;</td>
                                     </tr>
                                     <tr>
-                                        <td>87654534</td>
-                                        <td class="hidden-xxs">Счет</td>
-                                        <td>10.09.2016</td>
-                                        <td>546 987 543 руб</td>
-                                        <td class="hidden-xxs">Просьба президента ООО АвтоВАЗ</td>
-                                        <td> 
-                                            <div class="edit__btn">
-                                                <div class="edit__info"><a href="#" class="info-link"><i class="ion-android-print"></i>Печать</a><a href="#" class="info-link"><i class="ion-cloud"></i>Скачать</a></div>
-                                                <button type="submit" class="btn btn--edit btn--edit-popup"><i class="ion-gear-a"></i></button>
+                                        <td>Разослать всем новогоднее поздравление
+                                            <div class="visible-xxs">
+                                                <div class="clear5"></div>
+                                                <table class="table table--w100">
+                                                    <tr>
+                                                        <td>
+                                                            <div class="vote">
+                                                                <div><span>112</span><i class="ion-thumbsup"></i></div>
+                                                                <div><i class="ion-thumbsdown"></i><span>3</span></div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="text-right">
+                                                            <div class="info-status info-status--issued">в разработке</div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
                                             </div>
                                         </td>
-                                    </tr>
-                                    <tr class="visible-xxs">
-                                        <td colspan="4" class="no--padding-top">Счет<br>Просьба президента ООО АвтоВАЗ</td>
-                                    </tr>
-                                    <tr class="tr--separator visible-xxs">
-                                        <td colspan="4">&nbsp;</td>
-                                    </tr>
-                                    <tr>
-                                        <td>87654534</td>
-                                        <td class="hidden-xxs">Счет</td>
-                                        <td>10.09.2016</td>
-                                        <td>546 987 543 руб</td>
-                                        <td class="hidden-xxs">Просьба президента ООО АвтоВАЗ</td>
-                                        <td> 
-                                            <div class="edit__btn">
-                                                <div class="edit__info"><a href="#" class="info-link"><i class="ion-android-print"></i>Печать</a><a href="#" class="info-link"><i class="ion-cloud"></i>Скачать</a></div>
-                                                <button type="submit" class="btn btn--edit btn--edit-popup"><i class="ion-gear-a"></i></button>
+                                        <td class="hidden-xxs"> 
+                                            <div class="vote">
+                                                <div><span>112</span><i class="ion-thumbsup"></i></div>
+                                                <div><i class="ion-thumbsdown"></i><span>3</span></div>
                                             </div>
                                         </td>
-                                    </tr>
-                                    <tr class="visible-xxs">
-                                        <td colspan="4" class="no--padding-top">Счет<br>Просьба президента ООО АвтоВАЗ</td>
+                                        <td class="hidden-xxs"> 
+                                            <div class="info-status info-status--issued">в разработке</div>
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
-                            <div class="text-center">
-                                <button type="submit" class="btn btn--more"><i class="ion-refresh"></i>Загрузить еще 10 позиций с архива</button>
-                            </div>
+                            <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные  предложения залетают прямо в рот. </p>
+                            <p>Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна маленькая строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир грамматики. Великий Оксмокс предупреждал ее о злых запятых, диких знаках вопроса и коварных точках с запятой, но текст не дал сбить себя с толку. Он собрал семь своих заглавных букв, подпоясал инициал за пояс и пустился в дорогу. </p>
+                            <p>Взобравшись на первую вершину курсивных гор, бросил он последний взгляд назад, на силуэт своего родного города Буквоград, на заголовок деревни Алфавит и на подзаголовок своего переулка Строчка. Грустный реторический вопрос скатился по его щеке и он продолжил свой путь. По дороге встретил текст рукопись. Она предупредила его: «В моей стране все переписывается по несколько раз. Единственное, что от меня осталось, это приставка «и». Возвращайся ты лучше в свою безопасную страну». Не послушавшись рукописи, наш текст продолжил свой путь. Вскоре ему повстречался коварный составитель</p><img src="./tmp/new/disqus.png" alt="" class="img-responsive">
                         </div>
                     </div>
                 </div>

@@ -61,6 +61,26 @@ gulp.task('sass', function() {
     .pipe(browserSync.reload({stream:true}));
 });
 
+gulp.task('addsass', function() {
+  gulp.src('./_sass/add.sass')
+    .pipe(plumber())
+    .pipe(plugins.sourcemaps.init())
+    .pipe(sass({
+        includePaths: ['./dist/css/'],
+        onError: browserSync.notify
+    }))
+    .pipe(autoprefixer({
+      browsers: ['last 10 versions'],
+      cascade: true
+    }))
+    // .pipe(uncss({
+    //    html: ['*.html']
+    // }))
+    .pipe(plugins.sourcemaps.write("./"))
+    .pipe(gulp.dest('./dist/css/'))
+    .pipe(browserSync.reload({stream:true}));
+});
+
 // jade
 gulp.task('jade', function() {
   gulp.src('./_jade/**/*.jade')
@@ -104,7 +124,8 @@ gulp.task('js', function(){
 });
 
 gulp.task('watch', ['setWatch'], function () {
-  gulp.watch('./_sass/**/*.sass', ['sass']);
+  // gulp.watch('./_sass/**/*.sass', ['sass']);
+  gulp.watch('./_sass/add.sass', ['addsass']);
   gulp.watch('./_jade/**/*.jade', ['jade']);
   gulp.watch('./dist/**/*.js', ['js']);
   gulp.watch('./img/img-sprite/*.png', ['sprite-image']);
