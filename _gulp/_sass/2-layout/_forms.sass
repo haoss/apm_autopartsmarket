@@ -22,6 +22,10 @@ button, html input[type=button], input[type=reset], input[type=submit]
   cursor: pointer
   outline: none
 
+.form-control[disabled], .form-control[readonly]
+  background: none
+  opacity: 1
+
 .form
   &-group,  &__group
     margin-bottom: 8px
@@ -164,7 +168,7 @@ button, html input[type=button], input[type=reset], input[type=submit]
       float: right
 
     &--dark
-      background-color: $color-lightgray
+      background-color: $color-lightgray !important
       border: 1px solid $color-lightgray
 
   &__subscription
@@ -427,7 +431,3 @@ label
   border: 1px solid $color-gray
   background: $color-white
   vertical-align: middle
-
-.form-control[disabled], .form-control[readonly]
-  background: none
-  opacity: 1

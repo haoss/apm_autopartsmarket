@@ -106,7 +106,7 @@ html(lang="ru")
                 
               // Tab
               ul.nav.nav-tabs(role='tablist')
-                li.active(role='presentation')
+                li(role='presentation')
                   a(href='#tabBlock1', aria-controls='tabBlock1', role='tab', data-toggle='tab') 
                     b Пополнение баланса
                     i.ion-card
@@ -114,14 +114,14 @@ html(lang="ru")
                   a(href='#tabBlock2', aria-controls='tabBlock2', role='tab', data-toggle='tab') 
                     b История платежей
                     i.ion-document-text
-                li(role='presentation')
+                li.active(role='presentation')
                   a(href='#tabBlock3', aria-controls='tabBlock3', role='tab', data-toggle='tab') 
                     b Отправить уведомление
                     i.ion-email-unread
                   
               // Tab panes
               .tab-content
-                #tabBlock1.tab-block.active(role='tabpanel')
+                #tabBlock1.tab-block(role='tabpanel')
                   
                   table.table-basic.table-basic--payment
                     thead
@@ -271,8 +271,148 @@ html(lang="ru")
                             br
                             | в течение 3-х часов с момента оплаты
                   
-                #tabBlock2.tab-block(role='tabpanel') 2
-                #tabBlock3.tab-block(role='tabpanel') 3
+                #tabBlock2.tab-block(role='tabpanel')
+                  
+                  .form.form--tab-head
+                    .row
+                      .col-sm-4
+                        .form-group.form-group--has-icon
+                          label.hidden Дата от
+                          input.form-control.form-control--dark.datepicker-here(type='text', placeholder='Дата от', data-auto-close='true', readonly='')
+                          i.ion-android-calendar
+
+                      .col-sm-4
+                        .form-group.form-group--has-icon
+                          label.hidden Дата до
+                          input.form-control.form-control--dark.datepicker-here(type='text', placeholder='Дата до', data-auto-close='true', readonly='')
+                          i.ion-android-calendar
+
+                      .col-sm-4
+                        button(type="submit").btn.btn--blue.btn--lg-block искать
+                  
+                  table.table-basic.table-basic--data.table-basic--history.table--tab
+                    thead
+                      tr
+                        th №
+                        th дата
+                        th сума
+                        th.hidden-xs информация о платеже
+                    tbody
+                      tr.tr--separator
+                        td &nbsp;
+                        td &nbsp;
+                        td &nbsp;
+                        td.hidden-xs &nbsp;
+                      tr
+                        td 1879219
+                        td 2016-12-07 14:47:46
+                        td -509.40
+                        td.hidden-xs Оплата заказа №4230766
+                      tr.visible-xs
+                        td(colspan="3").no--padding-top Оплата заказа №4230766
+                          .clear10
+                      tr
+                        td 1879197
+                        td 2016-12-07 14:47:46
+                        td 612.90
+                        td.hidden-xs Отмена заказа 4223317 пользователем
+                      tr.visible-xs
+                        td(colspan="3").no--padding-top Отмена заказа 4223317 пользователем
+                          .clear10
+                      tr
+                        td 1878073
+                        td 2016-12-07 14:47:46
+                        td 865.88
+                        td.hidden-xs Зачислено админом (квитанция №277253) 2016-12-07 10:54:41
+                      tr.visible-xs
+                        td(colspan="3").no--padding-top Зачислено админом (квитанция №277253) 2016-12-07 10:54:41
+                          .clear10
+                      tr
+                        td 1875727
+                        td 2016-12-07 14:47:46
+                        td -254.00 
+                        td.hidden-xs Оплата заказа №4223598
+                      tr.visible-xs
+                        td(colspan="3").no--padding-top Оплата заказа №4223598
+                          .clear10
+                      tr.tr--separator
+                        td &nbsp;
+                        td &nbsp;
+                        td &nbsp;
+                        td.hidden-xs &nbsp;
+                  
+                  .tab-table-total
+                    div
+                      a(href="#!").link
+                        svg(xmlns='http://www.w3.org/2000/svg', version='1.2', viewbox='0 0 47.106934 50.000001', width='15', height='16')
+                          path(d='M26.355 28.015c-.22-.354-.525-.635-.916-.842-.39-.208-.99-.403-1.796-.598-.806-.196-1.318-.38-1.538-.55-.17-.134-.244-.305-.244-.5 0-.22.085-.39.268-.513.27-.195.66-.293 1.137-.293.463 0 .817.096 1.062.28.23.182.39.487.46.915l1.674-.074c-.025-.756-.305-1.366-.83-1.82-.525-.45-1.306-.68-2.344-.68-.634 0-1.17.096-1.623.292-.45.195-.793.476-1.025.842-.244.366-.354.757-.354 1.184 0 .658.256 1.208.757 1.66.366.317.99.597 1.88.817.696.17 1.135.293 1.33.366.28.1.49.22.6.355.108.135.17.306.17.5 0 .306-.135.575-.403.794-.27.232-.672.342-1.21.342-.512 0-.914-.122-1.207-.378-.293-.257-.5-.66-.6-1.197l-1.622.16c.11.927.44 1.623 1 2.11.562.49 1.368.72 2.406.72.72 0 1.316-.096 1.792-.304.476-.195.855-.513 1.11-.916.27-.415.392-.854.392-1.33 0-.55-.11-.99-.33-1.343zM15.05 30.347v-6.8h-1.67v8.19h5.81v-1.39h-4.14zM9.668 27.49l2.563-4.016h-1.926l-1.624 2.65-1.66-2.65H5.065L7.63 27.43l-2.82 4.308h2.002l1.83-2.856 1.832 2.856h2.014l-2.82-4.248zm0 0').path-color
+                          path(d='M31.726 20.19v14.43c0 1.586-1.294 2.88-2.88 2.88H12.5v8.655c0 1.062.867 1.916 1.93 1.916h28.83c1.062 0 1.928-.864 1.928-1.914V15.393h-12.5c-.537 0-.964-.427-.964-.964V1.93H14.43c-1.063 0-1.93.865-1.93 1.927V17.31h16.345c1.587 0 2.88 1.294 2.88 2.88z', fill='none')
+                          path(fill='none', d='M33.655 13.464h10.46L33.655 2.6M2.88 35.583h25.965c.525 0 .965-.427.965-.964V20.19c0-.524-.428-.964-.965-.964H2.88c-.524 0-.963.427-.963.964v14.43c.012.524.44.963.964.963z')
+                          path(d='M2.88 37.5h7.69v8.655c0 2.124 1.735 3.845 3.86 3.845h28.83c2.05 0 3.735-1.61 3.845-3.638V14.1c-.024-.208-.11-.416-.27-.562L34.108.293C33.922.11 33.678 0 33.41 0H14.43c-2.125 0-3.86 1.733-3.86 3.857V17.31H2.88C1.295 17.31 0 18.604 0 20.19v14.43c0 1.586 1.294 2.88 2.88 2.88zM33.656 2.6l10.46 10.864h-10.46V2.6zM12.5 3.857c0-1.062.867-1.928 1.93-1.928h17.296v12.5c0 .535.427.962.964.962h12.5v30.774c0 1.062-.866 1.916-1.928 1.916H14.43c-1.063 0-1.93-.866-1.93-1.916V37.51h16.345c1.587 0 2.88-1.293 2.88-2.88V20.19c0-1.586-1.293-2.88-2.88-2.88H12.5V3.857zM1.93 20.19c0-.524.426-.964.963-.964h25.964c.525 0 .965.427.965.964v14.43c0 .524-.427.963-.965.963H2.88c-.524 0-.963-.427-.963-.964V20.19z').path-color
+                        span Скачать в формате xls
+                    div
+                      .price-total
+                        span Итого:
+                        strong 1 322
+                  
+                #tabBlock3.tab-block.active(role='tabpanel')
+                  
+                  .row
+                    
+                    .col-sm-6.col-sm-push-6
+                      p 
+                        small 
+                          strong Уведомление необходимо присылать в случае
+                      p 
+                        small 1. При нестандартном способе оплаты - отсутствие автоматического зачисления на баланс
+                      p 
+                        small 2. При решении проблемных вопросов - например. оплата произведена - зачисления нет. Если вы оплачивали наличными (в кассе банка, терминале самообслуживания) - необходим скан чека или фотография.
+                      p 
+                        small Если вы осуществляли электронный перевод (интернет-банкинг, приват 24) - необходим Скриншот платежного поручения с отметкой банка. (Скриншот - снимок экрана)
+                        
+                    .col-sm-6.col-sm-pull-6
+                      .form
+                        form(action="#")
+                          .form-group.select-medium
+                            label.hidden Тип платежа
+                            select.sumoselect
+                              option(value='Тип платежа', selected='') Тип платежа
+                              option(value='Счет') Счет
+                              option(value='Перевод') Перевод
+                              option(value='Безнал') Безнал
+
+                          .form-group.form-group--has-icon
+                            label.hidden Дата и время платежа
+                            input.form-control.form-control--border.datepicker-here(type='text', placeholder='Дата и время платежа', data-auto-close='true', readonly='')
+                            i.ion-android-calendar
+
+                          .form-group
+                            label.hidden Плательщик
+                            input(type="text" placeholder="Плательщик").form-control.form-control--border
+                          .form-group
+                            label.hidden Сумма
+                            input(type="text" placeholder="Сумма").form-control.form-control--border
+                          .form-group
+                            label.hidden Комментарий
+                            textarea(placeholder="Комментарий").form-control.form-control--textarea.form-control--border
+                      
+                          .form-group
+                            div
+                              input#file-2.inputfile.inputfile-2(type='file', name='file-2[]', data-multiple-caption='{count} files selected', multiple='')
+                              label(for='file-2')
+                                span Выберите или перетяните сюда файл
+                            div
+                              .info.info--warning Форматы только jpeg, jpg, pdf, gif, png, tif и tiff. Лимит 1МБ
+
+                      
+                          .chat__form__file
+                            a(href='#')
+                              i.ion-android-close
+                            | Document_price_new_9.11.2016.xls
+                          
+                          .text-center
+                            button(type="submit").btn.btn--blue.btn--xxs-block Отправить уведомление
+                      
 
 
       include ./_include/_footer

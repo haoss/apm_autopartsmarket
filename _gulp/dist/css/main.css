@@ -4415,6 +4415,10 @@ button, html input[type=button], input[type=reset], input[type=submit] {
   cursor: pointer;
   outline: none; }
 
+.form-control[disabled], .form-control[readonly] {
+  background: none;
+  opacity: 1; }
+
 .form-group, .form__group {
   margin-bottom: 8px; }
   .form-group--slim, .form__group--slim {
@@ -4548,7 +4552,7 @@ button, html input[type=button], input[type=reset], input[type=submit] {
     border: 0;
     float: right; }
   .form-control--dark, .form__control--dark {
-    background-color: #f2f2f2;
+    background-color: #f2f2f2 !important;
     border: 1px solid #f2f2f2; }
 
 .form__subscription {
@@ -4812,10 +4816,6 @@ label {
   border: 1px solid #dddddd;
   background: #ffffff;
   vertical-align: middle; }
-
-.form-control[disabled], .form-control[readonly] {
-  background: none;
-  opacity: 1; }
 
 /* gallery */
 .gallery__item {

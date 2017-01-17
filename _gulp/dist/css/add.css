@@ -2486,6 +2486,157 @@ h5--intro, .h5--intro {
   .table-basic--payment tbody > tr:last-child > td, .table-basic--payment tbody > tr.tr--separator > td {
     border-bottom: 0; }
 
+.form-control, .form--control {
+  height: 34px; }
+
+.form--tab-head {
+  margin-bottom: 20px; }
+
+.btn--lg-block {
+  width: 100% !important; }
+
+.table--tab tbody > tr > td {
+  vertical-align: top; }
+
+.tab-table-total {
+  display: table;
+  font-size: 0.75rem; }
+  .tab-table-total > div {
+    display: table-cell;
+    vertical-align: baseline; }
+    .tab-table-total > div + div {
+      padding-left: 50px; }
+    .tab-table-total > div:first-child {
+      padding-left: 10px; }
+  .tab-table-total .price-total {
+    white-space: nowrap; }
+    .tab-table-total .price-total span {
+      display: inline-block;
+      margin-right: 10px;
+      font-size: 0.75rem; }
+    .tab-table-total .price-total strong {
+      font-size: 1rem; }
+  .tab-table-total .link {
+    text-decoration: none; }
+    .tab-table-total .link svg {
+      vertical-align: -3px;
+      fill: #30c4f3;
+      margin-right: 5px; }
+    .tab-table-total .link:hover {
+      text-decoration: underline; }
+
+.form-control--border {
+  border: 1px solid #dddddd; }
+
+.form-control--textarea {
+  height: 125px !important;
+  resize: none; }
+
+.js .inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1; }
+
+.inputfile + label {
+  font-size: 0.75rem;
+  /* 20px */
+  font-weight: 400;
+  margin: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  display: block;
+  overflow: hidden;
+  padding: 0;
+  height: 34px;
+  line-height: 31px;
+  padding: 0 45px 0 15px;
+  font-family: "RobotoMedium";
+  color: #444444;
+  position: relative;
+  /* 10px 20px */ }
+  .inputfile + label span {
+    display: block;
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+
+.no-js .inputfile + label {
+  display: none; }
+
+.inputfile:focus + label, .inputfile.has-focus + label {
+  outline: 1px dotted #000;
+  outline: -webkit-focus-ring-color auto 5px; }
+
+.inputfile-2 + label {
+  color: #b1b0b0;
+  border: 1px dashed #dddddd; }
+  .inputfile-2 + label::before {
+    content: "\f41f";
+    position: absolute;
+    font-family: "Ionicons";
+    color: #30c4f3;
+    right: 13px;
+    top: 0;
+    font-size: 1.5625rem; }
+
+.inputfile-2:focus + label, .inputfile-2.has-focus + label, .inputfile-2 + label:hover {
+  color: #b1b0b0;
+  outline: none;
+  border-style: solid; }
+
+.info {
+  font-size: 0.6875rem;
+  display: block;
+  margin-top: 5px; }
+  .info--warning {
+    color: #e18c62; }
+
+.chat__form__file {
+  padding-left: 0;
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+.color--dark {
+  color: #444444; }
+
+.h4 strong, h4 strong {
+  font-family: "Intro"; }
+
+.statistic {
+  border: 1px solid #dddddd;
+  margin-bottom: 25px; }
+  .statistic__header {
+    padding: 20px;
+    font-size: 1.25rem;
+    font-family: "Intro";
+    color: #444444;
+    position: relative;
+    z-index: 10;
+    cursor: pointer; }
+    .statistic__header::after {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+              transform: translateY(-50%);
+      color: #444444;
+      font-size: 1rem;
+      content: "\f209";
+      font-family: "Ionicons"; }
+  .statistic__body {
+    padding: 20px;
+    display: none; }
+  .statistic.is-open .statistic__header::after {
+    content: '\f218'; }
+
 @media (max-width: 1199px) {
   .h1--adaptive {
     font-size: 1.8125rem;
@@ -2611,6 +2762,10 @@ h5--intro, .h5--intro {
   .nav-tabs li a {
     min-width: inherit;
     padding-left: 10px;
-    padding-right: 10px; } }
+    padding-right: 10px; }
+  .tab-table-total {
+    width: 100%; }
+    .tab-table-total > div + div {
+      padding-left: 5px; } }
 
 /*# sourceMappingURL=add.css.map */

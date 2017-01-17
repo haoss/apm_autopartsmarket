@@ -260,6 +260,174 @@ h5, .h5
         &>td
           border-bottom: 0
 
+.form
+  &-control, &--control
+    height: 34px
+
+  &--tab-head
+    margin-bottom: 20px
+
+.btn
+  &--lg-block
+    width: 100% !important
+
+.table
+  &--tab
+    tbody
+      &>tr
+        &>td
+          vertical-align: top
+
+.tab-table-total
+  display: table
+  font-size: rem(12)
+  &>div
+    display: table-cell
+    vertical-align: baseline
+    &+div
+      padding-left: 50px
+    &:first-child
+      padding-left: 10px
+
+
+  .price-total
+    white-space: nowrap
+    span
+      display: inline-block
+      margin-right: 10px
+      font-size: rem(12)
+    strong
+      font-size: rem(16)
+
+  .link
+    svg
+      vertical-align: -3px
+      fill: #30c4f3
+      margin-right: 5px
+    text-decoration: none
+    &:hover
+      text-decoration: underline
+
+.form-control
+  &--border
+    border: 1px solid $color-gray
+  &--textarea
+    height: 125px !important
+    resize: none
+
+.js .inputfile
+  width: 0.1px
+  height: 0.1px
+  opacity: 0
+  overflow: hidden
+  position: absolute
+  z-index: -1
+
+.inputfile + label
+  // max-width: 80%
+  font-size: rem(12)
+  /* 20px
+  font-weight: 400
+  margin: 0
+  text-overflow: ellipsis
+  white-space: nowrap
+  cursor: pointer
+  display: block
+  overflow: hidden
+  padding: 0
+  height: 34px
+  line-height: 31px
+  padding: 0 45px 0 15px
+  font-family: $font-roboto-medium
+  color: $primary-color
+  position: relative
+  /* 10px 20px
+  span
+    display: block
+    white-space: nowrap
+    width: 100%
+    overflow: hidden
+    text-overflow: ellipsis
+
+.no-js .inputfile + label
+  display: none
+
+.inputfile
+  &:focus + label, &.has-focus + label
+    outline: 1px dotted #000
+    outline: -webkit-focus-ring-color auto 5px
+
+.inputfile-2
+  + label
+    color: #b1b0b0
+    border: 1px dashed $color-gray
+    &::before
+      content: "\f41f"
+      position: absolute
+      font-family: $font-ionicons
+      color: $color-blue
+      right: 13px
+      top: 0
+      font-size: rem(25)
+  &:focus + label, &.has-focus + label, + label:hover
+    color: #b1b0b0
+    outline: none
+    border-style: solid
+
+.info
+  font-size: rem(11)
+  display: block
+  margin-top: 5px
+  &--warning
+    color: #e18c62
+
+.chat__form__file
+  padding-left: 0
+  white-space: nowrap
+  width: 100%
+  overflow: hidden
+  text-overflow: ellipsis
+
+.color
+  &--dark
+    color: $primary-color
+
+.h4, h4
+  strong
+    font-family: $font-intro
+
+// statistic
+.statistic
+  border: 1px solid $color-gray
+  margin-bottom: 25px
+  &__header
+    padding: 20px
+    font-size: rem(20)
+    font-family: $font-intro
+    color: $primary-color
+    position: relative
+    z-index: 10
+    cursor: pointer
+    &::after
+      position: absolute
+      right: 20px
+      top: 50%
+      transform: translateY(-50%)
+      color: $primary-color
+      font-size: rem(16)
+      content: "\f209"
+      font-family: $font-ionicons
+
+  &__body
+    padding: 20px
+    display: none
+
+  &.is-open
+    .statistic__header
+      &::after
+        content: '\f218'
+
+
 @media (max-width: 1199px)
   .h1
     &--adaptive
@@ -415,3 +583,9 @@ h5, .h5
         min-width: inherit
         padding-left: 10px
         padding-right: 10px
+
+  .tab-table-total
+    width: 100%
+    &>div
+      &+div
+        padding-left: 5px
