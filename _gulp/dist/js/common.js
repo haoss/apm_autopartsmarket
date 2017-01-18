@@ -120,6 +120,11 @@ $(document).ready(function(){
     }
   });
 
+  $('.anchor__list li a').on('click', function(){
+    $('.anchor__list li').removeClass('active');
+    $(this).parent().addClass('active');
+  });
+
   // Radio
   $('.form__radio input[type="radio"]:checked').parents('.form__radio').addClass("is-selected");
   $('.form__check input[type="checkbox"]:checked').parents('.form__check').addClass("is-selected");

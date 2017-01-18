@@ -22,14 +22,15 @@ html(lang="ru")
           .col-sm-3
             .h1.h1--dark.h1--adaptive о компании
             
-            nav(role="navigation").navigation-level2
+            nav(role="navigation").navigation-level2.anchor__list
               ul
-                li.active: a(href="#") Auto Parts Market
-                li: a(href="#") Почему мы?
-                li: a(href="#") Наши направления
-                li: a(href="#") Клиентам
+                li.active: a(href="#apm").anchor Auto Parts Market
+                li: a(href="#about__block").anchor Почему мы?
+                li: a(href="#our-ways").anchor Наши направления
+                li: a(href="#clients").anchor Клиентам
             
           .col-sm-9
+            a#apm(name="apm")
             h1 АРМ
             
             p Auto Parts Market Биржа Авто Запчастей - это комплексное решение по увеличению прибыли любой компании работающей в сфере автобизнеса.
@@ -41,7 +42,9 @@ html(lang="ru")
             .clear
               
             // Block width blue border
+            a#about__block(name="about__block")
             .about__block.about__block--why
+              
               .h1 
                 span ПОЧЕМУ
                 small МЫ В ЭТОМ БИЗНЕСЕ
@@ -56,7 +59,8 @@ html(lang="ru")
               
               .about__block__map
                 img(src="./tmp/new/img-map.png", alt="").img-responsive
-              
+            
+            a#our-ways(name="our-ways")
             .h1 НАШИ НАПРАВЛЕНИЯ
             ul.list.list--check
               li Поставки со склада в Киеве
@@ -70,7 +74,9 @@ html(lang="ru")
             .clear
               
             // Block width blue border
+            a#clients(name="clients")
             .about__block.about__block--clients
+              
               .h1 
                 span КЛИЕНТАМ
                 small Сотрудничая с компанией АРМ Вы получаете:
