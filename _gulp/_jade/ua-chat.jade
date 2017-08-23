@@ -91,7 +91,63 @@ html(lang="ru")
               .chat
                 
                 .chat__body
-                  .chat__wrapper.nano
+                  .chat__wrapper.nano.hidden
+                    .nano-content
+                      
+                      - for (var i = 0; i<3; i++) {
+                      
+                        .chat__block.table
+                          .chat__block__img.table__cell
+                            img(src="./img/chat-placeholder.png", alt="").img-responsive
+                          .chat__block__text.table__cell
+                            .chat__block__name
+                              strong Иванов Иван Иванович
+                              span 16:53
+                              
+                            p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна маленькая строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир грамматики.
+                            
+                        .chat__block.table
+                          .chat__block__img.table__cell
+                            img(src="./tmp/chat.png", alt="").img-responsive
+                          .chat__block__text.table__cell
+                            .chat__block__name
+                              strong Петров Петр Петрович 
+                              span 16:53
+                              
+                            p Великий Оксмокс предупреждал ее о злых запятых, диких знаках вопроса и коварных точках с запятой, но текст не дал сбить себя с толку. Он собрал семь своих заглавных букв, подпоясал инициал за пояс и пустился в дорогу. Взобравшись на первую вершину курсивных гор, бросил он последний взгляд назад, на силуэт своего родного города Буквоград, на заголовок деревни Алфавит и на подзаголовок своего переулка Строчка. Грустный реторический вопрос скатился по его щеке и он продолжил свой путь. По дороге встретил текст рукопись.
+                            
+                        .chat__block.table
+                          .chat__block__img.table__cell
+                            img(src="./tmp/chat.png", alt="").img-responsive
+                          .chat__block__text.table__cell
+                            .chat__block__name
+                              strong Петров Петр Петрович 
+                              span 16:53
+                              
+                            p Поделился с Вами документом. Его можете загрузить, нажав на эту 
+                              a(href="#") ссылку
+                              | .
+                              
+                        .chat__date
+                          .chat__date__wrapper
+                            span 5 ноября 2016
+                              
+                        .chat__block.table
+                          .chat__block__img.table__cell
+                            img(src="./tmp/chat.png", alt="").img-responsive
+                          .chat__block__text.table__cell
+                            .chat__block__name
+                              strong Петров Петр Петрович 
+                              span 16:53
+                              
+                            p Поделился с Вами документом. Его можете загрузить, нажав на эту 
+                              a(href="#") ссылку
+                              | .
+                      - }    
+                
+                  .clear50
+              
+                  .chat__wrapper.scrollbar.default-skin
                     .nano-content
                       
                       - for (var i = 0; i<3; i++) {

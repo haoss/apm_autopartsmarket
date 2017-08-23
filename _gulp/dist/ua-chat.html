@@ -34,6 +34,7 @@
         <link rel="stylesheet" href="./js/libs/sumoselect/sumoselect.css">
         <link rel="stylesheet" href="./js/libs/nanoscroller/nanoscroller.css">
         <link rel="stylesheet" href="./js/libs/air-datepicker/dist/css/datepicker.min.css">
+        <link rel="stylesheet" href="./js/libs/jquery-custom-scrollbar-0.5.5/jquery.custom-scrollbar.css">
         <link rel="stylesheet" href="./css/main.css">
         <link rel="stylesheet" href="./css/add.css">
     </head>
@@ -168,7 +169,105 @@
                             <!-- Chat-->
                             <div class="chat">
                                 <div class="chat__body">
-                                    <div class="chat__wrapper nano">
+                                    <div class="chat__wrapper nano hidden">
+                                        <div class="nano-content">
+                                            <div class="chat__block table">
+                                                <div class="chat__block__img table__cell"><img src="./img/chat-placeholder.png" alt="" class="img-responsive"></div>
+                                                <div class="chat__block__text table__cell">
+                                                    <div class="chat__block__name"><strong>Иванов Иван Иванович</strong><span>16:53</span></div>
+                                                    <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна маленькая строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир грамматики.</p>
+                                                </div>
+                                            </div>
+                                            <div class="chat__block table">
+                                                <div class="chat__block__img table__cell"><img src="./tmp/chat.png" alt="" class="img-responsive"></div>
+                                                <div class="chat__block__text table__cell">
+                                                    <div class="chat__block__name"><strong>Петров Петр Петрович </strong><span>16:53</span></div>
+                                                    <p>Великий Оксмокс предупреждал ее о злых запятых, диких знаках вопроса и коварных точках с запятой, но текст не дал сбить себя с толку. Он собрал семь своих заглавных букв, подпоясал инициал за пояс и пустился в дорогу. Взобравшись на первую вершину курсивных гор, бросил он последний взгляд назад, на силуэт своего родного города Буквоград, на заголовок деревни Алфавит и на подзаголовок своего переулка Строчка. Грустный реторический вопрос скатился по его щеке и он продолжил свой путь. По дороге встретил текст рукопись.</p>
+                                                </div>
+                                            </div>
+                                            <div class="chat__block table">
+                                                <div class="chat__block__img table__cell"><img src="./tmp/chat.png" alt="" class="img-responsive"></div>
+                                                <div class="chat__block__text table__cell">
+                                                    <div class="chat__block__name"><strong>Петров Петр Петрович </strong><span>16:53</span></div>
+                                                    <p>Поделился с Вами документом. Его можете загрузить, нажав на эту <a href="#">ссылку</a>.</p>
+                                                </div>
+                                            </div>
+                                            <div class="chat__date">
+                                                <div class="chat__date__wrapper"><span>5 ноября 2016</span></div>
+                                            </div>
+                                            <div class="chat__block table">
+                                                <div class="chat__block__img table__cell"><img src="./tmp/chat.png" alt="" class="img-responsive"></div>
+                                                <div class="chat__block__text table__cell">
+                                                    <div class="chat__block__name"><strong>Петров Петр Петрович </strong><span>16:53</span></div>
+                                                    <p>Поделился с Вами документом. Его можете загрузить, нажав на эту <a href="#">ссылку</a>.</p>
+                                                </div>
+                                            </div>
+                                            <div class="chat__block table">
+                                                <div class="chat__block__img table__cell"><img src="./img/chat-placeholder.png" alt="" class="img-responsive"></div>
+                                                <div class="chat__block__text table__cell">
+                                                    <div class="chat__block__name"><strong>Иванов Иван Иванович</strong><span>16:53</span></div>
+                                                    <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна маленькая строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир грамматики.</p>
+                                                </div>
+                                            </div>
+                                            <div class="chat__block table">
+                                                <div class="chat__block__img table__cell"><img src="./tmp/chat.png" alt="" class="img-responsive"></div>
+                                                <div class="chat__block__text table__cell">
+                                                    <div class="chat__block__name"><strong>Петров Петр Петрович </strong><span>16:53</span></div>
+                                                    <p>Великий Оксмокс предупреждал ее о злых запятых, диких знаках вопроса и коварных точках с запятой, но текст не дал сбить себя с толку. Он собрал семь своих заглавных букв, подпоясал инициал за пояс и пустился в дорогу. Взобравшись на первую вершину курсивных гор, бросил он последний взгляд назад, на силуэт своего родного города Буквоград, на заголовок деревни Алфавит и на подзаголовок своего переулка Строчка. Грустный реторический вопрос скатился по его щеке и он продолжил свой путь. По дороге встретил текст рукопись.</p>
+                                                </div>
+                                            </div>
+                                            <div class="chat__block table">
+                                                <div class="chat__block__img table__cell"><img src="./tmp/chat.png" alt="" class="img-responsive"></div>
+                                                <div class="chat__block__text table__cell">
+                                                    <div class="chat__block__name"><strong>Петров Петр Петрович </strong><span>16:53</span></div>
+                                                    <p>Поделился с Вами документом. Его можете загрузить, нажав на эту <a href="#">ссылку</a>.</p>
+                                                </div>
+                                            </div>
+                                            <div class="chat__date">
+                                                <div class="chat__date__wrapper"><span>5 ноября 2016</span></div>
+                                            </div>
+                                            <div class="chat__block table">
+                                                <div class="chat__block__img table__cell"><img src="./tmp/chat.png" alt="" class="img-responsive"></div>
+                                                <div class="chat__block__text table__cell">
+                                                    <div class="chat__block__name"><strong>Петров Петр Петрович </strong><span>16:53</span></div>
+                                                    <p>Поделился с Вами документом. Его можете загрузить, нажав на эту <a href="#">ссылку</a>.</p>
+                                                </div>
+                                            </div>
+                                            <div class="chat__block table">
+                                                <div class="chat__block__img table__cell"><img src="./img/chat-placeholder.png" alt="" class="img-responsive"></div>
+                                                <div class="chat__block__text table__cell">
+                                                    <div class="chat__block__name"><strong>Иванов Иван Иванович</strong><span>16:53</span></div>
+                                                    <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна маленькая строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир грамматики.</p>
+                                                </div>
+                                            </div>
+                                            <div class="chat__block table">
+                                                <div class="chat__block__img table__cell"><img src="./tmp/chat.png" alt="" class="img-responsive"></div>
+                                                <div class="chat__block__text table__cell">
+                                                    <div class="chat__block__name"><strong>Петров Петр Петрович </strong><span>16:53</span></div>
+                                                    <p>Великий Оксмокс предупреждал ее о злых запятых, диких знаках вопроса и коварных точках с запятой, но текст не дал сбить себя с толку. Он собрал семь своих заглавных букв, подпоясал инициал за пояс и пустился в дорогу. Взобравшись на первую вершину курсивных гор, бросил он последний взгляд назад, на силуэт своего родного города Буквоград, на заголовок деревни Алфавит и на подзаголовок своего переулка Строчка. Грустный реторический вопрос скатился по его щеке и он продолжил свой путь. По дороге встретил текст рукопись.</p>
+                                                </div>
+                                            </div>
+                                            <div class="chat__block table">
+                                                <div class="chat__block__img table__cell"><img src="./tmp/chat.png" alt="" class="img-responsive"></div>
+                                                <div class="chat__block__text table__cell">
+                                                    <div class="chat__block__name"><strong>Петров Петр Петрович </strong><span>16:53</span></div>
+                                                    <p>Поделился с Вами документом. Его можете загрузить, нажав на эту <a href="#">ссылку</a>.</p>
+                                                </div>
+                                            </div>
+                                            <div class="chat__date">
+                                                <div class="chat__date__wrapper"><span>5 ноября 2016</span></div>
+                                            </div>
+                                            <div class="chat__block table">
+                                                <div class="chat__block__img table__cell"><img src="./tmp/chat.png" alt="" class="img-responsive"></div>
+                                                <div class="chat__block__text table__cell">
+                                                    <div class="chat__block__name"><strong>Петров Петр Петрович </strong><span>16:53</span></div>
+                                                    <p>Поделился с Вами документом. Его можете загрузить, нажав на эту <a href="#">ссылку</a>.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="clear50"></div>
+                                    <div class="chat__wrapper scrollbar default-skin">
                                         <div class="nano-content">
                                             <div class="chat__block table">
                                                 <div class="chat__block__img table__cell"><img src="./img/chat-placeholder.png" alt="" class="img-responsive"></div>
@@ -339,6 +438,7 @@
             <script src="./js/libs/nanoscroller/jquery.nanoscroller.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
             <script src="./js/libs/air-datepicker/dist/js/datepicker.min.js"></script>
+            <script src="./js/libs/jquery-custom-scrollbar-0.5.5/jquery.custom-scrollbar.min.js"></script>
             <script src="./js/common.js"></script>
             <script>
                 // Menu user account
