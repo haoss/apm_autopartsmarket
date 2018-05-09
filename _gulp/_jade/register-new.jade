@@ -1,0 +1,250 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Регистрация' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Регистрация' + ' - Биржа автозапчастей' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    //- include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    // Content
+    .content
+      .container
+        
+        .row
+          .col-lg-8.col-lg-push-2.col-md-10.col-md-push-1
+            
+            .content__head.content__head--dark.content__head--register
+              h1 Регистрация в интернет-магазине
+            
+            p Для регистрации в интернет-магазине, пожалуйста, заполните данную анкету.
+              br
+              | Обязательные для заполнения поля выделены данным цветом.
+              br
+              | Если у вас возникли проблемы с регистрацией, пожалуйста напишите нам на адрес 
+              a(href="#") info@apm.store
+            
+            //-.form.form__register
+            
+            .wrap_tabs
+              ul.tabs_caption
+                li.active Частное лицо
+                li Юридическое лицо
+              .wr_tabs
+                .tabs_content.active
+                  .reg_text
+                    | Вы планируете оплачивать заказы в офисе регистрации, в случае оплаты заказов через банк платежи будут Вами оформляться как платеж от частного лица на счет организации. Отношения между Вами и магазином будут регламентироваться законом «О защите прав потребителей»
+                  .input_item_full.double_string
+                    .input-field
+                      select
+                        option(value='1', selected='') Частный клиент
+                        option(value='2') Option 1
+                        option(value='3') Option 2
+                        option(value='4') Option 3
+                        option(value='5') Option 4
+                        option(value='6') Option 5
+                        option(value='7') Option 6
+                        option(value='8') Option 7
+                        option(value='9') Option 8
+                      label Тип регистрации
+                  .input_items
+                    .input_col.double_string
+                      .input-field
+                        select
+                          option(value='1', selected='') Регион
+                          option(value='2') Option 1
+                          option(value='3') Option 2
+                          option(value='4') Option 3
+                          option(value='5') Option 4
+                          option(value='6') Option 5
+                          option(value='7') Option 6
+                          option(value='8') Option 7
+                          option(value='9') Option 8
+                        label Регион обслуживания
+                    .input_col
+                      .input-field
+                        select
+                          option(value='1', selected='') Офис обслуживания
+                          option(value='2') Option 1
+                          option(value='3') Option 2
+                          option(value='4') Option 3
+                          option(value='5') Option 4
+                          option(value='6') Option 5
+                          option(value='7') Option 6
+                          option(value='8') Option 7
+                          option(value='9') Option 8
+                  .input_item_full
+                    .input-field
+                      input#last_name.validate(type='text')
+                      label(for='last_name') Фамилия
+                  .input_item_full
+                    .input-field
+                      input#name.validate(type='text')
+                      label(for='name') Имя
+                  .input_items
+                    .input_col
+                      .input-field
+                        input#email.validate(type='email')
+                        label(for='email') E-mail
+                    .input_col
+                      .input-field
+                        input#tel.validate(type='text')
+                        label(for='tel') Мобильный телефон
+                  .input_item_full
+                    .input-field
+                      input#password.validate(type='password')
+                      label(for='password') Пароль
+                  .input_item_full
+                    .input-field
+                      input#password_2.validate(type='password')
+                      label(for='password_2') Подтверждение пароля
+                  .input_item_full
+                    form(action='#')
+                      p
+                        label
+                          input.filled-in(type='checkbox', checked='checked')
+                          span
+                            | Я разрешаю IsNext.ru получать, хранить и использовать мои персональные данные: имя, фамилию, почтовый адрес, телефоны, адрес электронной почты в целях обеспечения оформления договоров с торговыми организациями, оповещения, проведения платежей (взаиморасчетов)
+                      p
+                        label
+                          input.filled-in(type='checkbox', checked='checked')
+                          span
+                            | С 
+                            a(href='') условиями использования
+                            |   ресурсов IsNext.ru ознакомлен и согласен
+                  button.submit Зарегистрироваться
+                .tabs_content
+                  .reg_text
+                    | Ваши платежи будут выполняться только со счета организации. Отношения между вами и магазином будут регламентироваться договором. Ознакомиться и подписать договор вы сможете в офисе регистрации
+                  .input_items
+                    .input_col.double_string
+                      .input-field
+                        .input-field
+                          select
+                            option(value='1', selected='') ИП
+                            option(value='2') Option 1
+                            option(value='3') Option 2
+                            option(value='4') Option 3
+                            option(value='5') Option 4
+                            option(value='6') Option 5
+                            option(value='7') Option 6
+                            option(value='8') Option 7
+                            option(value='9') Option 8
+                          label Тип
+                    .input_col
+                      .input-field
+                        input#org.validate(type='text')
+                        label(for='org') Наименование организации
+                  .input_item_full
+                    .input-field
+                      input#inn.validate(type='text')
+                      label(for='inn') ИНН
+                  .input_item_full.double_string
+                    .input-field
+                      select
+                        option(value='1', selected='') Частный клиент
+                        option(value='2') Option 1
+                        option(value='3') Option 2
+                        option(value='4') Option 3
+                        option(value='5') Option 4
+                        option(value='6') Option 5
+                        option(value='7') Option 6
+                        option(value='8') Option 7
+                        option(value='9') Option 8
+                      label Тип регистрации
+                  .input_items
+                    .input_col.double_string
+                      .input-field
+                        select
+                          option(value='1', selected='') Регион
+                          option(value='2') Option 1
+                          option(value='3') Option 2
+                          option(value='4') Option 3
+                          option(value='5') Option 4
+                          option(value='6') Option 5
+                          option(value='7') Option 6
+                          option(value='8') Option 7
+                          option(value='9') Option 8
+                        label Регион обслуживания
+                    .input_col
+                      .input-field
+                        select
+                          option(value='1', selected='') Офис обслуживания
+                          option(value='2') Option 1
+                          option(value='3') Option 2
+                          option(value='4') Option 3
+                          option(value='5') Option 4
+                          option(value='6') Option 5
+                          option(value='7') Option 6
+                          option(value='8') Option 7
+                          option(value='9') Option 8
+                  .input_item_full
+                    .input-field
+                      input#last_name.validate(type='text')
+                      label(for='last_name') Фамилия
+                  .input_item_full
+                    .input-field
+                      input#name.validate(type='text')
+                      label(for='name') Имя
+                  .input_items
+                    .input_col
+                      .input-field
+                        input#email.validate(type='email')
+                        label(for='email') E-mail
+                    .input_col
+                      .input-field
+                        input#tel.validate(type='text')
+                        label(for='tel') Мобильный телефон
+                  .input_item_full
+                    .input-field
+                      input#password.validate(type='password')
+                      label(for='password') Пароль
+                  .input_item_full
+                    .input-field
+                      input#password_2.validate(type='password')
+                      label(for='password_2') Подтверждение пароля
+                  .input_item_full
+                    form(action='#')
+                      p
+                        label
+                          input.filled-in(type='checkbox', checked='checked')
+                          span
+                            | Я разрешаю IsNext.ru получать, хранить и использовать мои персональные данные: имя, фамилию, почтовый адрес, телефоны, адрес электронной почты в целях обеспечения оформления договоров с торговыми организациями, оповещения, проведения платежей (взаиморасчетов)
+                      p
+                        label
+                          input.filled-in(type='checkbox', checked='checked')
+                          span
+                            | С 
+                            a(href='') условиями использования
+                            |   ресурсов IsNext.ru ознакомлен и согласен
+                  button.submit Зарегистрироваться
+
+    
+    include ./_include/_footer
+    //- div(style="height: 900px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Vendor.js
+       Modernizr v2.8.3
+       Plugins-scroll
+    script(src='./js/libs/vendor.js')
+    include ./_include/_footer-js
+    script(src='./js/common.js')
+    include ./_include/_js-body-bottom
+
+    link(rel="stylesheet", href="./css/materialize.css")
+    link(rel="stylesheet", href="./css/style.css")
+    script(src="./js/libs/materialize.min.js")
+    script(src="./js/libs/main.js")
