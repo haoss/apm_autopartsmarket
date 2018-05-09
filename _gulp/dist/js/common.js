@@ -160,6 +160,10 @@ $(document).ready(function(){
     preventPageScrolling: true
   });
 
+  $('.scrollbar').customScrollbar({
+    updateOnWindowResize:true
+  });
+
   // Popup block
   $('.open-popup-link').magnificPopup({
     type:'inline',
